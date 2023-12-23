@@ -1,7 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <Navbar></Navbar>
-<router-view/>
+    <div class="container-fluid">
+      <router-view/>
+    </div>
 </template>
 <script>
 import Navbar from '../components/Navbar.vue';
@@ -22,7 +24,7 @@ export default {
     // 透過axios中的this.$http取得方法，使用POST(包含API,夾帶的資料)
     // promise使用.then方法進行串接
     this.$http.post(api, this.user).then((res) => {
-      console.log(res);
+      // console.log(res);
       if (!res.data.success) {
         this.$router.push('/login');
       }
