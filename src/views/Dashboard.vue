@@ -1,12 +1,20 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    Dashboard
+    <Navbar></Navbar>
+<router-view/>
 </template>
 <script>
+import Navbar from '../components/Navbar.vue';
+
 export default {
+// 區域註冊Navbar
+  components: {
+    Navbar,
+  },
   created() {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-    alert(token);
+    // alert(token);
+    // 將token加入到headers
     this.$http.defaults.headers.common.Authorization = token;
 
     // 透過$讀出.env環境變數裡站點的位置，連接後方api/user/check的API路徑
@@ -16,7 +24,7 @@ export default {
     this.$http.post(api, this.user).then((res) => {
       console.log(res);
       if (!res.data.success) {
-        this.$router.push('login');
+        this.$router.push('/login');
       }
     });
   },
