@@ -3,7 +3,7 @@
     <div class="text-end">
     <!-- Button trigger modal -->
         <button class="btn btn-primary" type="button"
-         @click.prevent="$refs.productModal.showModal()">
+         @click.prevent="openModal">
         新增產品
         </button>
     </div>
@@ -37,7 +37,8 @@
             </tr>
         </tbody>
     </table>
-    <ProductModel ref="productModal"></ProductModel>
+    <ProductModel ref="productModal" :product="tempProduct"
+    @update-product="updateProduct"></ProductModel>
 </template>
 <script>
 import ProductModel from '../components/ProductModel.vue';
@@ -47,6 +48,7 @@ export default {
     return {
       products: [],
       pagination: {},
+      tempProduct: {},
     };
   },
   components: {
@@ -65,6 +67,21 @@ export default {
             this.pagination = res.data.pagination;
           }
         });
+    },
+    openModal() {
+      this.tempProduct = {};
+      const productComponent = this.$refs.productModal;
+      productComponent.showModal();
+    },
+    updateProduct(item) {
+      this.tempProduct = item;
+      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product`;
+      const productComponent = this.$refs.productModal;
+      this.$http.post(api, { data: this.tempProduct }).then((response) => {
+        console.log(response);
+        productComponent.hideModal();
+        this.getProducts();
+      });
     },
   },
   created() {
