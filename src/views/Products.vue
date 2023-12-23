@@ -1,5 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+    <div class="text-end">
+    <!-- Button trigger modal -->
+        <button class="btn btn-primary" type="button"
+         @click.prevent="$refs.productModal.showModal()">
+        新增產品
+        </button>
+    </div>
     <table class="table mt-4">
         <thead>
             <tr>
@@ -30,14 +37,20 @@
             </tr>
         </tbody>
     </table>
+    <ProductModel ref="productModal"></ProductModel>
 </template>
 <script>
+import ProductModel from '../components/ProductModel.vue';
+
 export default {
   data() {
     return {
       products: [],
       pagination: {},
     };
+  },
+  components: {
+    ProductModel,
   },
   methods: {
     getProducts() {
