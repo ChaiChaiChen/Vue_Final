@@ -1,6 +1,7 @@
+/* eslint-disable linebreak-style */
 const { defineConfig } = require('@vue/cli-service');
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/Vue_Final/dist'
+  publicPath: '/Vue_Final/dist',
 });
