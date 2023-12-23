@@ -59,12 +59,15 @@ export default {
       // promise使用.then方法進行串接
       this.$http.post(api, this.user)
         .then((res) => {
-          // expired為token的到期日
-          const { token, expired } = res.data;
-          // console.log(token, expired);
-          // 將token和到期日儲存到cookie中
-          document.cookie = `hexToken=${token}; expires=${new Date(expired)}`;
-          // console.log(res);
+          if (res.data.success) {
+            // expired為token的到期日
+            const { token, expired } = res.data;
+            // console.log(token, expired);
+            // 將token和到期日儲存到cookie中
+            document.cookie = `hexToken=${token}; expires=${new Date(expired)}`;
+            // console.log(res);
+            this.$router.push('/dashboard');
+          }
         });
     },
   },

@@ -1,0 +1,25 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<template>
+    Dashboard
+</template>
+<script>
+export default {
+  created() {
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
+    alert(token);
+    this.$http.defaults.headers.common.Authorization = token;
+
+    // 透過$讀出.env環境變數裡站點的位置，連接後方api/user/check的API路徑
+    const api = `${process.env.VUE_APP_API}api/user/check`;
+    // 透過axios中的this.$http取得方法，使用POST(包含API,夾帶的資料)
+    // promise使用.then方法進行串接
+    this.$http.post(api, this.user).then((res) => {
+      console.log(res);
+      if (!res.data.success) {
+        this.$router.push('login');
+      }
+    });
+  },
+};
+
+</script>
