@@ -6,12 +6,13 @@ import Loading from 'vue3-loading-overlay';
 import App from './App.vue';
 import router from './router';
 import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
-import { currency } from './methods/filters';
+import { currency, date } from './methods/filters';
 
 const app = createApp(App);
 app.use(router);
 app.config.globalProperties.$filters = {
   currency,
+  date,
 };
 // eslint-disable-next-line vue/multi-word-component-names
 app.component('Loading', Loading);

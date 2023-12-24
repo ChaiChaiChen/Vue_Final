@@ -14,7 +14,10 @@
           <a class="nav-link active" aria-current="page" href="#/dashboard/products">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link active" aria-current="page" href="#/dashboard/orders">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#/dashboard/coupons">Coupons</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" @click.prevent="logout">登出</a>
