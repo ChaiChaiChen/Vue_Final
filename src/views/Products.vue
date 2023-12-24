@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <Loading :active="isLoading"></Loading>
     <div class="text-end">
     <!-- Button trigger modal -->
         <button class="btn btn-primary" type="button"
@@ -54,6 +55,7 @@ export default {
       pagination: {},
       tempProduct: {},
       isNew: false,
+      isLoading: false,
     };
   },
   components: {
@@ -64,10 +66,12 @@ export default {
   methods: {
     getProducts() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products`;
+      this.isLoading = true;
       // 透過axios中的this.$http取得方法，使用POST(包含API,夾帶的資料)
       // promise使用.then方法進行串接
       this.$http.get(api)
         .then((res) => {
+          this.isLoading = false;
           if (res.data.success) {
             console.log(res.data);
             this.products = res.data.products;
