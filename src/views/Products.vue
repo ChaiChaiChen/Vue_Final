@@ -50,6 +50,7 @@
 import ProductModel from '../components/ProductModel.vue';
 import DelModal from '../components/DelModal.vue';
 import Pagination from '../components/Pagination.vue';
+import { pushMessageState } from '../methods/pushMessageState';
 
 export default {
   data() {
@@ -70,6 +71,7 @@ export default {
   inject: ['emitter'],
 
   methods: {
+    pushMessageState,
     getProducts(page = 1) {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products/?page=${page}`;
       this.isLoading = true;
@@ -109,21 +111,8 @@ export default {
       this.$http[httpMethod](api, { data: this.tempProduct }).then((response) => {
         console.log(response);
         productComponent.hideModal();
-        if (response.data.success) {
-          this.getProducts();
-          console.log('success');
-          this.emitter.emit('push-message', {
-            style: 'success',
-            title: '更新成功',
-          });
-        } else {
-          console.log('error', response.data.message);
-          this.emitter.emit('push-message', {
-            style: 'danger',
-            title: '更新失敗',
-            content: response.data.message.join('、'),
-          });
-        }
+        pushMessageState(response);
+        this.getProducts();
       });
     },
     openDelProductModal(item) {
@@ -137,10 +126,7 @@ export default {
         console.log(response.data);
         const delComponent = this.$refs.delModal;
         delComponent.hideModal();
-        this.emitter.emit('push-message', {
-          style: 'danger',
-          title: `${response.data.message}`,
-        });
+        pushMessageState(response, response.data.message);
         this.getProducts();
       });
     },
