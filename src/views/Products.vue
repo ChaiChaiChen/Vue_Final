@@ -40,6 +40,8 @@
             </tr>
         </tbody>
     </table>
+    <Pagination :pages="pagination"
+    @emit-pages="getProducts"></Pagination>
     <ProductModel ref="productModal" :product="tempProduct"
     @update-product="updateProduct"></ProductModel>
     <DelModal :item="tempProduct" ref="delModal" @del-item="delProduct"></DelModal>
@@ -47,6 +49,7 @@
 <script>
 import ProductModel from '../components/ProductModel.vue';
 import DelModal from '../components/DelModal.vue';
+import Pagination from '../components/Pagination.vue';
 
 export default {
   data() {
@@ -62,12 +65,13 @@ export default {
     ProductModel,
     // eslint-disable-next-line vue/no-unused-components
     DelModal,
+    Pagination,
   },
   inject: ['emitter'],
 
   methods: {
-    getProducts() {
-      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products`;
+    getProducts(page = 1) {
+      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products/?page=${page}`;
       this.isLoading = true;
       // 透過axios中的this.$http取得方法，使用POST(包含API,夾帶的資料)
       // promise使用.then方法進行串接
