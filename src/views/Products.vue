@@ -32,7 +32,8 @@
                     <div class="btn-group">
                         <button class="btn btn-outline-primary btn-sm"
                          @click="openModal(false, item)">編輯</button>
-                        <button class="btn btn-outline-danger btn-sm">刪除</button>
+                        <button class="btn btn-outline-danger btn-sm"
+                        @click="openDelProductModal(item)">刪除</button>
                     </div>
                 </td>
             </tr>
@@ -40,9 +41,11 @@
     </table>
     <ProductModel ref="productModal" :product="tempProduct"
     @update-product="updateProduct"></ProductModel>
+    <DelModal :item="tempProduct" ref="delModal" @del-item="delProduct"></DelModal>
 </template>
 <script>
 import ProductModel from '../components/ProductModel.vue';
+import DelModal from '../components/DelModal.vue';
 
 export default {
   data() {
@@ -55,6 +58,8 @@ export default {
   },
   components: {
     ProductModel,
+    // eslint-disable-next-line vue/no-unused-components
+    DelModal,
   },
   methods: {
     getProducts() {
@@ -86,7 +91,7 @@ export default {
       let api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product`;
       const productComponent = this.$refs.productModal;
       let httpMethod = 'post';
-      // 編輯api
+      // 修改
       if (!this.isNew) {
         api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product/${item.id}`;
         httpMethod = 'put';
@@ -94,6 +99,20 @@ export default {
       this.$http[httpMethod](api, { data: this.tempProduct }).then((response) => {
         console.log(response);
         productComponent.hideModal();
+        this.getProducts();
+      });
+    },
+    openDelProductModal(item) {
+      this.tempProduct = { ...item };
+      const delComponent = this.$refs.delModal;
+      delComponent.showModal();
+    },
+    delProduct() {
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product/${this.tempProduct.id}`;
+      this.$http.delete(url).then((response) => {
+        console.log(response.data);
+        const delComponent = this.$refs.delModal;
+        delComponent.hideModal();
         this.getProducts();
       });
     },
