@@ -63,6 +63,8 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     DelModal,
   },
+  inject: ['emitter'],
+
   methods: {
     getProducts() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products`;
@@ -103,7 +105,21 @@ export default {
       this.$http[httpMethod](api, { data: this.tempProduct }).then((response) => {
         console.log(response);
         productComponent.hideModal();
-        this.getProducts();
+        if (response.data.success) {
+          this.getProducts();
+          console.log('success');
+          this.emitter.emit('push-message', {
+            style: 'success',
+            title: '更新成功',
+          });
+        } else {
+          console.log('error', response.data.message);
+          this.emitter.emit('push-message', {
+            style: 'danger',
+            title: '更新失敗',
+            content: response.data.message.join('、'),
+          });
+        }
       });
     },
     openDelProductModal(item) {
@@ -117,6 +133,10 @@ export default {
         console.log(response.data);
         const delComponent = this.$refs.delModal;
         delComponent.hideModal();
+        this.emitter.emit('push-message', {
+          style: 'danger',
+          title: `${response.data.message}`,
+        });
         this.getProducts();
       });
     },
