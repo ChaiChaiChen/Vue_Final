@@ -45,6 +45,7 @@ export default {
     },
   },
   created() {
+    // 透過$route.params接收UserCart所傳送的prouctId
     this.id = this.$route.params.productId;
     this.getProduct();
   },

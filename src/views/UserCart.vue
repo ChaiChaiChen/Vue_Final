@@ -1,3 +1,4 @@
+<!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div class="container">
@@ -9,7 +10,7 @@
                             <th width="120">圖片</th>
                             <th width="120">商品名稱</th>
                             <th width="120">價格</th>
-                            <th width="120"></th>
+                            <th width="150"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,7 +27,12 @@
                                     <button class="btn btn-outline-primary btn-sm"
                                     @click="getProduct(product.id)">查看更多</button>
                                     <button class="btn btn-outline-danger btn-sm"
-                                    >加入購物車</button>
+                                    :disabled ="this.status.loadingItem === product.id"
+                                    @click="addCart(product.id)">
+                                    <div class="spinner-grow text-red spinner-grow-sm" v-if="this.status.loadingItem === product.id">
+                                      <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    加入購物車</button>
                                 </div>
                             </td>
                         </tr>
@@ -41,6 +47,9 @@ export default {
   data() {
     return {
       productList: [],
+      status: {
+        loadingItem: '', // 對應品項id
+      },
     };
   },
   methods: {
@@ -53,6 +62,18 @@ export default {
     },
     getProduct(id) {
       this.$router.push(`/user/product/${id}`);
+    },
+    addCart(id) {
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
+      this.status.loadingItem = id;
+      const cart = {
+        product_id: id,
+        qty: 1,
+      };
+      this.$http.post(url, { data: cart }).then((response) => {
+        this.status.loadingItem = '';
+        console.log('Products', response);
+      });
     },
   },
 
