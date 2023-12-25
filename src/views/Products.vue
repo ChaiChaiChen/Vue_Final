@@ -42,12 +42,12 @@
     </table>
     <Pagination :pages="pagination"
     @emit-pages="getProducts"></Pagination>
-    <ProductModel ref="productModal" :product="tempProduct"
-    @update-product="updateProduct"></ProductModel>
+    <ProductModal ref="productModal" :product="tempProduct"
+    @update-product="updateProduct"></ProductModal>
     <DelModal :item="tempProduct" ref="delModal" @del-item="delProduct"></DelModal>
 </template>
 <script>
-import ProductModel from '../components/ProductModel.vue';
+import ProductModal from '../components/ProductModal.vue';
 import DelModal from '../components/DelModal.vue';
 import Pagination from '../components/Pagination.vue';
 import { pushMessageState } from '../methods/pushMessageState';
@@ -63,7 +63,7 @@ export default {
     };
   },
   components: {
-    ProductModel,
+    ProductModal,
     // eslint-disable-next-line vue/no-unused-components
     DelModal,
     Pagination,
