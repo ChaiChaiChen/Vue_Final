@@ -2,9 +2,16 @@
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img  src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703562291819.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=cFRidcCU3b45g8CdLITgG2a1C%2BMZ6z7rWE2VZuBy7wn7Ru5Zkrl201x%2BUHK8wziZnKW5t%2BjgQNAOBe%2FcxQe%2FCzzNc96UN38R%2F1Tx%2Fci8PgoQh4NV8nmG6uAoIZQnF%2F7h%2FBjIOM1xgm4ffBpftd4godkH%2Fx9IPXjV5RYnUoOY1HS0k50UoXS90CgOi2w1RxBlPWyHPKqejaXBRiT3cAX7H6pD2x01zzux1zmQBaIrRdp4z6%2FLoNAYsc7khG6r%2FRvNOqr%2FvPMgMej5WUVP7wbqpuRwhcTkiS94IQaOkI6Nl5prBXDHGTn52lZAK8vp5TJE%2BhjobTzlqW%2BfZYkFIPjNNw%3D%3D" class="d-block w-100">
+    </div>
+  </div>
+</div>
   <div class="container">
-    <div class="row">
-      <div class="col-md-4 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
+    <div class="row mt-5">
+      <div class="col-md-6 col-xl-4 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
         <div class="card">
           <div class="card border-white text-white text-left">
             <img :src="product.imageUrl" class="card-img-top img-cover" height="300">
