@@ -6,7 +6,7 @@
         </div>
     </nav>
     <router-view/>
+    <UserFooter></UserFooter>
 </template>
 <script>
-
 </script>

@@ -1,22 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <table>
-        <thead>
-            <tr>
-                <th width="120">圖片</th>
-                <th width="120">商品名稱</th>
-                <th width="120">價格</th>
-                <th width="120"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <img :src="tempProduct.imageUrl" alt="" class="img-fluid mb-3">
-                </td>
-                <td>{{ tempProduct.title }}</td>
-                <td>{{ tempProduct.price }}</td>
-                <button class="btn btn-outline-danger btn-sm"
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-12 col-xl-6 mt-5">
+        <img :src="tempProduct.imageUrl" alt="" class="img-fluid mb-3">
+      </div>
+      <div class="col-md-12 col-xl-6 mt-5">
+        <h1>產品名稱：{{ tempProduct.title }}</h1>
+        <span>售價：{{ tempProduct.price }}</span>
+      </div>
+      <div class="col-md-2 mt-3">
+        <button class="btn btn-outline-danger btn-sm"
                                     :disabled ="this.status.loadingItem === tempProduct.id"
                                     @click="addCart(tempProduct.id)">
                                     <div class="spinner-grow text-red spinner-grow-sm"
@@ -24,9 +18,10 @@
                                       <span class="visually-hidden">Loading...</span>
                                     </div>
                                     加入購物車</button>
-            </tr>
-        </tbody>
-    </table>
+      </div>
+    </div>
+  </div>
+
 </template>
 <script>
 export default {

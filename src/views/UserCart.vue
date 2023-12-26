@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable vuejs-accessibility/alt-text -->
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
@@ -12,7 +13,7 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col-md-6 col-xl-4 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
-        <div class="card">
+        <div class="card" @click="getProduct(product.id)">
           <div class="card border-white text-white text-left">
             <img :src="product.imageUrl" class="card-img-top img-cover" height="300">
             <div class="card-img-overlay d-flex justify-content-between align-items-end p-0 px-3" style="background-color: rgba(0, 0, 0, .2)">
