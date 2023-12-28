@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvue_final"]=self["webpackChunkvue_final"]||[]).push([[892],{892:function(n,e,u){function r(n,e){return" 優惠碼 "}u.r(e),u.d(e,{default:function(){return c}});var t=u(89);const f={},a=(0,t.Z)(f,[["render",r]]);var c=a}}]);
-//# sourceMappingURL=892.30e497ed.js.map
