@@ -50,7 +50,6 @@
 import ProductModal from '../components/ProductModal.vue';
 import DelModal from '../components/DelModal.vue';
 import Pagination from '../components/Pagination.vue';
-import { pushMessageState } from '../methods/pushMessageState';
 
 export default {
   data() {
@@ -60,6 +59,7 @@ export default {
       tempProduct: {},
       isNew: false,
       isLoading: false,
+      status: '',
     };
   },
   components: {
@@ -71,7 +71,6 @@ export default {
   inject: ['emitter'],
 
   methods: {
-    pushMessageState,
     getProducts(page = 1) {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products/?page=${page}`;
       this.isLoading = true;
@@ -103,15 +102,17 @@ export default {
       let api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product`;
       const productComponent = this.$refs.productModal;
       let httpMethod = 'post';
+      this.status = '新增產品';
       // 修改
       if (!this.isNew) {
         api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product/${item.id}`;
         httpMethod = 'put';
+        this.status = '更新產品';
       }
       this.$http[httpMethod](api, { data: this.tempProduct }).then((response) => {
         console.log(response);
         productComponent.hideModal();
-        pushMessageState(response);
+        this.$httpMessageState(response, this.status);
         this.getProducts();
       });
     },
@@ -126,7 +127,7 @@ export default {
         console.log(response.data);
         const delComponent = this.$refs.delModal;
         delComponent.hideModal();
-        pushMessageState(response, response.data.message);
+        this.$httpMessageState(response, response.data.message);
         this.getProducts();
       });
     },

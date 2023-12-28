@@ -1,7 +1,7 @@
+/* eslint-disable func-names */
 import emitter from '@/methods/emitter';
 
-// eslint-disable-next-line import/prefer-default-export
-export function pushMessageState(response, title = '更新') {
+export default function (response, title = '更新') {
   if (response.data.success) {
     emitter.emit('push-message', {
       style: 'success',
