@@ -5,19 +5,36 @@
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img  src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703563863874.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MeNl8zCCkQLH8gVEPVqKRTZ20b9X1kAgyYRPsDd4d%2FCR0c32xAGKAyKag5w1JatIwgUhxSZzzSI4XCioB1wYZvJESijp6l3vudrFdR9tXRAac1%2BoeKdN7uecevnuBrpV%2BcCiJEgkyzDJqxi%2BKC0H2FSrBcA14U2W6eeyXOfJ%2FpuU9%2B8EDOMpgUBS1x7%2Ft1noNmEcNO73OrpGrh4a%2FPgmB7hvy1jYGaDXGcGs8j%2BaVjMSjOEufMgq3ga7HHZ4J4Mkx82AkwuUoLdHWlp7Uf0SYcQE62IZYYdU%2B4T7sIteR06uRuN6zd7Pz0Kj2zyy6Jojmoe26JhnwxBLSCAAcsy32w%3D%3D" class="d-block w-100">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703864415662.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=pTokQX%2BefqJHJNHR2UWBUozNJjfqg8ANj64NXNPtnfPe2%2BVqeZFyedy5IkAm9%2FrCfAnBXyYetWelOelJFStgjKBrmbAd2qORug5e8rh2gqKFRvgHHSMBs7KptaLEi6MibZbxvLKxFmzIwVHwi6IL0u1wDZjR28Qo2BwnS2SVyZJwsIBDZWkCiQd1tf4PDAb96qfYQPDdGmyfSQmgHB2BdcsS%2F%2F3tFMHSr4uEiKPL3YfoIAmsCMblyOGtdIUgu1RmW8HkJ%2FdRd%2BuqNwqJWK2zARdkT8%2FeNFSPeBaYT7J8zYsbSdEi47k4zMY9xDz80wteNK4lJkyLH%2Bsf7mzCA1pvyw%3D%3D" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703864621709.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=pq%2FI5xrzA04ZRUaOhmIYrVuTaoduJUR6Btj4nUjr8uUMnDgPovnaAJkSseBBmcX%2FrtFDCtkkoBDxJ%2FRwkvoFIGhHU6NuugcFw6WyJ0YA4b%2F9JKyapIRYyfevrrKoGOCvzoqlimtR%2B%2FUCglNsM4LIc4dCelBKH2UXoIkb5CAQtQjPNRPg2QCn2lVDOqo6yZon%2FwKB3nY%2FF8CPhRgOTwsvr1jYrthcBxl3OAo2krAo11V%2FZ868KoRcvWYMjvIHewP9sV20Xh1Aw8vH204Te8k58QBkUEJyuxwdKMANfqJao2vRzbT2xlvjVT%2FMg5iFWT8Xq19Yf7LlDOjNer0LO3pJAg%3D%3D" class="d-block w-100" alt="...">
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
   <div class="container">
     <div class="row mt-5">
       <div class="col-md-6 col-xl-4 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
         <div class="card">
           <div class="card border-white text-white text-left" @click="getProduct(product.id)">
-            <img :src="product.imageUrl" class="card-img-top img-cover" height="300">
+            <img :src="product.imageUrl" class="img-cover" height="350">
             <div class="card-img-overlay d-flex justify-content-center align-items-end">
               <button class="btn btn-primary col-8 border-radius-0 btn-default"
               @click="getProduct(product.id)">查看更多</button>

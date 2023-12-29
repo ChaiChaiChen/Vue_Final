@@ -1,17 +1,29 @@
 <!-- eslint-disable vuejs-accessibility/label-has-for -->
 <template>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1"
- aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modal">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content border-0">
-      <div class="modal-header bg-secondary text-white">
-        <h5 class="modal-title" id="exampleModalLabel"><span>新增產品</span></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    ref="modal"
+  >
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content border-0">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <span>新增產品</span>
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
             <div class="col-sm-4">
               <div class="mb-3">
                 <label for="image" class="form-label">輸入圖片網址</label>
@@ -37,36 +49,7 @@
                 />
               </div>
               <img class="img-fluid" :src="tempProduct.imageUrl" alt="" />
-              <!-- 延伸技巧，多圖 -->
-              <div class="mt-5" v-if="tempProduct.images">
-                <div v-for="(image, key) in tempProduct.images" class="mb-3 input-group" :key="key">
-                  <input
-                    type="url"
-                    class="form-control form-control"
-                    v-model="tempProduct.images[key]"
-                    placeholder="請輸入連結"
-                  />
-                  <button
-                    type="button"
-                    class="btn btn-outline-danger"
-                    @click="tempProduct.images.splice(key, 1)"
-                  >
-                    移除
-                  </button>
-                </div>
-                <div
-                  v-if="
-                    tempProduct.images[tempProduct.images.length - 1] || !tempProduct.images.length
-                  "
-                >
-                  <button
-                    class="btn btn-outline-primary btn-sm d-block w-100"
-                    @click="tempProduct.images.push('')"
-                  >
-                    新增圖片
-                  </button>
-                </div>
-              </div>
+
             </div>
             <div class="col-sm-8">
               <div class="mb-3">
@@ -164,16 +147,24 @@
               </div>
             </div>
           </div>
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-        <button type="button" class="btn btn-primary"
-         @click="$emit('update-product',tempProduct)">確認</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            取消
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            @click="$emit('update-product', tempProduct)"
+          >
+            確認
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
+
 <script>
 import modalMixin from '@/mixins/modalMixin';
 
@@ -187,6 +178,10 @@ export default {
   watch: {
     product() {
       this.tempProduct = this.product;
+      // 多圖範例
+      if (!this.tempProduct.images) {
+        this.tempProduct.images = [];
+      }
     },
   },
   data() {
@@ -195,7 +190,6 @@ export default {
       tempProduct: {},
     };
   },
-  mixins: [modalMixin],
   methods: {
     uploadFile() {
       const uploadedFile = this.$refs.fileInput.files[0];
@@ -204,8 +198,12 @@ export default {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/upload`;
       this.$http.post(url, formData).then((response) => {
         console.log(response.data);
+        if (response.data.success) {
+          this.tempProduct.imageUrl = response.data.imageUrl;
+        }
       });
     },
   },
+  mixins: [modalMixin],
 };
 </script>

@@ -16,6 +16,7 @@ import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { currency, date } from './methods/filters';
 import $httpMessageState from './methods/pushMessageState';
+import 'bootstrap';
 
 defineRule('required', required);
 defineRule('email', email);
