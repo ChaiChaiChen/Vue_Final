@@ -29,6 +29,60 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="d-flex flex-column align-items-center flex-wrap mt-3 py-4 col-md-6">
+      <h2>
+        ABOUT US
+      </h2>
+      <h4>Rubik's shop</h4>
+      <p>
+小丸號方塊屋為專業魔術方塊品牌，除了研發各式魔術方塊及相關產品外，也代理國內外各廠牌之魔術方塊，為各年齡層之魔術方塊愛好者提供最專業的產品與服務。
+除了研發、生產、代理魔術方塊產品，小丸號也熱衷於舉辦各種規模的魔術方塊比賽，致力於推廣魔術方塊運動，不遺餘力，希望讓魔術方塊成為全民運動，男女老少一同享受動腦解題的樂趣！</p>
+    </div>
+  </div>
+</div>
+<div class="bg-light mb-4 mb-md-6">
+  <div class="container">
+    <div class="row align-items-center mt-5">
+      <div class="col-md-6 intro-bg ">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703868398709.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Wy3Vx5Gqt2%2BJlLH4XTESOEItQz4LzW%2BvUkOMjKtdjvnwJ9nirxiym0rKR0lWT460md9V78v2htavEmyBK1O1sTUazx04gpn8gQqZGRKJ9MD7g0KYmk2JXRjX2hkgUx2E4MuD%2F10Zf3j702dP3r3BfVlp1qnk%2BvH2H%2FjJcUxjO2qo5jC%2FqFDyxDlapPEa%2FUMgV7pKxFR33f8MgSsjfzMYxOgrjLIqJvVfRskigEV2AVk6eLO5eYhMTlUBwQViz9Dyjn8c%2BkNXge1k3Q0qFHG9GGmMlUkZa%2FsQtSqkExwRnzd7vMOH75ccod5aNw%2F8tJRjcfodgUURQ0UBwt%2FfJjEnYA%3D%3D" class="d-block w-100" alt="...">
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="d-flex flex-column px-5 py-5">
+          <h4 class="font-md-l fw-bold mb-3 ">提升耐心</h4>
+          <p>魔術方塊並不是非常簡單的益智玩具，從一開始學習六面復原很容易誤判情況，到後期為了追求速度，相同的動作需要練習千萬次，這些都需要很大份量的耐心還有試誤。可以說玩魔術方塊的同時，也是在鍛鍊孩子的意志力。</p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="bg-light mb-4 mb-md-6">
+  <div class="container">
+    <div class="row align-items-center mt-5">
+      <div class="col-md-6 d-flex justify-content-center order-2 order-md-1">
+        <div class="d-flex flex-column px-5 py-5">
+          <h4 class="font-md-l fw-bold mb-3 ">增加專注力</h4>
+          <p>為了提高復原魔方的速度、減少出錯的機率，進階的玩家會相當專心於當下的轉動，同時眼睛大量接收色彩，腦內快速預判下一步的狀況，這些操作需要高度專注才可以達成。你在看到孩子轉得更快的同時，也代表著他更專注於當下。</p>
+        </div>
+      </div>
+      <div class="col-md-6 intro-bg intro-fashion order-1 order-md-2">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703868398709.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Wy3Vx5Gqt2%2BJlLH4XTESOEItQz4LzW%2BvUkOMjKtdjvnwJ9nirxiym0rKR0lWT460md9V78v2htavEmyBK1O1sTUazx04gpn8gQqZGRKJ9MD7g0KYmk2JXRjX2hkgUx2E4MuD%2F10Zf3j702dP3r3BfVlp1qnk%2BvH2H%2FjJcUxjO2qo5jC%2FqFDyxDlapPEa%2FUMgV7pKxFR33f8MgSsjfzMYxOgrjLIqJvVfRskigEV2AVk6eLO5eYhMTlUBwQViz9Dyjn8c%2BkNXge1k3Q0qFHG9GGmMlUkZa%2FsQtSqkExwRnzd7vMOH75ccod5aNw%2F8tJRjcfodgUURQ0UBwt%2FfJjEnYA%3D%3D" class="d-block w-100" alt="...">
+      </div>
+    </div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="row justify-content-center">
+    <div class="d-flex flex-column align-items-center flex-wrap mt-3 py-4 col-md-6">
+      <h2>
+        精選商品
+      </h2>
+    </div>
+  </div>
+  </div>
+</div>
   <div class="container">
     <div class="row mt-5">
       <div class="col-md-6 col-xl-4 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
