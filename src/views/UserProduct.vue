@@ -1,16 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="container">
-    <div class="row mt-5">
-      <div class="col-md-12 col-xl-6 mt-5">
+    <div class="row mt-5 justify-content-center">
+      <div class="col-md-12 col-xl-5 mt-5">
         <img :src="tempProduct.imageUrl" alt="" class="img-fluid mb-3">
       </div>
-      <div class="col-md-12 col-xl-6 mt-5">
+      <div class="col-md-12 col-xl-5 mt-5">
         <h1>產品名稱：{{ tempProduct.title }}</h1>
-        <span>售價：{{ tempProduct.price }}</span>
-      </div>
-      <div class="col-md-2 mt-3">
-        <button class="btn btn-outline-danger btn-sm"
+        <p>售價：{{ tempProduct.price }}</p>
+        <p>產品內容：{{ tempProduct.content }}</p>
+        <p>產品描述：{{ tempProduct.description }}</p>
+        <button class="btn btn-outline-danger btn-xl"
                                     :disabled ="this.status.loadingItem === tempProduct.id"
                                     @click="addCart(tempProduct.id)">
                                     <div class="spinner-grow text-red spinner-grow-sm"
