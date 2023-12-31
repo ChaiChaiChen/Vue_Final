@@ -11,10 +11,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav navbar-nav navbar-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#/user/products">商品一覽</a>
+            <a class="nav-link" aria-current="page" href="#/user/products/所有商品">商品一覽</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#/user/about">關於我們</a>
+            <a class="nav-link" aria-current="page" href="#/user/about">關於我們</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bi bi-cart" aria-current="page" href="#/user/checkout">購物車</a>
           </li>
         </ul>
       </div>
