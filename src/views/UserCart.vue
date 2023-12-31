@@ -52,14 +52,14 @@
           <div class="card border-white text-white text-left" @click="getProduct(product.id)">
             <img :src="product.imageUrl" class="img-cover" height="300">
             <div class="card-img-overlay d-flex justify-content-center align-items-end">
-              <button class="btn btn-primary col-8 border-radius-0 btn-default rounded-0"
+              <button class="btn btn-primary col-8 border-radius-0 btn-default"
               @click="getProduct(product.id)">查看更多</button>
               </div>
           </div>
           <div class="card-body text-center">
             <h5 class="card-img-title-lg">{{ product.title }}</h5>
               <p class="card-text">售價：{{ product.price }}</p>
-            <button class="btn btn-outline-danger btn-xl rounded-0"
+            <button class="btn btn-outline-danger btn-xl"
             :disabled ="this.status.loadingItem === product.id"
             @click="addCart(product.id)">
             <div class="spinner-grow text-red spinner-grow-sm" v-if="this.status.loadingItem === product.id">
