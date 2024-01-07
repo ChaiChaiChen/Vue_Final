@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <footer class="py-4 bg-black">
+    <footer class="py-4 bg-black mt-5">
         <div class="container">
           <div class="d-flex flex-column align-items-center">
             <div class="d-md-flex align-items-md-center justify-content-md-center">

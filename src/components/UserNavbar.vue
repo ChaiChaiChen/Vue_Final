@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <router-link to="/user/cart" class="navbar-brand mt-2 ms-3"><h4>
-        <strong>Soffa</strong></h4></router-link>
+      <router-link to="/user/cart" class="navbar-brand mt-2 ms-3"><h2>
+        <strong>Soffa</strong></h2></router-link>
       <button class="navbar-toggler" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
@@ -14,13 +14,13 @@
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
              aria-current="page" to="/user/products/所有商品">
-              <h5><strong>商品一覽</strong></h5>
+              <h4><strong>商品一覽</strong></h4>
             </router-link>
           </li>
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
              aria-current="page" to="/user/about">
-             <h5><strong>關於我們</strong></h5>
+             <h4><strong>關於我們</strong></h4>
             </router-link>
           </li>
         </ul>

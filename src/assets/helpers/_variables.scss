@@ -320,7 +320,9 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "theme":     #efb057
+  "theme":     #efb057,
+  "text-bg":  #f5debe,
+  "btn-bg":    #703316,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -850,8 +852,8 @@ $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-colo
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           0 !default;
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
+$btn-border-radius-sm:        0 !default;
+$btn-border-radius-lg:        0 !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
