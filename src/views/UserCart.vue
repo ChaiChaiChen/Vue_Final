@@ -68,39 +68,58 @@
   </div>
   <div class="row text-center mt-5 text-black align-items-center">
     <h4>New Post</h4>
-    <div class="col-3 mt-5">
+    <div class="col-lg-3 col-md-6 mt-3">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629649408.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=qDipYug7%2FuPHex%2B2Edb4cm9l1wSjplWUw45wiRVvhZnUd8StptUkpjM0DjhfwRZqaDBwNB0Uh%2BZP1pfkfKA%2BmW2ENmg6XWgqLlleSLr9Z2%2F4CFSp5LGu%2B%2FxYKM8F1WKOE79%2BVnNQqRXnFhlccxubHWAeaqd9mfW1Twk%2Fi%2BRgB9zHhMDJmqHdBCEC%2FIkmBHUUyh%2BYeV%2Fl%2BFJVn8OwFUtP%2FKl1sz2BGaOC%2FNYSG9pIkaujNY4bNcaoeaK4ONhsrVhmdWK9N%2BpOpshftgw1Iz2kCy2Qa%2Fr%2B5xmQNnMJH4IS%2FW5kFGnT%2BRuNDLK6h7WCYYuxQ5udwp9GatzElsIdWzTCGA%3D%3D" class="img-fluid" alt="">
     </div>
-    <div class="col-3 text-black link-bottom">傢俱雜誌 第154期<br>2015/1&2月新發行</div>
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6 mt-3 text-black link-bottom">傢俱雜誌 第154期<br>2015/1&2月新發行</div>
+    <div class="col-lg-3 col-md-6 mt-3">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629676867.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=R6X4XrJ%2BCSMUJz5V7UtbFBnIKD2v4rb4NJJpChi02VXj6a1SaX1lKCaFuXZVqnbEFMKKJ2g3YsKnZoNCyNCHIJIrFselUbE2Fbewf60Ryxg42baY8xWKPjm%2FBraHbvX8C%2BaDmaSUeM1ZvWb4lX2clsMZxBqe4vdHbjNqkypxfcdZMRUjGYVvB7X5v7nDEVNUerp3PevVkdz4EN3surwfid3Rj668C9TbnVsKEdf1i5xC1P8txlRLCLa4fAqs5fl6L7QZYrZtOPt%2BZZEt3XEC98oIfStTiJH3HbJtbtfwv45CrHmjLbvW8%2Fp7sQxsmp%2BEKTB2bqhcbCc0ZaoVRAMdHA%3D%3D" class="img-fluid" alt="">
     </div>
-    <div class="col-3 text-black link-bottom">傢飾雜誌 第154期<br>2017/2018新發行</div>
+    <div class="col-lg-3 col-md-6 mt-3 text-black link-bottom">傢飾雜誌 第155期<br>2017/2018新發行</div>
+    <div class="col-lg-3 col-md-6 mt-4 text-black link-bottom d-flex justify-content-center order-2 order-md-1">傢飾雜誌 第156期<br>2017/2018新發行</div>
+    <div class="col-lg-3 col-md-6 mt-4 order-1 order-md-2">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629649408.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=qDipYug7%2FuPHex%2B2Edb4cm9l1wSjplWUw45wiRVvhZnUd8StptUkpjM0DjhfwRZqaDBwNB0Uh%2BZP1pfkfKA%2BmW2ENmg6XWgqLlleSLr9Z2%2F4CFSp5LGu%2B%2FxYKM8F1WKOE79%2BVnNQqRXnFhlccxubHWAeaqd9mfW1Twk%2Fi%2BRgB9zHhMDJmqHdBCEC%2FIkmBHUUyh%2BYeV%2Fl%2BFJVn8OwFUtP%2FKl1sz2BGaOC%2FNYSG9pIkaujNY4bNcaoeaK4ONhsrVhmdWK9N%2BpOpshftgw1Iz2kCy2Qa%2Fr%2B5xmQNnMJH4IS%2FW5kFGnT%2BRuNDLK6h7WCYYuxQ5udwp9GatzElsIdWzTCGA%3D%3D" class="img-fluid" alt="">
+    </div>
+    <div class="col-lg-3 col-md-6 mt-4 text-black link-bottom d-flex justify-content-center order-4 order-md-3">傢俱雜誌 第157期<br>2015/1&2月新發行</div>
+    <div class="col-lg-3 col-md-6 mt-4 order-3 order-md-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629676867.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=R6X4XrJ%2BCSMUJz5V7UtbFBnIKD2v4rb4NJJpChi02VXj6a1SaX1lKCaFuXZVqnbEFMKKJ2g3YsKnZoNCyNCHIJIrFselUbE2Fbewf60Ryxg42baY8xWKPjm%2FBraHbvX8C%2BaDmaSUeM1ZvWb4lX2clsMZxBqe4vdHbjNqkypxfcdZMRUjGYVvB7X5v7nDEVNUerp3PevVkdz4EN3surwfid3Rj668C9TbnVsKEdf1i5xC1P8txlRLCLa4fAqs5fl6L7QZYrZtOPt%2BZZEt3XEC98oIfStTiJH3HbJtbtfwv45CrHmjLbvW8%2Fp7sQxsmp%2BEKTB2bqhcbCc0ZaoVRAMdHA%3D%3D" class="img-fluid" alt="">
+    </div>
   </div>
 </div>
-<div class="container-fluid">
-  <div class="row align-items-center mt-5 bg-text-bg">
-    <div class="col-md-7 intro-bg mt-3 mb-3">
+<div class="container-fluid mt-5">
+  <div class="row align-items-center bg-text-bg">
+    <div class="col-md-6 intro-bg">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704630851982.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EEJ6SWnOGN00q9y%2FSBTUtgkHmQTQWdwQ5qFg%2Bqwaw38FyXSne0lRC2wUGJHeXENwSXvKE934882CKAOpHg2V4VGCpVOhCX%2FW%2F2%2BuBLsaGdjp0ottIhAXiCBimlwWX4GWSY8MG8XLc%2FtH%2FOg3Lw6h1453ELQhy%2BdVQF85BvRsNgjrt7M5PJUF6k2X5w0giWO0Ahae2BEXpA%2BrmA%2FJC5kMibLbeVlGIGXwTzRNHpTruGh1UTuDK5245QY5kd0AInO%2F6FaZdyWxoylbQMkHW%2BvWRzyWdpkVNtpbvlmTFUHPcnQFUG9kcv41iAaMqBDuxQnRoM%2FZtyjQSvYjiCAb469P0w%3D%3D" class="img-fluid" alt="...">
     </div>
-    <div class="col-md-5 d-flex justify-content-center">
+    <div class="col-md-6 d-flex justify-content-center">
       <div class="d-flex flex-column px-5 py-5">
         <h4 class="font-md-l fw-bold mb-3 ">一個人的沙發｜享受孤獨    擁有專屬空間</h4>
         <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
       </div>
     </div>
   </div>
-  <div class="row align-items-center mt-5 bg-text-bg">
-      <div class="col-md-5 d-flex justify-content-center order-2 order-md-1">
+  <div class="row align-items-center">
+      <div class="col-md-6 d-flex justify-content-center order-2 order-md-1">
         <div class="d-flex flex-column px-5 py-5">
           <h4 class="font-md-l fw-bold mb-3 ">沙發上享受家庭團聚時光</h4>
           <p>依照不同的居家風格，與家人朋友一同共度美好時光。</p>
         </div>
       </div>
-      <div class="col-md-7 intro-bg intro-fashion order-1 order-md-2 mt-3 mb-3">
+      <div class="col-md-6 intro-bg intro-fashion order-1 order-md-2">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704631781122.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MiTl%2Be8BdkiJPr2Y4yxtH1UjZveKc2jx81pJ4g4GP2PNiObL%2B2h3E7JLi3nYTVwYHI96z6EdorydbSToOnj956Q4Fi1RkO3K%2FR5LA9W%2FNigZEY%2F9KzrxOASlQzI2bTr59HsMXD05Sd3YSJ%2B5sX1F5r2REaF8sSX%2FHkavP5BPr2qLbYEyXGR%2B7qGzy55AL0e7xbgG6FdEmKJMBFwdIpOyX3p1iYghEH4MA2op6HZL2lwjKREceZbGttmRGK4Ibar85lN4RqyeGIMJZnEJ7yZyNys3izVyLjjjaIQxNTO%2BGAmj8Vjtuv9OA24Gy1nqYcnWJlfYAe6uBUFA4X4HTJaIhQ%3D%3D" class="img-fluid" alt="...">
       </div>
     </div>
+    <div class="row align-items-center bg-text-bg">
+    <div class="col-md-6 intro-bg">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704630851982.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EEJ6SWnOGN00q9y%2FSBTUtgkHmQTQWdwQ5qFg%2Bqwaw38FyXSne0lRC2wUGJHeXENwSXvKE934882CKAOpHg2V4VGCpVOhCX%2FW%2F2%2BuBLsaGdjp0ottIhAXiCBimlwWX4GWSY8MG8XLc%2FtH%2FOg3Lw6h1453ELQhy%2BdVQF85BvRsNgjrt7M5PJUF6k2X5w0giWO0Ahae2BEXpA%2BrmA%2FJC5kMibLbeVlGIGXwTzRNHpTruGh1UTuDK5245QY5kd0AInO%2F6FaZdyWxoylbQMkHW%2BvWRzyWdpkVNtpbvlmTFUHPcnQFUG9kcv41iAaMqBDuxQnRoM%2FZtyjQSvYjiCAb469P0w%3D%3D" class="img-fluid" alt="...">
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <div class="d-flex flex-column px-5 py-5">
+        <h4 class="font-md-l fw-bold mb-3 ">一個人的沙發｜享受孤獨    擁有專屬空間</h4>
+        <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- <div class="bg-light mb-4 mb-md-6">
