@@ -5,43 +5,73 @@
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="container-field mt-5">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704599984989.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=YfMM%2FC4HTyvo1ZSnrmVHAcb4OQwxp%2FwAOo%2Bbzuqf464o%2F46SzTQxy366d2fB%2BRW0BDPG3MAOdWgbtLgHwX2IIdw8l8kzyHO5b7YffjtgR9BadR36Ir%2BjrJ4wMPD2Hkz77RXAWVmds0FSIeKC94N2tXyLb69AZoMTjFjPO04yLyXMLkkHPrbjvHZbCCLpzUE5jcYf6nXjHtx2qMsuZFNk%2F4RIhs1IQL1ZnZaIxHek17sHuy5EfyGQ0MNuX0eLBRby%2FUyqRv3iZGkqtyUVQXaJqLgX4f2WDqLGVsLDUeIG5DU6AkS5JDre25SWO2G4Xy8D4dvyS1PIGk9%2B1VUUkqYGEw%3D%3D" class="img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704601966892.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=TjDAlYUMSWoDZ60Zq%2BFHJdj6yooNwzKzNK4kEbp4SELbTtYawELSGhoWXLA59vjTFyWoM%2FhrSo3uNuBksBHr7vyYnOw60vQaVdq1ZRkG93PW7S7PgLY5QMGVilSYgY9uhprSNCU8tmwHy3a3M4BfYvR%2BPmLWVwgZ68CCPLXZtKZYLWaNn7OVnOL9qK1Prl9gV%2BR3AXkwQHg%2FCm9HrKT3cjTP21QfZtbXd45O4Z0dLFmJG5GdK1l5mHrLD2FMTn52A2ClLQXa6Tg1KDVwz3YwTcXgMnQuHhUitZTJWBP9AdLClRdLQeJUp9jGiBL9gfwKVKWWvhCiw26EFhoniS0ZHQ%3D%3D" class="img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704602215770.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Rf6HfbsW0Rcso7vyJ0N%2B0n1dA4NKGCh2sO11obwizz8PAF6BtsEAlYQC7tV9kHk9k%2FpuB25h0RyI%2Ba6fT9mO0670TGV%2Fn%2BnqUIDCbNH0UEJoj0fcftskG58d6lKaEWGReBWGn108Bd4Gfn7lE7XX1IiKSg%2B5vaL2%2FWWNjm9R%2FLr%2Bmy6l3xx5ZFNA2W9Epv3nAYyZvpXbXXNRfz4P9SjQVPk%2Btk1zm252tx%2F%2FiVd2OnURSAKrZ7WW%2BI2KWkrOZmnZOnIFkn31mejwe4MMX8o2CfOwZzhhAUrHXIBw%2BQVN1%2F5akCR%2FRnzQmDBBWuXb0Z7jv2Vj9hg8%2FRFMew3keMxN6w%3D%3D" class="img-fluid" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703905269683.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Pe7GQ5G8nVMB5QFoWgYOo72TGvxuYHldee%2BNzQsClWw3CRWjLovXQ231akZofz7PVhWYSmpm6aXiwc4F1DmYeKddARb%2Bedc%2BYllx5AxkUTQnlccH%2FozTujbAehFGUEtHiQsgMWLknASxJf8BH%2FRxZT83L5P43a2bGXNDBeHHJixJA8cRa3zKp9JjusTH8GGXwwVyQN1ldsYzxfcf%2BvHPt8JZy59G%2BUTvWm%2B%2Bl9bupBaX1MakNhyT9VbGRHq7H1yIn7f85nFBGBFwk51d53ezwuwMYx%2F8F1GAHdbeq1HlTlbdO4rSPkAZK%2FoxVgUGS0o0O4DPvSEEoDVdDABreCyC0w%3D%3D" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703905241609.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=ahbCcSwGTNpGqQ8XrTQiW7tMhN3pH0u2voFz7xQS0qms%2BPB4RjNZiItdKSOn7mnc9wHbeM5hDSvqd1jrlBlWvbdYtDtM6CX12otI084CThr6tjHtvYR9QzAzlMNWjzaPI0gnqPBCM%2B6YsKOSts6LbkFZaK%2F64sK3E4noTeJySFlq%2Fk3%2FLOlBCAVLKzBF3OLqRisrQFkZ8C0a3dzFKr3Z3FhOIU9Vdbr2gzIjJh5b%2FQ6afMNCCfai7%2BIes2jtfVJcJ2xSJ7AlzfWCDrJ9Kc5SF%2BXZGeD6ky90mm65CAXl9Yc7DbRAb2jdzyj54FJCJfZsU%2Bg5Jq3hi94dX1kzLWjaLw%3D%3D" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703905201509.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Jzkq8d27UWpl0IOo9HZtvNiYYbieKcExvxwo0b4HlLcs6S6aAEKJNCRD%2F6JWYkJtZsaSeFVZsbkNmKxgxX82Z0FT7pVbPWt80PoGfZv2kkR7P4ji52qr36pVPvfwwQKXDJrlyb2h8b4ZAAiRt6sD05eZyqr2bfI80UW%2FlrHuRSOaAJCIo9LrurKZqmTigytS0f33z3ALgshHHnX2tM%2FdO4yZp7KLmLIbpzLedBPBkvMUT%2Br3RVxyMHXxOdpyNvKrG29jXkEcuCXRRlb6OgDu%2FGox71so1ksdnw0CEgTSOHSjEvh0zjlt1E5ykN7vY0kwkpNkE9Apnq6lwSFSELfkmA%3D%3D"
- class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="row justify-content-center">
+<div class="container mt-5 text-theme">
+  <div class="row row-cols-3 justify-content-center align-items-center">
+    <div class="col-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610430929.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=dYoP%2FdWfpLPM0NJCQqJiHuV18SOP0UcVoeJ5tymjkD%2BdCYx6NILs7taavSwtiCaETrpwHFeV1qahluNkdCV0gjNuigqabK7s%2FxhYRvX%2BNh1kpgHBgGoQTQxmMM8AgM0l8k8zPzH5M2E1sEjiX9VvNc7Ucmt9PUNQcOldoDuQO3CGp8y%2FnwD6MyHtZ5dkcnctefbQ5J%2B%2BS3HS2IzRVh%2BSujibSN19zgvnwttIbVQLIspGUVy3pKWx%2BPzoHudwh3l71mqk0F54nYMvwoOjZQVBtPCFWejqSuaydPhmicTRDsQgl6aaannovtl8fkNIfDnP3zW65joXZNu3U7CGIbqjIQ%3D%3D" class="img-fluid" alt="...">
+    </div>
+    <div class="col-4 text-center">
+      <div class="imgText">
+      <h4>全皮沙發</h4>
+      <p>原料都來自精心維護的天然牛皮<br>天然皮革透氣度佳</p>
+    </div></div>
+    <div class="col-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610411908.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Ro08U3YaRBiEopdiPuILAIiiR1%2BnvY248%2FWgXhUDElH6fw9TMvUvw1z56vQzMRSJQoT5IH3r8SoR7%2FkNJ09NjlbvzZQXD0omrxdd3TykzW67AZLNaVmxIfXMWmCt4Wh%2BjGK7g2Jp2xlqe0Clvh0wYFKecpt6LHoYPzSOmdmMt8ron7BqaNF3NGwckDsBk2nglaQKuqQV1EONVsrAw%2FzBRVsljfSQsJU9U6iI%2BLZbzxZq%2Ft7S4HSig%2FeaVqUR3%2FHtoAobeXJeOGaJPa7NE9LneoOB0Q6ai4SnYs%2BR1M5tw9AXCUbfZjBreO11gh9flvSLtSRXtKV6aR2ZRptx8GEwNg%3D%3D" class="img-fluid"
+ alt="...">
+    </div>
+    <div class="col-4 text-center">
+      <div class="imgText">
+      <h4>布質沙發</h4>
+      <p>布料、材質、顏色多樣<br>透氣性佳、不容易悶熱</p>
+    </div>
+    </div>
+    <div class="col-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610443185.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=nd2YIKZiARnJikjGTFuaCSEcxy0UVIcvrBm%2FpglBl1xhl5qOywxFmuX2RnW7GT%2BTCUZGWzIKNmahxXmhP3gfrV3e2IsWPEvIIAbzhyhiDpdbeX7SAs%2FUUWRtHpXzeJp9P%2BTaavCbEVxMTI8S%2FJ%2Baex6iNZM60D7OPH6F2hNsVyd4LluqvpitRciaj7OftJqeZOLFxl6IXXJZB3T0Y3wuWHCNBQp3wBxrFdiGY6A%2FWVf7VDIto9Zlr5neGbQpUwSWwnC4MzaDeHHqPSdWMCtj4Fd0fVviv5gi8%2Bt1Ub5HbRSl2cijuTW%2FffZlTMZSw5J48V8jH4H%2B6iI9GgCSIlHI3A%3D%3D" class="img-fluid" alt="...">
+    </div>
+    <div class="col-4 text-center">
+      <div class="imgText">
+      <h4>半皮沙發</h4>
+      <p>部分皮質為牛皮<br>與全皮外觀差異不大易維護</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row justify-content-center">
     <div class="d-flex flex-column align-items-center flex-wrap mt-3 py-4 col-md-6">
       <h2>
         精選商品
       </h2>
     </div>
-  </div>
   </div>
 </div>
 
@@ -71,8 +101,8 @@
   </div>
 </div>
 
-</div>
-<div class="bg-light mb-4 mb-md-6">
+</div> -->
+<!-- <div class="bg-light mb-4 mb-md-6">
   <div class="container">
     <div class="row align-items-center mt-5">
       <div class="col-md-6 intro-bg ">
@@ -116,68 +146,53 @@
       </div>
     </div>
 </div>
-</div>
+</div> -->
 </template>
+<style>
+.col-4 {
+  margin-right: -12px;
+  margin-left: -12px;
+}
+.imgText{
+  border-style:solid;
+  border-width:1px;
+  margin: 0 2rem;
+  padding: 4rem 0;
+}
+.carousel-item{
+    width:100%;
+    height: 600px !important;
+  }
+  .carousel-item img{
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+  }
+@media (max-width: 1200px){
+  .imgText{
+  margin: 0 1.5rem;
+  padding: 1rem;
+  }
+}
+@media (max-width: 768px){
+  .carousel-item{
+    width:100%;
+    height: 500px !important;
+  }
+  .carousel-item img{
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;height: 100%;
+  }
+}
+
+</style>
 <script>
 
-export default {
-  data() {
-    return {
-      productList: [],
-      cartsList: [],
-      status: {
-        loadingItem: '', // 對應品項id
-      },
-      form: {
-        user: {
-          name: '',
-          email: '',
-          tel: '',
-          address: '',
-        },
-        message: '',
-      },
-      cart: {},
-      coupon_code: '',
-    };
-  },
-  methods: {
-    getProducts() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
-      this.$http.get(url).then((response) => {
-        this.productList = response.data.products;
-        console.log(this.productList);
-      });
-    },
-    getProduct(id) {
-      this.$router.push(`/user/product/${id}`);
-    },
-    addCart(id) {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
-      this.status.loadingItem = id;
-      const cart = {
-        product_id: id,
-        qty: 1,
-      };
-      this.$http.post(url, { data: cart }).then((response) => {
-        this.status.loadingItem = '';
-        console.log('Products', response);
-        this.getCart();
-      });
-    },
-    getCart() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
-      this.$http.get(url).then((response) => {
-        console.log(response);
-        this.cartsList = response.data.data;
-        console.log('cartsList', this.cartsList);
-      });
-    },
-  },
-
-  created() {
-    this.getProducts();
-    this.getCart();
-  },
-};
 </script>
