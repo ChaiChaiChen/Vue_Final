@@ -68,7 +68,7 @@
   </div>
   <div class="row text-center mt-5 text-black align-items-center">
     <h4>New Post</h4>
-    <div class="col-lg-3 col-md-6 mt-3">
+    <div class="col-lg-3 col-md-6 mt-3 ">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629649408.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=qDipYug7%2FuPHex%2B2Edb4cm9l1wSjplWUw45wiRVvhZnUd8StptUkpjM0DjhfwRZqaDBwNB0Uh%2BZP1pfkfKA%2BmW2ENmg6XWgqLlleSLr9Z2%2F4CFSp5LGu%2B%2FxYKM8F1WKOE79%2BVnNQqRXnFhlccxubHWAeaqd9mfW1Twk%2Fi%2BRgB9zHhMDJmqHdBCEC%2FIkmBHUUyh%2BYeV%2Fl%2BFJVn8OwFUtP%2FKl1sz2BGaOC%2FNYSG9pIkaujNY4bNcaoeaK4ONhsrVhmdWK9N%2BpOpshftgw1Iz2kCy2Qa%2Fr%2B5xmQNnMJH4IS%2FW5kFGnT%2BRuNDLK6h7WCYYuxQ5udwp9GatzElsIdWzTCGA%3D%3D" class="img-fluid" alt="">
     </div>
     <div class="col-lg-3 col-md-6 mt-3 text-black link-bottom">傢俱雜誌 第154期<br>2015/1&2月新發行</div>
@@ -122,53 +122,9 @@
   </div>
 </div>
 
-<!-- <div class="bg-light mb-4 mb-md-6">
-  <div class="container">
-    <div class="row align-items-center mt-5">
-      <div class="col-md-6 intro-bg ">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703914279600.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=D3%2BR1cHZTCWTNtNzaAZONyIrLORuBr9wGq6Im25Gm1bX6N2WsKn%2BKTRPzdccYCJpw9xLq6GgJg9TauolJIz1%2BoJlbfwZr412wdy6MpsIlEtyobTyE01MNnmovKPf%2BXhGXUZLOi3yZCBo7f4CK8GLanQZ%2FzTMOcGasSB2Z5JedFOuJMeq9GTJZol%2FkV9QSHwOeGS6T97uOowllwbaFoYdLXwvcrzeL031I%2Bd6OeGT6uP8mPVwIoCyuu4wvE3FVTBszqdflHyQfRn0yOJ8IQhXe1IkkuPR%2FdFzOKBf1VcgpWaKOc0QAH1SufIm1NwR2jmzjrDsfnh3QBwLxwE%2FUZqLyA%3D%3D" class="d-block w-100" alt="...">
-      </div>
-      <div class="col-md-6 d-flex justify-content-center">
-        <div class="d-flex flex-column px-5 py-5">
-          <h4 class="font-md-l fw-bold mb-3 ">提升耐心</h4>
-          <p>魔術方塊並不是非常簡單的益智玩具，從一開始學習六面復原很容易誤判情況，到後期為了追求速度，相同的動作需要練習千萬次，這些都需要很大份量的耐心還有試誤。可以說玩魔術方塊的同時，也是在鍛鍊孩子的意志力。</p>
-        </div>
-      </div>
-    </div>
-</div>
-</div>
-<div class="bg-light mb-4 mb-md-6">
-  <div class="container">
-    <div class="row align-items-center mt-5">
-      <div class="col-md-6 d-flex justify-content-center order-2 order-md-1">
-        <div class="d-flex flex-column px-5 py-5">
-          <h4 class="font-md-l fw-bold mb-3 ">增加專注力</h4>
-          <p>為了提高復原魔方的速度、減少出錯的機率，進階的玩家會相當專心於當下的轉動，同時眼睛大量接收色彩，腦內快速預判下一步的狀況，這些操作需要高度專注才可以達成。你在看到孩子轉得更快的同時，也代表著他更專注於當下。</p>
-        </div>
-      </div>
-      <div class="col-md-6 intro-bg intro-fashion order-1 order-md-2">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703914139053.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=cyrJFB59Z%2FJGSk4AoWv43nVYxFbfXcvm24FNkFNCJUxk%2BD%2BVMFNftogpATjpLpR9CceDSXIr253popa9IQEMtcfJvWcp9cUTbX%2BgNWU7r7VfFo8GkunTwTPILnciHBR6%2FyiyC1Dx%2BJLh1dbLP3Gl4xMuGxkCEXnubH7TbsY1d8ylYyuk1VfWvTgvaR3SVEMguzA2BzWpgUj2bzx%2B1LpGUc6qD0zqRXqh57MG0ThpLes%2Bwl4VR9IiefqHEDh8f4Yt08J8q75cXws3S2Q4kEHCg16tkfuRJMhrHwGQoYy0m%2F3IaswymBtPy7zkg8Wgme2WLzJObmYSLADaY0wPB8S8fw%3D%3D" class="d-block w-100" alt="...">
-      </div>
-    </div>
-</div>
-</div>
-<div class="bg-light mb-4 mb-md-6">
-  <div class="container">
-    <div class="row align-items-center mt-5">
-      <div class="col-md-6 intro-bg ">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703868398709.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Wy3Vx5Gqt2%2BJlLH4XTESOEItQz4LzW%2BvUkOMjKtdjvnwJ9nirxiym0rKR0lWT460md9V78v2htavEmyBK1O1sTUazx04gpn8gQqZGRKJ9MD7g0KYmk2JXRjX2hkgUx2E4MuD%2F10Zf3j702dP3r3BfVlp1qnk%2BvH2H%2FjJcUxjO2qo5jC%2FqFDyxDlapPEa%2FUMgV7pKxFR33f8MgSsjfzMYxOgrjLIqJvVfRskigEV2AVk6eLO5eYhMTlUBwQViz9Dyjn8c%2BkNXge1k3Q0qFHG9GGmMlUkZa%2FsQtSqkExwRnzd7vMOH75ccod5aNw%2F8tJRjcfodgUURQ0UBwt%2FfJjEnYA%3D%3D" class="d-block w-100" alt="...">
-      </div>
-      <div class="col-md-6 d-flex justify-content-center">
-        <div class="d-flex flex-column px-5 py-5">
-          <h4 class="font-md-l fw-bold mb-3 ">提升自信</h4>
-          <p>多數人的想法，認為小孩轉魔方都只是在「亂轉」而已，而如果此時你的小孩是真的有辦法轉回來，甚至是能很快地轉回來，肯定是會成為焦點的，這讓孩子不僅可以從掌聲與讚嘆中獲得自信，也會在同年齡的孩子中多一個可以暢快聊天的話題。</p>
-        </div>
-      </div>
-    </div>
-</div>
-</div> -->
 </template>
 <style>
+
 .link-bottom{
   border-bottom: solid #888888 1px;
 }

@@ -1,8 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <router-link to="/user/cart" class="navbar-brand mt-2 ms-3"><h2>
-        <strong>Soffa</strong></h2></router-link>
+      <router-link to="/user/cart" class="navbar-brand mt-2 ms-3">
+        <img src="../assets/static/soffa.png" style="height:60px;" alt="">
+        </router-link>
       <button class="navbar-toggler" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
