@@ -62,7 +62,7 @@
       <p>部分皮質為牛皮<br>與全皮外觀差異不大易維護</p>
     </div>
     </div>
-    <div class="col-3 text-center mt-3">
+    <div class="col-6 text-center mt-3">
       <button class="btn btn-btn-bg btn-lg text-white">View More</button>
     </div>
   </div>
