@@ -35,35 +35,30 @@
 </div>
 <div class="container mt-5 text-theme">
   <div class="row row-cols-3 justify-content-center align-items-center">
-    <div class="col-4">
+    <div class="col-4 text-center g-0">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610430929.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=dYoP%2FdWfpLPM0NJCQqJiHuV18SOP0UcVoeJ5tymjkD%2BdCYx6NILs7taavSwtiCaETrpwHFeV1qahluNkdCV0gjNuigqabK7s%2FxhYRvX%2BNh1kpgHBgGoQTQxmMM8AgM0l8k8zPzH5M2E1sEjiX9VvNc7Ucmt9PUNQcOldoDuQO3CGp8y%2FnwD6MyHtZ5dkcnctefbQ5J%2B%2BS3HS2IzRVh%2BSujibSN19zgvnwttIbVQLIspGUVy3pKWx%2BPzoHudwh3l71mqk0F54nYMvwoOjZQVBtPCFWejqSuaydPhmicTRDsQgl6aaannovtl8fkNIfDnP3zW65joXZNu3U7CGIbqjIQ%3D%3D" class="img-fluid" alt="...">
-    </div>
-    <div class="col-4 text-center">
-      <div class="imgText">
-      <h4>全皮沙發</h4>
-      <p>原料都來自精心維護的天然牛皮<br>天然皮革透氣度佳</p>
-    </div></div>
-    <div class="col-4">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610411908.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Ro08U3YaRBiEopdiPuILAIiiR1%2BnvY248%2FWgXhUDElH6fw9TMvUvw1z56vQzMRSJQoT5IH3r8SoR7%2FkNJ09NjlbvzZQXD0omrxdd3TykzW67AZLNaVmxIfXMWmCt4Wh%2BjGK7g2Jp2xlqe0Clvh0wYFKecpt6LHoYPzSOmdmMt8ron7BqaNF3NGwckDsBk2nglaQKuqQV1EONVsrAw%2FzBRVsljfSQsJU9U6iI%2BLZbzxZq%2Ft7S4HSig%2FeaVqUR3%2FHtoAobeXJeOGaJPa7NE9LneoOB0Q6ai4SnYs%2BR1M5tw9AXCUbfZjBreO11gh9flvSLtSRXtKV6aR2ZRptx8GEwNg%3D%3D" class="img-fluid"
- alt="...">
-    </div>
-    <div class="col-4 text-center">
-      <div class="imgText">
+      <div class="imgText mt-4">
       <h4>布質沙發</h4>
       <p>布料、材質、顏色多樣<br>透氣性佳、不容易悶熱</p>
     </div>
     </div>
-    <div class="col-4">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610443185.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=nd2YIKZiARnJikjGTFuaCSEcxy0UVIcvrBm%2FpglBl1xhl5qOywxFmuX2RnW7GT%2BTCUZGWzIKNmahxXmhP3gfrV3e2IsWPEvIIAbzhyhiDpdbeX7SAs%2FUUWRtHpXzeJp9P%2BTaavCbEVxMTI8S%2FJ%2Baex6iNZM60D7OPH6F2hNsVyd4LluqvpitRciaj7OftJqeZOLFxl6IXXJZB3T0Y3wuWHCNBQp3wBxrFdiGY6A%2FWVf7VDIto9Zlr5neGbQpUwSWwnC4MzaDeHHqPSdWMCtj4Fd0fVviv5gi8%2Bt1Ub5HbRSl2cijuTW%2FffZlTMZSw5J48V8jH4H%2B6iI9GgCSIlHI3A%3D%3D" class="img-fluid" alt="...">
+    <div class="col-4 text-center gx-0">
+      <div class="imgText mb-5 mt-5">
+        <h4>全皮沙發</h4>
+        <p>原料都來自精心維護的天然牛皮<br>天然皮革透氣度佳</p>
+      </div>
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610411908.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Ro08U3YaRBiEopdiPuILAIiiR1%2BnvY248%2FWgXhUDElH6fw9TMvUvw1z56vQzMRSJQoT5IH3r8SoR7%2FkNJ09NjlbvzZQXD0omrxdd3TykzW67AZLNaVmxIfXMWmCt4Wh%2BjGK7g2Jp2xlqe0Clvh0wYFKecpt6LHoYPzSOmdmMt8ron7BqaNF3NGwckDsBk2nglaQKuqQV1EONVsrAw%2FzBRVsljfSQsJU9U6iI%2BLZbzxZq%2Ft7S4HSig%2FeaVqUR3%2FHtoAobeXJeOGaJPa7NE9LneoOB0Q6ai4SnYs%2BR1M5tw9AXCUbfZjBreO11gh9flvSLtSRXtKV6aR2ZRptx8GEwNg%3D%3D" class="img-fluid"
+ alt="...">
     </div>
-    <div class="col-4 text-center">
-      <div class="imgText">
+    <div class="col-4 text-center g-0">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610443185.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=nd2YIKZiARnJikjGTFuaCSEcxy0UVIcvrBm%2FpglBl1xhl5qOywxFmuX2RnW7GT%2BTCUZGWzIKNmahxXmhP3gfrV3e2IsWPEvIIAbzhyhiDpdbeX7SAs%2FUUWRtHpXzeJp9P%2BTaavCbEVxMTI8S%2FJ%2Baex6iNZM60D7OPH6F2hNsVyd4LluqvpitRciaj7OftJqeZOLFxl6IXXJZB3T0Y3wuWHCNBQp3wBxrFdiGY6A%2FWVf7VDIto9Zlr5neGbQpUwSWwnC4MzaDeHHqPSdWMCtj4Fd0fVviv5gi8%2Bt1Ub5HbRSl2cijuTW%2FffZlTMZSw5J48V8jH4H%2B6iI9GgCSIlHI3A%3D%3D" class="img-fluid" alt="...">
+      <div class="imgText mt-4">
       <h4>半皮沙發</h4>
       <p>部分皮質為牛皮<br>與全皮外觀差異不大易維護</p>
     </div>
     </div>
     <div class="col-6 text-center mt-3">
-      <button class="btn btn-btn-bg btn-lg text-white">View More</button>
+      <button class="btn btn-btn-bg btn-lg text-white btn-view">View More</button>
     </div>
   </div>
   <div class="row text-center mt-5 text-black align-items-center">
@@ -88,50 +83,62 @@
 </div>
 <div class="container-fluid mt-5">
   <div class="row align-items-center bg-text-bg">
-    <div class="col-md-6 intro-bg">
+    <div class="col-md-6 gx-0">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704630851982.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EEJ6SWnOGN00q9y%2FSBTUtgkHmQTQWdwQ5qFg%2Bqwaw38FyXSne0lRC2wUGJHeXENwSXvKE934882CKAOpHg2V4VGCpVOhCX%2FW%2F2%2BuBLsaGdjp0ottIhAXiCBimlwWX4GWSY8MG8XLc%2FtH%2FOg3Lw6h1453ELQhy%2BdVQF85BvRsNgjrt7M5PJUF6k2X5w0giWO0Ahae2BEXpA%2BrmA%2FJC5kMibLbeVlGIGXwTzRNHpTruGh1UTuDK5245QY5kd0AInO%2F6FaZdyWxoylbQMkHW%2BvWRzyWdpkVNtpbvlmTFUHPcnQFUG9kcv41iAaMqBDuxQnRoM%2FZtyjQSvYjiCAb469P0w%3D%3D" class="img-fluid" alt="...">
     </div>
-    <div class="col-md-6 d-flex justify-content-center">
-      <div class="d-flex flex-column px-5 py-5">
+    <div class="col-md-6 d-flex justify-content-center gx-0">
+      <div class="d-flex flex-column m-5">
         <h4 class="font-md-l fw-bold mb-3 ">一個人的沙發｜享受孤獨    擁有專屬空間</h4>
-        <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
+        <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，<br>即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
       </div>
     </div>
   </div>
   <div class="row align-items-center">
-      <div class="col-md-6 d-flex justify-content-center order-2 order-md-1">
-        <div class="d-flex flex-column px-5 py-5">
-          <h4 class="font-md-l fw-bold mb-3 ">沙發上享受家庭團聚時光</h4>
-          <p>依照不同的居家風格，與家人朋友一同共度美好時光。</p>
-        </div>
-      </div>
-      <div class="col-md-6 intro-bg intro-fashion order-1 order-md-2">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704631781122.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MiTl%2Be8BdkiJPr2Y4yxtH1UjZveKc2jx81pJ4g4GP2PNiObL%2B2h3E7JLi3nYTVwYHI96z6EdorydbSToOnj956Q4Fi1RkO3K%2FR5LA9W%2FNigZEY%2F9KzrxOASlQzI2bTr59HsMXD05Sd3YSJ%2B5sX1F5r2REaF8sSX%2FHkavP5BPr2qLbYEyXGR%2B7qGzy55AL0e7xbgG6FdEmKJMBFwdIpOyX3p1iYghEH4MA2op6HZL2lwjKREceZbGttmRGK4Ibar85lN4RqyeGIMJZnEJ7yZyNys3izVyLjjjaIQxNTO%2BGAmj8Vjtuv9OA24Gy1nqYcnWJlfYAe6uBUFA4X4HTJaIhQ%3D%3D" class="img-fluid" alt="...">
+    <div class="col-md-6 d-flex justify-content-center order-2 order-md-1 gx-0">
+      <div class="d-flex flex-column m-5">
+        <h4 class="font-md-l fw-bold mb-3 ">沙發上享受家庭團聚時光</h4>
+        <p>依照不同的居家風格，與家人朋友一同共度美好時光。</p>
       </div>
     </div>
+    <div class="col-md-6 intro-fashion order-1 order-md-2 gx-0">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704631781122.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MiTl%2Be8BdkiJPr2Y4yxtH1UjZveKc2jx81pJ4g4GP2PNiObL%2B2h3E7JLi3nYTVwYHI96z6EdorydbSToOnj956Q4Fi1RkO3K%2FR5LA9W%2FNigZEY%2F9KzrxOASlQzI2bTr59HsMXD05Sd3YSJ%2B5sX1F5r2REaF8sSX%2FHkavP5BPr2qLbYEyXGR%2B7qGzy55AL0e7xbgG6FdEmKJMBFwdIpOyX3p1iYghEH4MA2op6HZL2lwjKREceZbGttmRGK4Ibar85lN4RqyeGIMJZnEJ7yZyNys3izVyLjjjaIQxNTO%2BGAmj8Vjtuv9OA24Gy1nqYcnWJlfYAe6uBUFA4X4HTJaIhQ%3D%3D" class="img-fluid" alt="...">
+    </div>
+  </div>
     <div class="row align-items-center bg-text-bg">
-    <div class="col-md-6 intro-bg">
+    <div class="col-md-6 gx-0">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704630851982.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EEJ6SWnOGN00q9y%2FSBTUtgkHmQTQWdwQ5qFg%2Bqwaw38FyXSne0lRC2wUGJHeXENwSXvKE934882CKAOpHg2V4VGCpVOhCX%2FW%2F2%2BuBLsaGdjp0ottIhAXiCBimlwWX4GWSY8MG8XLc%2FtH%2FOg3Lw6h1453ELQhy%2BdVQF85BvRsNgjrt7M5PJUF6k2X5w0giWO0Ahae2BEXpA%2BrmA%2FJC5kMibLbeVlGIGXwTzRNHpTruGh1UTuDK5245QY5kd0AInO%2F6FaZdyWxoylbQMkHW%2BvWRzyWdpkVNtpbvlmTFUHPcnQFUG9kcv41iAaMqBDuxQnRoM%2FZtyjQSvYjiCAb469P0w%3D%3D" class="img-fluid" alt="...">
     </div>
-    <div class="col-md-6 d-flex justify-content-center">
-      <div class="d-flex flex-column px-5 py-5">
+    <div class="col-md-6 d-flex justify-content-center gx-0">
+      <div class="d-flex flex-column m-5">
         <h4 class="font-md-l fw-bold mb-3 ">一個人的沙發｜享受孤獨    擁有專屬空間</h4>
-        <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
+        <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，<br>即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
       </div>
     </div>
   </div>
+<div class="row">
+  <div class="col-12 middleBg gy-0 d-flex align-items-center justify-content-center">
+    <button class="btn btn-btn-bg btn-lg btn-view">領取優惠碼</button>
+  </div>
+</div>
 </div>
 
 </template>
 <style>
+.middleBg{
+  background-size: cover;
+  background-position: center;
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url("https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704682267504.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=c4MWBs77ZM%2BOOl%2Ftm8wxNuw6Tk249vNTizbweLH4meFXjh8KyNl%2FsxlFGXaB%2Bv59FIo2PL8mzvo0XZ5b9mYropKqidJjKuQYPlpwrHy3hptZ%2BZxOi9HhltAeFNdIWVdityjeTZi%2F%2Be9EXb3v8la9j2VUKx8X6N1pITbPDCWJR7P%2FI3sy5LTTpQHkmuSpy71QcJ04frqTp33WtIm5Lfy6lsAERsXpMWmG8fG8DkvmJzjqGVNE5%2B4%2FLc8smGs%2F49g%2FPBr0b1dli4LjPDQtFlkazeyr2uSToIL5KWKymJilcfKzEHLhkzicaGSCzUfkdh0cIw03A56gFWkTCQwCitM6Ow%3D%3D");
+  background-attachment: fixed;
+  height: 400px;
+  margin: 100px 0;
+  position: relative;
+  display: block;
+}
 
 .link-bottom{
   border-bottom: solid #888888 1px;
 }
-.col-4 {
-  margin-right: -12px;
-  margin-left: -12px;
-}
+
 .imgText{
   border-style:solid;
   border-width:1px;
@@ -173,5 +180,6 @@
 
 </style>
 <script>
-
+export default {
+};
 </script>
