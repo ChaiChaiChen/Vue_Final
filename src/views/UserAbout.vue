@@ -1,38 +1,44 @@
 <!-- eslint-disable max-len -->
 <template>
-  <div class="banner">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703908235018.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=HMirTBLqIDnBljng1KfXDplpROeMbDTPnuByMw7zyhfEA68A1cJ50BtPiG5fy%2BK0tNn%2Fp2LrpF01mQN7L0Q0eJxm19w6GYS0BiabUcYqF4gy0iYbvPB7qgrmG1duyOETR16Ms8zwRkt2hd1oM%2F3Fbi78sn%2FRjheIcp8X%2BdVQjvdaINQsxsn5GKyvFHjdfG8QzqmI4%2FR2WuDhWzZNQbfqGX49PM0H%2Bedb%2FuABPzfu7Zgknnxx6SBoj4tLIiJFByfKEbeu%2F6gEZh1mOoEmspR84XpnGVedOA9AJQm8I9c%2FK9bTcZbtG8GshqrXNR7PU%2FzOBv1%2FdANSkDZQXhhrYQqb5Q%3D%3D" class="d-block w-100" alt="...">
-
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704688694154.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=TDqPpRKduKijGpwaoRFJepfnRIfVupIvLLZe9pIoUDztJ5T0%2B5gd74UhQAYGPuJbfa713z%2FGCNmeWbrXGVJJMLIAi%2BkLgDX1b5CYuSDzhtBke4vmafE4%2FZIuJl0DW1x1F34UbBTZTH%2F52yIVBQGKhgeQG3JNP6hYOl9t82FsaWYibPEH%2FhL2UVJMss8FsKbNfH0zVbxF96Uk9HDAD3jjRDfKsQnmJ5gzeLVtU3vP6GI7C%2B1ATnTWWxsJWG0UjUXF0mKvIB38f5yT7n%2FFRHPAwoPCqrx4d70Wkxxjd5R58VPD%2BST65W0%2FjGNCyf35O2YE42Y%2FXeQlvxgbScHKFMQ5og%3D%3D" class="img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block justify-content-center carousel-text">
+        <h1><strong>關於我們</strong></h1>
+      </div>
+      </div>
+    </div>
   </div>
-<div class="bg-light mb-4 mb-md-6">
-  <div class="container">
-    <div class="row align-items-center mt-5">
-      <div class="col-md-6 d-flex justify-content-center order-2 order-md-1">
-        <div class="d-flex flex-column px-5 py-5">
-          <h2 class="font-md-xl fw-bold mb-5">關於Rubik's cube shop</h2>
-          <p>Rubik's cube為專業魔術方塊品牌，除了研發各式魔術方塊及相關產品外，也代理國內外各廠牌之魔術方塊，為各年齡層之魔術方塊愛好者提供最專業的產品與服務。
-除了研發、生產、代理魔術方塊產品，Rubik's cube也熱衷於舉辦各種規模的魔術方塊比賽，致力於推廣魔術方塊運動，不遺餘力，希望讓魔術方塊成為全民運動，男女老少一同享受動腦解題的樂趣！</p>
-        </div>
+<div class="container mt-5 mb-5">
+  <div class="row row-cols-3">
+    <div class="col-3 mt-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704702228996.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=DqDO8GjdIXDFACQYa6H%2FOSPWSOlnqQeQ2fv%2FcEUffVlZGk8zms30MkCYg%2FBQhyGKXmW4MHCI3QGCfzc99M9SFy0rRzOntiVMOtDp63rP1utcGWXCXZbTftaLGa5Oj2rCEr9D529QfOfRVp7h5Nt%2F2YU1GxoCARDM8rMuZCmA8I2LAeQDwKWISLaj9EEiy3CNVQcbWPtNWO%2FQVKn8MfZZSm5AIHXn%2Fy3WcAjj6iutBIYKEedidOXhV3WIfk%2BilAZY4%2BiAp2pRdSB6Bc2ZuRGU0jxMQMmQ4noOkYd4qiS%2FXZi8E0gd5l4BBupVx%2F8BzALVKOKacX426au7djho3HF2pA%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
+    </div>
+    <div class="col-5 mt-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704703524798.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=UMfqo9FFsZmvUB5kI0MQM8AMJL%2BTxXedgwRW3lgFC6gb05Q0Jq17XlgvkHIdw3TN8Gm5o0%2BQ%2B9wWJW%2FT83%2Fb%2BicNezBJWcp01uDn8V8EUyWxkWcsJLPihNTl%2FD6RqJh7rm3%2BO4wbPYL2Jc%2BmYaMH59lnMvikZlzDqN1qDKYB990j86EgB%2BCdEL8AGORQ0g4OTVM2G9JrjSIVq1aR1XwC%2BSpSsAJH73i7SX5EC2Yjwvc%2FE0BsT0nsonJ9ii%2F1kUQU0XOyuV2lUnSD6hzNejxL5GzohaUvWghZp77Gbux8hgKzhPg1XBenNU9%2BJ1sur8oX8ufmAoTR4nNyIO8dXOYNBg%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
+    </div>
+    <div class="col-4 mt-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704703930087.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=HmJy6Ni0PphY6WnmcFz04WsUG5tw1Uo6ZHJG2%2BRfcHM6jsmCcTuWtve7rNAzaYcVUkl9ons9Vc42tq6De40MvmoIC8AS2CiOdMAN%2ByejjHyzQ6RebC8V11P6tYFpODOD69j1jHWWLRUpsqPrjPHarjTwKVY6TQYmVKBRscofJQTLVhu5Ehsz2nHlxGA0VAKMYl86pOVouVqcukIDndiPD9340oIIvxYdRcxjKmKVzkCzo1yHr2EzDWfRyrW6eCk1%2FCUBIJM%2FuNFIqFHQgD3lJWdW8hitPhy3feDSukxuzeIyQbUeykWEHXKGeovTyEnia6CZROeFxv5iTN8SnvxC5w%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
+    </div>
+    <div class="col-3" style="margin-top: -12rem;">
+      <div class="col">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704703984361.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=NQw7onIF9X3R1MA5xb17CR%2FaezYYGtGZh1fNgtpCO1fGyvI%2Bi%2FS6jCe5%2Fp5eN9Q9sG7v0h2bC1CAWK5h8KJCRLmw82gp75XOBXXy%2BNTP625VK7qnAKIPcqXCMEKEPuFExbtFfrIlUrJEphfdo3v8ENFpUr4n%2F5%2Bpj%2FUBPvqHMf5n1FKBWVUUXWuW%2BANedfnBF3v4fzXDQwroc1qjYL3GKGLqS%2BCUkrr8wX4xjMuCuBvOWISCnVW6aFXhQtNWMjSEparbDu%2BEUIPTn51ynNC%2F42QBNboMHIQmZvb1tS4IDRzEZZB5dq5n4bhwARRo%2BOAe9cbug0GYSAZe28ecRQP5Ew%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
       </div>
-      <div class="col-md-6 intro-bg intro-fashion order-1 order-md-2">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703868398709.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Wy3Vx5Gqt2%2BJlLH4XTESOEItQz4LzW%2BvUkOMjKtdjvnwJ9nirxiym0rKR0lWT460md9V78v2htavEmyBK1O1sTUazx04gpn8gQqZGRKJ9MD7g0KYmk2JXRjX2hkgUx2E4MuD%2F10Zf3j702dP3r3BfVlp1qnk%2BvH2H%2FjJcUxjO2qo5jC%2FqFDyxDlapPEa%2FUMgV7pKxFR33f8MgSsjfzMYxOgrjLIqJvVfRskigEV2AVk6eLO5eYhMTlUBwQViz9Dyjn8c%2BkNXge1k3Q0qFHG9GGmMlUkZa%2FsQtSqkExwRnzd7vMOH75ccod5aNw%2F8tJRjcfodgUURQ0UBwt%2FfJjEnYA%3D%3D" class="d-block w-100" alt="...">
+      <div class="col mt-4">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704704026779.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=g6vwX7QWPXwgyb69DGtpprcP7PblGQuEXHutGH7zDprKTZjRqyiUl3CyC9fP1AiwEzfX7hj3fDKQdJzPJwCume%2B%2BAmxJ6puA63xBGX3DIc20QLUZCSYZZA6WTtpM80tux8aRAv2yYTGk57IpmSznWWQJ0NfOYKXiAONjoakD91xsvG3kf%2BDvwqfo5r%2Bc3BVgno3v3vgUxq2fEPcGMqBzelCzvgpERYywJ4JrRJ%2Be96ynemrNW6CQ44Q%2BCuHREowfQZNf%2FlEa0zgHvj3WotwyV7K5fXi37l6wBS68%2FqKVytfn%2B7X%2BUTPPRxwh82vagEaEPyBXC3ff%2Bil8alrGhWDMvA%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
       </div>
     </div>
-</div>
-</div>
-<div class="bg-light mb-4 mb-md-6">
-  <div class="container">
-    <div class="row align-items-center mt-5">
-      <div class="col-md-6 intro-bg ">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703868398709.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Wy3Vx5Gqt2%2BJlLH4XTESOEItQz4LzW%2BvUkOMjKtdjvnwJ9nirxiym0rKR0lWT460md9V78v2htavEmyBK1O1sTUazx04gpn8gQqZGRKJ9MD7g0KYmk2JXRjX2hkgUx2E4MuD%2F10Zf3j702dP3r3BfVlp1qnk%2BvH2H%2FjJcUxjO2qo5jC%2FqFDyxDlapPEa%2FUMgV7pKxFR33f8MgSsjfzMYxOgrjLIqJvVfRskigEV2AVk6eLO5eYhMTlUBwQViz9Dyjn8c%2BkNXge1k3Q0qFHG9GGmMlUkZa%2FsQtSqkExwRnzd7vMOH75ccod5aNw%2F8tJRjcfodgUURQ0UBwt%2FfJjEnYA%3D%3D" class="d-block w-100" alt="...">
-      </div>
-      <div class="col-md-6 d-flex justify-content-center">
-        <div class="d-flex flex-column px-5 py-5">
-          <h4 class="font-md-l fw-bold mb-3 ">公司理念</h4>
-          <p>Rubik's cube 是對於喜愛魔術方塊的一群合夥人所創立的公司。我們使用國內生產再利用網購的方式，目的就是想讓喜愛解開魔術方塊的顧客們 讓大家能夠簡單、輕鬆與便宜的價格購買高品質魔術方塊。</p>
-        </div>
-      </div>
+    <div class="col-2" style="margin-top: -15.5rem;">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704704298448.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=YYL0Q619ew5zj60LljRsx1QOraSAqefd09lmTllo%2BPlvB9aFiPR7p%2B0bKDeaXR%2Fo5UEJXZ4rcELRAeAqmNA32RE2As2VDl4T14KBM60qlsHhzERwfiPQiYWcz299TvMZ5oygg111az63EBb5jKZr3l84WHWQJV4j1ZL5k40ETx47%2FDaY3hJjc7xsmCleozaUMoN1eTU47XOWb4BiZVImQ0owoamr76KpGwGOP89CJJvmIdqBV7OCKDPkvqEvj0gQr8mRoBPU%2BBCIPMrLiR%2BhZlWXNwwIIE%2B6iNHkO50lB5mkYDTbMeeq%2B9Z2%2FKYBisbA0bN%2BZl54bsvQTfqib6lDvg%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
     </div>
-</div>
+    <div class="col-3" style="margin-top: -15.5rem;">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704704240765.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Rs4HNShMcBjpiZLF6dtLJCnVGYjZUuLPBpGgUvOkHWna1FI%2BuZHFo7JM1hvc5WpzSHKKfQvUQycQKzg%2BjBwEW6nFw8dOdLawtweiSs7iLhKFU74BURlNs3kNziOrdzly65cpxcVnZHoK7mPG4KYGmkl2EzCKc7BeNv8Pn3yZdY%2FURLkSsxiS2t0N2gclha2SSlb8fVcPoPTAY8ie2VjWs6MdonLWDdroUfvH0GZtXwkOk5OhwMxkhdY7%2FTyC%2BhKcR%2Fh5V03RFqUUwLIte0NILabxbZUYC%2FRPLYmz1iCwI9q91CoqKFqtwZiB8MHZ3QazomshLh8eqT9EJm381lfloA%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
+    </div>
+    <div class="col-4 mt-4">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704704370543.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Xfrr5Tc9Mzpk7pKbsFow3CWEtrDfxQ7KKMAkQSyoLybbewB1vFiH7DGxy6eM04PAfeHhDmf%2FocGW0UizPTfYV43CsP5gAjdcPZJadxv6bKjScLZCfKSoxJub2nN66SH1fxRjQ8ev5sXgIbe%2FKjqWF4DeBPjvDHYS0h%2BbzNDTSil6rNA05iFSH4k471R3cYdsl0tvrkz4uZbVgHFXe5LHfiPyWCBaR4iGnjLiQgDpvRUCr0UQC9lOIVPqU0rSgNwsrbs5B%2B3B8rwGsRQSB5XQQAXZOjgn7yPaRo7dwFkC1FAGv9kKKB7vCQDFaWks2byj8dhAkFff9FV3D27%2FZa2HhQ%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
+    </div>
+  </div>
+
 </div>
 </template>

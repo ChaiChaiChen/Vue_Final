@@ -34,15 +34,15 @@
   </div>
 </div>
 <div class="container mt-5 text-theme">
-  <div class="row row-cols-3 justify-content-center align-items-center">
-    <div class="col-4 text-center g-0">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-4 col-md-12 text-center g-0">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610430929.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=dYoP%2FdWfpLPM0NJCQqJiHuV18SOP0UcVoeJ5tymjkD%2BdCYx6NILs7taavSwtiCaETrpwHFeV1qahluNkdCV0gjNuigqabK7s%2FxhYRvX%2BNh1kpgHBgGoQTQxmMM8AgM0l8k8zPzH5M2E1sEjiX9VvNc7Ucmt9PUNQcOldoDuQO3CGp8y%2FnwD6MyHtZ5dkcnctefbQ5J%2B%2BS3HS2IzRVh%2BSujibSN19zgvnwttIbVQLIspGUVy3pKWx%2BPzoHudwh3l71mqk0F54nYMvwoOjZQVBtPCFWejqSuaydPhmicTRDsQgl6aaannovtl8fkNIfDnP3zW65joXZNu3U7CGIbqjIQ%3D%3D" class="img-fluid" alt="...">
       <div class="imgText mt-4">
       <h4>布質沙發</h4>
       <p>布料、材質、顏色多樣<br>透氣性佳、不容易悶熱</p>
     </div>
     </div>
-    <div class="col-4 text-center gx-0">
+    <div class="col-lg-4 col-md-12 text-center gx-0">
       <div class="imgText mb-5 mt-5">
         <h4>全皮沙發</h4>
         <p>原料都來自精心維護的天然牛皮<br>天然皮革透氣度佳</p>
@@ -50,7 +50,7 @@
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610411908.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Ro08U3YaRBiEopdiPuILAIiiR1%2BnvY248%2FWgXhUDElH6fw9TMvUvw1z56vQzMRSJQoT5IH3r8SoR7%2FkNJ09NjlbvzZQXD0omrxdd3TykzW67AZLNaVmxIfXMWmCt4Wh%2BjGK7g2Jp2xlqe0Clvh0wYFKecpt6LHoYPzSOmdmMt8ron7BqaNF3NGwckDsBk2nglaQKuqQV1EONVsrAw%2FzBRVsljfSQsJU9U6iI%2BLZbzxZq%2Ft7S4HSig%2FeaVqUR3%2FHtoAobeXJeOGaJPa7NE9LneoOB0Q6ai4SnYs%2BR1M5tw9AXCUbfZjBreO11gh9flvSLtSRXtKV6aR2ZRptx8GEwNg%3D%3D" class="img-fluid"
  alt="...">
     </div>
-    <div class="col-4 text-center g-0">
+    <div class="col-lg-4 col-md-12 text-center g-0">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610443185.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=nd2YIKZiARnJikjGTFuaCSEcxy0UVIcvrBm%2FpglBl1xhl5qOywxFmuX2RnW7GT%2BTCUZGWzIKNmahxXmhP3gfrV3e2IsWPEvIIAbzhyhiDpdbeX7SAs%2FUUWRtHpXzeJp9P%2BTaavCbEVxMTI8S%2FJ%2Baex6iNZM60D7OPH6F2hNsVyd4LluqvpitRciaj7OftJqeZOLFxl6IXXJZB3T0Y3wuWHCNBQp3wBxrFdiGY6A%2FWVf7VDIto9Zlr5neGbQpUwSWwnC4MzaDeHHqPSdWMCtj4Fd0fVviv5gi8%2Bt1Ub5HbRSl2cijuTW%2FffZlTMZSw5J48V8jH4H%2B6iI9GgCSIlHI3A%3D%3D" class="img-fluid" alt="...">
       <div class="imgText mt-4">
       <h4>半皮沙發</h4>
@@ -58,7 +58,9 @@
     </div>
     </div>
     <div class="col-6 text-center mt-3">
-      <button class="btn btn-btn-bg btn-lg text-white btn-view">View More</button>
+      <router-link to="/user/products">
+        <button class="btn btn-btn-bg btn-lg text-white btn-view">View More</button>
+      </router-link>
     </div>
   </div>
   <div class="row text-center mt-5 text-black align-items-center">
@@ -100,13 +102,13 @@
         <p>沙發不僅是一張椅子，更是家庭生活的精華。它象徵著愛、溫馨和共享，是家人聚集的場所，擁抱著每一個家庭成員的獨特故事。無論是歡笑還是淚水，沙發都是家庭中最溫暖的存在。</p>
       </div>
     </div>
-    <div class="col-md-6 intro-fashion order-1 order-md-2 gx-0">
+    <div class="col-md-6 order-1 order-md-2 gx-0">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704631781122.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MiTl%2Be8BdkiJPr2Y4yxtH1UjZveKc2jx81pJ4g4GP2PNiObL%2B2h3E7JLi3nYTVwYHI96z6EdorydbSToOnj956Q4Fi1RkO3K%2FR5LA9W%2FNigZEY%2F9KzrxOASlQzI2bTr59HsMXD05Sd3YSJ%2B5sX1F5r2REaF8sSX%2FHkavP5BPr2qLbYEyXGR%2B7qGzy55AL0e7xbgG6FdEmKJMBFwdIpOyX3p1iYghEH4MA2op6HZL2lwjKREceZbGttmRGK4Ibar85lN4RqyeGIMJZnEJ7yZyNys3izVyLjjjaIQxNTO%2BGAmj8Vjtuv9OA24Gy1nqYcnWJlfYAe6uBUFA4X4HTJaIhQ%3D%3D" class="img-fluid" alt="...">
     </div>
   </div>
     <div class="row align-items-center bg-text-bg">
     <div class="col-md-6 gx-0">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704630851982.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EEJ6SWnOGN00q9y%2FSBTUtgkHmQTQWdwQ5qFg%2Bqwaw38FyXSne0lRC2wUGJHeXENwSXvKE934882CKAOpHg2V4VGCpVOhCX%2FW%2F2%2BuBLsaGdjp0ottIhAXiCBimlwWX4GWSY8MG8XLc%2FtH%2FOg3Lw6h1453ELQhy%2BdVQF85BvRsNgjrt7M5PJUF6k2X5w0giWO0Ahae2BEXpA%2BrmA%2FJC5kMibLbeVlGIGXwTzRNHpTruGh1UTuDK5245QY5kd0AInO%2F6FaZdyWxoylbQMkHW%2BvWRzyWdpkVNtpbvlmTFUHPcnQFUG9kcv41iAaMqBDuxQnRoM%2FZtyjQSvYjiCAb469P0w%3D%3D" class="img-fluid" alt="...">
+      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704699055694.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=U%2F7Iow4ZIgyBjcRrwNPmAYY5vqC%2FomMRT6sFMlUgH9z6eHOeAnBsuv99fA7RY6VYQhGY49aeGmP8vHmCgTVb2BsQxUxbbH7bI76PVqrAdS562HzP7Z19WK6ZnC7fE%2FZ75QMz4lU4NN8HGTn9p2PTe1M1EaU917pJVcAzYuGgUHYbieq9lrgDRHN64Byzk6KBp%2Faj19mv8%2Bl0pmdwqXB%2FubciiHngWkF4bHvPJHbChE%2BUY%2BZ1qfMQoOtSJuVZnM5mTeH3QQJRfNSOlO0DcMJKBKng%2FTaQSiZ98CbDix1ooEuVzbWMeWM7FKvQZntCHXH6IjzIkr3k5vEV0RuRRIEnzw%3D%3D" class="img-fluid" alt="...">
     </div>
     <div class="col-md-6 d-flex justify-content-center gx-0">
       <div class="d-flex flex-column m-5">
