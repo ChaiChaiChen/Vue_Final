@@ -96,8 +96,8 @@
   <div class="row align-items-center">
     <div class="col-md-6 d-flex justify-content-center order-2 order-md-1 gx-0">
       <div class="d-flex flex-column m-5">
-        <h4 class="font-md-l fw-bold mb-3 ">沙發上享受家庭團聚時光</h4>
-        <p>依照不同的居家風格，與家人朋友一同共度美好時光。</p>
+        <h4 class="font-md-l fw-bold mb-3 ">家庭團聚｜沙發上享受時光</h4>
+        <p>沙發不僅是一張椅子，更是家庭生活的精華。它象徵著愛、溫馨和共享，是家人聚集的場所，擁抱著每一個家庭成員的獨特故事。無論是歡笑還是淚水，沙發都是家庭中最溫暖的存在。</p>
       </div>
     </div>
     <div class="col-md-6 intro-fashion order-1 order-md-2 gx-0">
@@ -110,8 +110,8 @@
     </div>
     <div class="col-md-6 d-flex justify-content-center gx-0">
       <div class="d-flex flex-column m-5">
-        <h4 class="font-md-l fw-bold mb-3 ">一個人的沙發｜享受孤獨    擁有專屬空間</h4>
-        <p>假日時窩在沙發上耍廢看劇吃零食，愜意地度過美好時光，<br>即使一個人稱作為孤獨，但擁抱面對孤獨，過上自己喜歡的生活模式，也是另一種享受。</p>
+        <h4 class="font-md-l fw-bold mb-3 ">朋友聚會｜共度歡笑時光</h4>
+        <p>沙發也是朋友聚會的靈感發源地，它提供了一個舒適自在的環境，讓大家盡情放鬆，開展心靈深處的對話。無論是看電影、打遊戲還是閑聊，沙發都是朋友間歡樂的起點。</p>
       </div>
     </div>
   </div>
@@ -123,62 +123,6 @@
 </div>
 
 </template>
-<style>
-.middleBg{
-  background-size: cover;
-  background-position: center;
-  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url("https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704682267504.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=c4MWBs77ZM%2BOOl%2Ftm8wxNuw6Tk249vNTizbweLH4meFXjh8KyNl%2FsxlFGXaB%2Bv59FIo2PL8mzvo0XZ5b9mYropKqidJjKuQYPlpwrHy3hptZ%2BZxOi9HhltAeFNdIWVdityjeTZi%2F%2Be9EXb3v8la9j2VUKx8X6N1pITbPDCWJR7P%2FI3sy5LTTpQHkmuSpy71QcJ04frqTp33WtIm5Lfy6lsAERsXpMWmG8fG8DkvmJzjqGVNE5%2B4%2FLc8smGs%2F49g%2FPBr0b1dli4LjPDQtFlkazeyr2uSToIL5KWKymJilcfKzEHLhkzicaGSCzUfkdh0cIw03A56gFWkTCQwCitM6Ow%3D%3D");
-  background-attachment: fixed;
-  height: 400px;
-  margin: 100px 0;
-  position: relative;
-  display: block;
-}
-
-.link-bottom{
-  border-bottom: solid #888888 1px;
-}
-
-.imgText{
-  border-style:solid;
-  border-width:1px;
-  margin: 0 2rem;
-  padding: 4rem 0;
-}
-.carousel-item{
-    width:100%;
-    height: 600px !important;
-  }
-  .carousel-item img{
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
-  }
-@media (max-width: 1200px){
-  .imgText{
-  margin: 0 1.5rem;
-  padding: 1rem;
-  }
-}
-@media (max-width: 768px){
-  .carousel-item{
-    width:100%;
-    height: 400px !important;
-  }
-  .carousel-item img{
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;height: 100%;
-  }
-}
-
-</style>
 <script>
 export default {
 };

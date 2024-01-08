@@ -14,7 +14,7 @@
         <ul class="nav navbar-nav me-auto">
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
-             aria-current="page" to="/user/products/所有商品">
+             aria-current="page" to="/user/products">
               <h4><strong>商品一覽</strong></h4>
             </router-link>
           </li>
