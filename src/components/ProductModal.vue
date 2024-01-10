@@ -49,7 +49,35 @@
                 />
               </div>
               <img class="img-fluid" :src="tempProduct.imageUrl" alt="" />
-
+              <div class="mt-5" v-if="tempProduct.images">
+                <div v-for="(image, key) in tempProduct.images" class="mb-3 input-group" :key="key">
+                  <input
+                    type="url"
+                    class="form-control form-control"
+                    v-model="tempProduct.images[key]"
+                    placeholder="請輸入連結"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger"
+                    @click="tempProduct.images.splice(key, 1)"
+                  >
+                    移除
+                  </button>
+                </div>
+                <div
+                  v-if="
+                    tempProduct.images[tempProduct.images.length - 1] || !tempProduct.images.length
+                  "
+                >
+                  <button
+                    class="btn btn-outline-primary btn-sm d-block w-100"
+                    @click="tempProduct.images.push('')"
+                  >
+                    新增圖片
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="col-sm-8">
               <div class="mb-3">

@@ -5,7 +5,7 @@
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-<div class="container-field mt-5">
+<div class="container-field">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
