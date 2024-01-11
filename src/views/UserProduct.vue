@@ -11,7 +11,7 @@
           <p class="mb-5 fs-5 text-theme">售價：${{ tempProduct.price }}</p>
           <p v-for="(content) in contentList" :key="content">{{ content }}</p>
           <div class="col">
-            <button class="btn btn-outline-danger btn-xl"
+            <button class="btn btn-btn-bg btn-xl btn-view"
                 :disabled ="this.status.loadingItem === tempProduct.id"
                 @click="addCart(tempProduct.id)">
                 <div class="spinner-grow text-red spinner-grow-sm"
