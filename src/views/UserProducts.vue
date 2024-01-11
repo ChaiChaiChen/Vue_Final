@@ -30,7 +30,7 @@
     <div class="col-sm-12 col-md-6 col-xl-3 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
       <div class="card rounded-0">
         <div class="card border-white text-white text-left" @click="getProduct(product.id)">
-          <img :src="product.imageUrl" class="img-cover" height="340">
+          <img :src="product.imageUrl" class="img-cover" height="280">
           <div class="card-img-overlay d-flex justify-content-center align-items-end">
             <button class="btn btn-primary col-8 border-radius-0 btn-default"
             @click="getProduct(product.id)">查看更多</button>

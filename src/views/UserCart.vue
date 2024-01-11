@@ -42,8 +42,8 @@
       <p>布料、材質、顏色多樣<br>透氣性佳、不容易悶熱</p>
     </div>
     </div>
-    <div class="col-lg-4 col-md-12 text-center gx-0">
-      <div class="imgText mb-5 mt-5">
+    <div class="col-lg-4 col-md-12 text-center gx-0 mt-4">
+      <div class="imgText mb-4 mt-5">
         <h4>全皮沙發</h4>
         <p>原料都來自精心維護的天然牛皮<br>天然皮革透氣度佳</p>
       </div>
