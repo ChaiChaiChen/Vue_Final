@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/mouse-events-have-key-events -->
 <!-- eslint-disable vuejs-accessibility/label-has-for -->
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
@@ -27,19 +28,21 @@
 
 <div class="container">
   <div class="row mt-5">
-    <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="product in productList" :key="product.Id" v-bind="product">
+    <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in productList" :key="product.Id" v-bind="product">
       <div class="card rounded-0">
-        <div class="card border-white text-white text-left" @click="getProduct(product.id)">
-          <img :src="product.imageUrl" class="img-cover" height="320">
+        <!-- https://www.yisu.com/zixun/153224.html -->
+        <div class="card border-white text-white text-left" @mouseenter="enterFun(index)" @mouseleave="leaveFun(index)" @click="getProduct(product.id)">
+          <img v-if="showImage || n != index" :src="product.imageUrl" class="img-cover" height="320">
+          <img v-else :src="product.images[4]" class="img-cover" height="320">
           <div class="card-img-overlay d-flex justify-content-center align-items-end">
-            <button class="btn btn-primary col-8 border-radius-0 btn-default"
+            <button class="btn btn-btn-bg btn-view col-8 border-radius-0 btn-default"
             @click="getProduct(product.id)">查看更多</button>
             </div>
         </div>
         <div class="card-body text-center">
           <h5 class="card-img-title-lg">{{ product.title }}</h5>
             <p class="card-text">售價：{{ product.price }}</p>
-          <button class="btn btn-outline-danger btn-sm"
+          <button class="btn btn-btn-bg btn-view btn-xl"
           :disabled ="this.status.loadingItem === product.id"
           @click="addCart(product.id)">
           <div class="spinner-grow text-red spinner-grow-sm" v-if="this.status.loadingItem === product.id">
@@ -65,6 +68,8 @@ export default {
         loadingItem: '', // 對應品項id
       },
       cart: {},
+      showImage: true,
+      n: 0,
     };
   },
   methods: {
@@ -89,6 +94,14 @@ export default {
         this.status.loadingItem = '';
         console.log('Products', response);
       });
+    },
+    enterFun(index) {
+      this.showImage = false;
+      this.n = index;
+    },
+    leaveFun(index) {
+      this.showImage = true;
+      this.n = index;
     },
   },
 
