@@ -31,13 +31,9 @@
     <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in productList" :key="product.Id" v-bind="product">
       <div class="card rounded-0">
         <!-- https://www.yisu.com/zixun/153224.html -->
-        <div class="card border-white text-white text-left" @mouseenter="enterFun(index)" @mouseleave="leaveFun(index)" @click="getProduct(product.id)">
+        <div class="card border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @mouseleave="leaveFun(index)" @click="getProduct(product.id)">
           <img v-if="showImage || n != index" :src="product.imageUrl" class="img-cover" height="320">
           <img v-else :src="product.images[4]" class="img-cover" height="320">
-          <div class="card-img-overlay d-flex justify-content-center align-items-end">
-            <button class="btn btn-btn-bg btn-view col-8 border-radius-0 btn-default"
-            @click="getProduct(product.id)">查看更多</button>
-            </div>
         </div>
         <div class="card-body text-center">
           <h5 class="card-img-title-lg">{{ product.title }}</h5>
@@ -55,9 +51,6 @@
 </div>
 </div>
 </template>
-<style>
-
-</style>
 <script>
 
 export default {
