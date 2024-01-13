@@ -17,23 +17,24 @@
     </div>
   </div>
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="d-flex flex-column align-items-center flex-wrap mt-3 py-4 col-md-6">
-        <h2>
-          精選商品
-        </h2>
-    </div>
+    <div class="row">
+      <ul class="list-group list-group-horizontal justify-content-center mt-3">
+        <li class="list-group-item" :class="{ active: filterType === '全部' }" @click="getFilter(filterType = '全部')">全部商品</li>
+        <li class="list-group-item" :class="{ active: filterType === '布質' }" @click="getFilter(filterType = '布質')">布質沙發</li>
+        <li class="list-group-item" :class="{ active: filterType === '半皮' }" @click="getFilter(filterType = '半皮')">半皮沙發</li>
+        <li class="list-group-item" :class="{ active: filterType === '全皮' }" @click="getFilter(filterType = '全皮')">全皮沙發</li>
+      </ul>
   </div>
 </div>
 
 <div class="container">
   <div class="row mt-5">
-    <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in productList" :key="product.Id" v-bind="product">
+    <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in relatedProducts" :key="product.Id" v-bind="product">
       <div class="card rounded-0">
         <!-- https://www.yisu.com/zixun/153224.html -->
         <div class="card border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @mouseleave="leaveFun(index)" @click="getProduct(product.id)">
-          <img v-if="showImage || n != index" :src="product.imageUrl" class="img-cover" height="320">
-          <img v-else :src="product.images[4]" class="img-cover" height="320">
+          <img v-if="showImage || n != index" :src="product.images[0]" class="img-cover imgSize" height="350">
+          <img v-else :src="product.images[1]" class="img-cover imgSize" height="350">
         </div>
         <div class="card-body text-center">
           <h5 class="card-img-title-lg">{{ product.title }}</h5>
@@ -62,6 +63,8 @@ export default {
       },
       cart: {},
       showImage: true,
+      relatedProducts: [],
+      filterType: '全部',
       n: 0,
     };
   },
@@ -70,8 +73,27 @@ export default {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
       this.$http.get(url).then((response) => {
         this.productList = response.data.products;
+        this.relatedProducts = this.productList;
         console.log(this.productList);
       });
+    },
+    getFilter() {
+      switch (this.filterType) {
+        case '全部':
+          this.relatedProducts = this.productList;
+          break;
+        case '布質':
+          this.relatedProducts = this.productList.filter((item) => item.category === '布質');
+          break;
+        case '半皮':
+          this.relatedProducts = this.productList.filter((item) => item.category === '半皮');
+          break;
+        case '全皮':
+          this.relatedProducts = this.productList.filter((item) => item.category === '全皮');
+          break;
+        default:
+          break;
+      }
     },
     getProduct(id) {
       this.$router.push(`/user/product/${id}`);
