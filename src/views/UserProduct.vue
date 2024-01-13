@@ -106,6 +106,7 @@ export default {
       contentList: {},
       descriptionList: {},
       relatedProducts: [],
+      showImage: true,
       n: 0,
     };
   },
@@ -140,7 +141,8 @@ export default {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
       this.$http.get(url).then((response) => {
         this.productList = response.data.products;
-        this.relatedProducts = this.productList.filter((item) => item.category === productCategory);
+        this.relatedProducts = this.productList.filter((item) => item.category === productCategory
+        && item.id !== this.tempProduct.id);
         console.log(this.relatedProducts);
       });
     },

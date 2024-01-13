@@ -57,14 +57,13 @@
 export default {
   data() {
     return {
-      productList: [],
+      productList: [], // 存放所有產品
       status: {
         loadingItem: '', // 對應品項id
       },
-      cart: {},
-      showImage: true,
-      relatedProducts: [],
-      filterType: '全部',
+      showImage: true, // hover顯示產品第二張照片
+      relatedProducts: [], // 存放類別產品
+      filterType: '全部', // 切換產品類別
       n: 0,
     };
   },
@@ -77,7 +76,7 @@ export default {
         console.log(this.productList);
       });
     },
-    getFilter() {
+    getFilter() { // 切換產品
       switch (this.filterType) {
         case '全部':
           this.relatedProducts = this.productList;
@@ -95,12 +94,12 @@ export default {
           break;
       }
     },
-    getProduct(id) {
+    getProduct(id) { // 取得產品id切換到該產品頁面
       this.$router.push(`/user/product/${id}`);
     },
-    addCart(id) {
+    addCart(id) { // 加入購物車
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
-      this.status.loadingItem = id;
+      this.status.loadingItem = id; // 取得產品id
       const cart = {
         product_id: id,
         qty: 1,
