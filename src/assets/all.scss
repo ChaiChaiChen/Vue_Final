@@ -17,6 +17,27 @@ html, body {
 .imgHover{
   cursor: pointer;
 }
+.list-group{
+  border-radius: 0;
+  cursor: pointer;
+}
+.list-group-horizontal{
+  .list-group-item:first-child:not(:last-child) {
+    border-bottom-left-radius: 0;
+  }
+  .list-group-item:last-child:not(:first-child) {
+    border-top-right-radius: 0;
+  }
+}
+.list-group-item{
+  border: 0;
+  &.active{
+    background-color: #ffffff00;
+    border-bottom:3px solid rgb(235, 95, 35);
+    color: #ffb516;
+
+  }
+}
 .btn-view{
     position: relative;
     border: 0;

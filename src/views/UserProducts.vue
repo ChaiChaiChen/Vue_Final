@@ -18,12 +18,14 @@
   </div>
   <div class="container">
     <div class="row">
-      <ul class="list-group list-group-horizontal justify-content-center mt-3">
-        <li class="list-group-item" :class="{ active: filterType === '全部' }" @click="getFilter(filterType = '全部')">全部商品</li>
-        <li class="list-group-item" :class="{ active: filterType === '布質' }" @click="getFilter(filterType = '布質')">布質沙發</li>
-        <li class="list-group-item" :class="{ active: filterType === '半皮' }" @click="getFilter(filterType = '半皮')">半皮沙發</li>
-        <li class="list-group-item" :class="{ active: filterType === '全皮' }" @click="getFilter(filterType = '全皮')">全皮沙發</li>
-      </ul>
+      <div class="col">
+        <ul class="list-group list-group-horizontal justify-content-center mt-3">
+          <li class="list-group-item" :class="{ active: filterType === '全部' }" @click="getFilter(filterType = '全部')">全部商品</li>
+          <li class="list-group-item" :class="{ active: filterType === '布質' }" @click="getFilter(filterType = '布質')">布質沙發</li>
+          <li class="list-group-item" :class="{ active: filterType === '半皮' }" @click="getFilter(filterType = '半皮')">半皮沙發</li>
+          <li class="list-group-item" :class="{ active: filterType === '全皮' }" @click="getFilter(filterType = '全皮')">全皮沙發</li>
+        </ul>
+      </div>
   </div>
 </div>
 

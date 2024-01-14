@@ -1,8 +1,15 @@
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <!-- eslint-disable vuejs-accessibility/label-has-for -->
 <template>
-  <div class="banner">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1703908235018.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=HMirTBLqIDnBljng1KfXDplpROeMbDTPnuByMw7zyhfEA68A1cJ50BtPiG5fy%2BK0tNn%2Fp2LrpF01mQN7L0Q0eJxm19w6GYS0BiabUcYqF4gy0iYbvPB7qgrmG1duyOETR16Ms8zwRkt2hd1oM%2F3Fbi78sn%2FRjheIcp8X%2BdVQjvdaINQsxsn5GKyvFHjdfG8QzqmI4%2FR2WuDhWzZNQbfqGX49PM0H%2Bedb%2FuABPzfu7Zgknnxx6SBoj4tLIiJFByfKEbeu%2F6gEZh1mOoEmspR84XpnGVedOA9AJQm8I9c%2FK9bTcZbtG8GshqrXNR7PU%2FzOBv1%2FdANSkDZQXhhrYQqb5Q%3D%3D" class="d-block w-100" alt="...">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704688694154.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=TDqPpRKduKijGpwaoRFJepfnRIfVupIvLLZe9pIoUDztJ5T0%2B5gd74UhQAYGPuJbfa713z%2FGCNmeWbrXGVJJMLIAi%2BkLgDX1b5CYuSDzhtBke4vmafE4%2FZIuJl0DW1x1F34UbBTZTH%2F52yIVBQGKhgeQG3JNP6hYOl9t82FsaWYibPEH%2FhL2UVJMss8FsKbNfH0zVbxF96Uk9HDAD3jjRDfKsQnmJ5gzeLVtU3vP6GI7C%2B1ATnTWWxsJWG0UjUXF0mKvIB38f5yT7n%2FFRHPAwoPCqrx4d70Wkxxjd5R58VPD%2BST65W0%2FjGNCyf35O2YE42Y%2FXeQlvxgbScHKFMQ5og%3D%3D" class="img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block justify-content-center carousel-text">
+        <h1><strong>結帳</strong></h1>
+      </div>
+      </div>
+    </div>
   </div>
   <div class="my-5 row justify-content-center">
     <div class="col-md-8">
