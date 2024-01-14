@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <router-link to="/user/cart" class="navbar-brand mt-2 ms-3">
+      <router-link to="/" class="navbar-brand mt-2 ms-3">
         <img src="../assets/static/soffa.png" style="height:60px;" alt="">
         </router-link>
       <button class="navbar-toggler" type="button"
@@ -14,13 +14,13 @@
         <ul class="nav navbar-nav me-auto">
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
-             aria-current="page" to="/user/products">
+             aria-current="page" to="/products">
               <h4><strong>商品一覽</strong></h4>
             </router-link>
           </li>
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
-             aria-current="page" to="/user/about">
+             aria-current="page" to="/about">
              <h4><strong>關於我們</strong></h4>
             </router-link>
           </li>
@@ -28,7 +28,7 @@
         <div class="nav navbar-nav ms-auto">
           <li class="me-2 ms-2 d-none d-lg-block">
             <router-link class="nav-link bi bi-cart fs-4" @click="mobileBtn = false"
-             aria-current="page" to="/user/checkout">
+             aria-current="page" to="/checkout">
             </router-link>
           </li>
           <li class="me-3 ms-2 d-none d-lg-block">
@@ -40,7 +40,7 @@
         <div class="nav navbar-nav ms-auto d-lg-none d-xl-none">
           <li class="me-2 ms-2">
             <router-link class="nav-link fs-5" @click="mobileBtn = false"
-             aria-current="page" to="/user/checkout"><strong>購物車</strong>
+             aria-current="page" to="/checkout"><strong>購物車</strong>
             </router-link>
           </li>
           <li class="me-5 ms-2">

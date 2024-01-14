@@ -66,7 +66,7 @@
        :key="product.Id" v-bind="product">
         <div class="card rounded-0">
           <!-- https://www.yisu.com/zixun/153224.html -->
-          <div class="card border border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @click="getProduct(product.id)">
+          <div class="card border border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @click="relatedProduct(product.id)">
             <img v-if="showImage || n != index" :src="product.images[0]" alt="" class="img-cover imageSize" height="320">
             <img v-else :src="product.images[1]" alt="" class="img-cover imageSize" height="320">
           </div>
@@ -145,6 +145,11 @@ export default {
         && item.id !== this.tempProduct.id);
         console.log(this.relatedProducts);
       });
+    },
+    relatedProduct(id) { // 取得產品id切換到該產品頁面
+      this.$router.push(`/product/${id}`);
+      this.id = id;
+      this.getProduct();
     },
     enterFun(index) {
       this.showImage = false;

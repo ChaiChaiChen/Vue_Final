@@ -95,7 +95,7 @@ export default {
       }
     },
     getProduct(id) { // 取得產品id切換到該產品頁面
-      this.$router.push(`/user/product/${id}`);
+      this.$router.push(`/product/${id}`);
     },
     addCart(id) { // 加入購物車
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;

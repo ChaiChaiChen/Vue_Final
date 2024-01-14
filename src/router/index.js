@@ -1,11 +1,35 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView,
+    component: () => import('../views/Userboard.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('../views/HomeView.vue'),
+      },
+      {
+        path: 'products',
+        component: () => import('../views/UserProducts.vue'),
+      },
+      {
+        path: 'about',
+        component: () => import('../views/UserAbout.vue'),
+      },
+      {
+        path: 'product/:productId',
+        component: () => import('../views/UserProduct.vue'),
+      },
+      {
+        path: 'checkout',
+        component: () => import('../views/UserCheckout.vue'),
+      },
+      {
+        path: 'pay/:orderId',
+        component: () => import('../views/UserPay.vue'),
+      },
+    ],
   },
   {
     path: '/about',
@@ -39,34 +63,8 @@ const routes = [
     ],
   },
   {
-    path: '/user',
-    component: () => import('../views/Userboard.vue'),
-    children: [
-      {
-        path: 'cart',
-        component: () => import('../views/UserCart.vue'),
-      },
-      {
-        path: 'products',
-        component: () => import('../views/UserProducts.vue'),
-      },
-      {
-        path: 'about',
-        component: () => import('../views/UserAbout.vue'),
-      },
-      {
-        path: 'product/:productId',
-        component: () => import('../views/UserProduct.vue'),
-      },
-      {
-        path: 'checkout',
-        component: () => import('../views/UserCheckout.vue'),
-      },
-      {
-        path: 'pay/:orderId',
-        component: () => import('../views/UserPay.vue'),
-      },
-    ],
+    path: '/:pathMatch(.*)*',
+    component: () => import('../views/NotFound.vue'),
   },
 ];
 
