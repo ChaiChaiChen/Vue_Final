@@ -31,6 +31,7 @@ html, body {
 }
 .list-group-item{
   border: 0;
+  
   &.active{
     background-color: #ffffff00;
     border-bottom:3px solid rgb(235, 95, 35);

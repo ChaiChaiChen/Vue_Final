@@ -47,12 +47,15 @@
       <div class="col-xl-7 d-flex order-2 order-xl-1">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705157449372.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=U50nUI5gDnrJGIEYP7nCnWaL7VlDZbbHNoNUC1uGXwUeFQ%2BpduJVwkcR1DmOpPSWiPADBSteF3BQz8L5fddRUhaqI7odZEnZm8lGh64vGbEjqRyvkn8BrEF19uIsvTqaHb7%2FV6hi8esQd7c0VKQb%2BXgYWFnlpJVdy37wMNnQwX1CXYFbfdE3hGIXmcfmZCPEEv6RwsxoaygxtkSKRqotZA68iQ3RdUAprjXLgaw3HSxGHhWMSEsevkfb8oaUqPRpSLVEW%2FtnDsntNJa3B%2BKd5wHLsf4CXbRP5F2BbDm6Uo8W0d%2BXZVumoaq6ighDxOk3wWVZ82MsJVRqFM%2BuTY6KMQ%3D%3D" class="img-fluid imgIntroduce" alt="">
       </div>
-      <div class="col-xl-5 order-1 order-xl-2 text-sm-center text-xl-start">
-        <h1 class="text-theme">打造您理想的家居空間</h1>
-        <p class="mt-4 mb-4 lh-lg">我們為每一位注重生活品質的顧客打造了一個極致奢華的客廳體驗。<br>提供優質、個性化的沙發，打造出滿足顧客期望的獨特家居風格。</p>
+      <div class="col-xl-5 col-sm-12 order-1 order-xl-2 text-center text-xl-start">
+
+          <h1 class="text-theme">打造您理想的家居空間</h1>
+          <p class="mt-4 mb-4 lh-lg">我們為每一位注重生活品質的顧客打造了一個極致奢華的客廳體驗。<br>提供優質、個性化的沙發，打造出滿足顧客期望的獨特家居風格。</p>
+
         <router-link to="/products">
-          <button class="btn btn-btn-bg btn-lg text-white btn-view">View More</button>
+          <button class="btn btn-btn-bg btn-lg text-white btn-view ">View More</button>
         </router-link>
+
       </div>
       <div class="col-xl-5 order-3 order-xl-3">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705157404490.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=B5tQ8wq8%2BeIP%2FsYP7MI%2F3U6Iu%2F4Y%2FqVYduVFGG0fhZzlaL4XMoMtpzTQr%2BB1jz4OB1wQHIKoNLaUa0uNrNFIPrAagxMjxKdDHaWuT%2B3EqUKVsuni4321Q18c7gXyqY7EYeIzMNivkP%2Bt8EZDYPQ0QUIxcyMgpTan%2BfMYBfml6KqUqU%2FJIkqisObrfymuguMV5Ntua6dOQvx0IT7adLRcESUcqzr1blCyuxLnS21QRx9SrkjWyt7p8mMxvL417HOSN0K4MNWOMvo1TlAGsPJj%2FHRpK6Yxosg16YCwXA%2F2aFxplQGUSS6tdBsZywJ6QSljJmw0KAUO7ZWsuTltAPVY6A%3D%3D" class="img-fluid imgIntroduce" alt="...">
