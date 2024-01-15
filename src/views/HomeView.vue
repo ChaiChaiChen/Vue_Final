@@ -151,7 +151,7 @@
   </div>
   <div class="row">
     <div class="col-12 middleBg gy-0 d-flex align-items-center justify-content-center">
-      <button class="btn btn-btn-bg btn-lg btn-view">領取優惠碼</button>
+      <button class="btn btn-btn-bg btn-lg btn-add-view">領取優惠碼</button>
     </div>
   </div>
 </div>

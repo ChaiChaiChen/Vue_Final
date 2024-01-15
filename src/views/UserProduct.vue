@@ -14,8 +14,8 @@
           <h4 class="font-md-l fw-bold mb-3 ">{{ tempProduct.title }}</h4>
           <p class="mb-5 fs-5 text-theme">售價：${{ tempProduct.price }}</p>
           <p v-for="(content) in contentList" :key="content">{{ content }}</p>
-          <div class="col">
-            <button class="btn btn-btn-bg btn-xl btn-view"
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button class="btn btn-btn-bg btn-xl btn-add-view m-1"
                 :disabled ="this.status.loadingItem === tempProduct.id"
                 @click="addCart(tempProduct.id)">
                 <div class="spinner-grow text-red spinner-grow-sm"
@@ -23,7 +23,7 @@
                   <span class="visually-hidden">Loading...</span>
                 </div>
                 加入購物車</button>
-                <button class="btn btn-outline-primary btn-xl"
+                <button class="btn btn-btn-share-bg btn-share-view btn-xl m-1"
                 :disabled ="this.status.loadingItem === tempProduct.id"
                 >
                 分享 <i class="bi bi-share"></i></button>
@@ -84,7 +84,7 @@
           <div class="card-body text-center">
             <h5 class="card-img-title-lg">{{ product.title }}</h5>
               <p class="card-text">售價：{{ product.price }}</p>
-            <button class="btn btn-btn-bg btn-view btn-xl"
+            <button class="btn btn-btn-bg btn-add-view btn-xl"
             :disabled ="this.status.loadingItem === product.id"
             @click="addCart(product.id)">
             <div class="spinner-grow text-red spinner-grow-sm"
