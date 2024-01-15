@@ -70,7 +70,7 @@
       </div>
     </div>
   </div> -->
-  <div class="container mt-5 mb-5" v-if="relatedProduct > 0">
+  <div class="container mt-5 mb-5" v-if="relatedProducts.length > 0">
     <div class="row">
       <h3 class="text-center mb-4">相關產品</h3>
       <div class="col-sm-12 col-md-6 col-xl-3 py-2" v-for="(product,index) in relatedProducts"

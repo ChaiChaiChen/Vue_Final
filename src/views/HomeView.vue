@@ -16,19 +16,19 @@
       <div class="carousel-item active">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311402637.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QLjGMCEC%2BUAICf0hSSZ4VJUo7ww6ANtpWBMInS%2BAm%2BO1HbYu2%2FuMdRDk2IkHtRSOQmj%2BDhPgcRcLHg81BGtz%2Fd8It0KeNdAs2zs%2F4Zr1m7Al%2FvWmrByB9YTXbQYx%2Fl70Yxg2fj%2BpFIrvDKVt9dhhhSEpA9JHW8QdjXKV%2F3CxEsP%2B3SuyslZ4zFIDsmvXhC8vDxIrcVqBbHqIyksHPyE9mIcKvF9dzeFcUBgdfAzWyMMWNTg46dyLVr9m1BOC9h%2FHswBDJotROHD5mAqyo%2FVhHqCXQXvajSev64npZR03vFZt5VMDBHzDx9eyGIBsQlpRdnffq355dv1TZEk9ZYRy0w%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
-          <h1><strong>極致舒適&emsp;<br>&emsp;優雅生活</strong></h1>
+          <h1 class="bannerText">極致舒適&emsp;<br>&emsp;優雅生活</h1>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311990681.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eTGojm8G75jJYEjyGnerTWsSS%2B626TnSS4Yxl%2FiTX7GJA27x401h7kufycqaJLZGrXeG66UvKUdl5DzZg%2F2lnmd4zXXHU8q90oYZ5neM%2F6nPx1KDEgTfH9ixTbykmNIrVgHYyiN5gDWesFYmea5aKzDnw0AyZ3%2FakkJVAWeUJrRmxphicBSpB2A1tYXoKCVgHAdmDb5i%2FQ6WW55b6jKxM6uLv1K7yLVmFi7SUDEOjY43POtwU9EpGRUCIvxH4vvli13og1QkgEndPOPGxxZhcaHhl2jVzloZW4VMNGwckA4XkUEOk8tgKs3hl8%2BZipo1p8ObQJObuGBfq%2Fjv%2BJsgHQ%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
-          <h1><strong>輕奢設計<br>添色於你的家居</strong></h1>
+          <h1 class="bannerText">輕奢設計<br>添色於你的家居</h1>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705312139600.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eZKkrOkD4NBLlJQDJ2NMbfXk0wiU7w7Xy32jCbWrwn2ceoqD%2FzXhgDF3exQ6omXa8gsS5bP3fVdO926IX3Chcn1tERCMDGB4XcCTAqWu9e2g2mzf7wNkK4eCW1RGlNaHhVBQj3u56FKV0LmRStG8IuRRbuBJdGiB0%2B1FTSU85RHnsLWxNKY3HmqI6Mzd9YOAtEhnqFYvv%2BAAkNis3aqap7wC7sRFbqI8Gz03oBmg%2BwDflnyqfYvJFcu25L2Mq7LFsseyLZ3xQrExnxK2rIMVUrNwCBiQeWPOUJQ%2BeMJI%2BV6RjAayZ8t4HDKBoh97c1KySiONcULh8baMqTI5godgWA%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
-          <h1><strong>專屬你的沙發時光<br>品味獨特生活</strong></h1>
+          <h1 class="bannerText">專屬你的沙發時光<br>品味獨特生活</h1>
         </div>
       </div>
     </div>
@@ -65,56 +65,6 @@
       </div>
     </div>
   </div>
-<!-- <div class="container mt-5 text-theme">
-  <div class="row justify-content-center align-items-center">
-    <div class="col-lg-4 col-md-12 text-center g-0">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610430929.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=dYoP%2FdWfpLPM0NJCQqJiHuV18SOP0UcVoeJ5tymjkD%2BdCYx6NILs7taavSwtiCaETrpwHFeV1qahluNkdCV0gjNuigqabK7s%2FxhYRvX%2BNh1kpgHBgGoQTQxmMM8AgM0l8k8zPzH5M2E1sEjiX9VvNc7Ucmt9PUNQcOldoDuQO3CGp8y%2FnwD6MyHtZ5dkcnctefbQ5J%2B%2BS3HS2IzRVh%2BSujibSN19zgvnwttIbVQLIspGUVy3pKWx%2BPzoHudwh3l71mqk0F54nYMvwoOjZQVBtPCFWejqSuaydPhmicTRDsQgl6aaannovtl8fkNIfDnP3zW65joXZNu3U7CGIbqjIQ%3D%3D" class="img-fluid" alt="...">
-      <div class="imgText mt-4">
-      <h4>布質沙發</h4>
-      <p>布料、材質、顏色多樣<br>透氣性佳、不容易悶熱</p>
-    </div>
-    </div>
-    <div class="col-lg-4 col-md-12 text-center gx-0 mt-4">
-      <div class="imgText mb-4 mt-5">
-        <h4>全皮沙發</h4>
-        <p>原料都來自精心維護的天然牛皮<br>天然皮革透氣度佳</p>
-      </div>
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610411908.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Ro08U3YaRBiEopdiPuILAIiiR1%2BnvY248%2FWgXhUDElH6fw9TMvUvw1z56vQzMRSJQoT5IH3r8SoR7%2FkNJ09NjlbvzZQXD0omrxdd3TykzW67AZLNaVmxIfXMWmCt4Wh%2BjGK7g2Jp2xlqe0Clvh0wYFKecpt6LHoYPzSOmdmMt8ron7BqaNF3NGwckDsBk2nglaQKuqQV1EONVsrAw%2FzBRVsljfSQsJU9U6iI%2BLZbzxZq%2Ft7S4HSig%2FeaVqUR3%2FHtoAobeXJeOGaJPa7NE9LneoOB0Q6ai4SnYs%2BR1M5tw9AXCUbfZjBreO11gh9flvSLtSRXtKV6aR2ZRptx8GEwNg%3D%3D" class="img-fluid"
- alt="...">
-    </div>
-    <div class="col-lg-4 col-md-12 text-center g-0">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704610443185.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=nd2YIKZiARnJikjGTFuaCSEcxy0UVIcvrBm%2FpglBl1xhl5qOywxFmuX2RnW7GT%2BTCUZGWzIKNmahxXmhP3gfrV3e2IsWPEvIIAbzhyhiDpdbeX7SAs%2FUUWRtHpXzeJp9P%2BTaavCbEVxMTI8S%2FJ%2Baex6iNZM60D7OPH6F2hNsVyd4LluqvpitRciaj7OftJqeZOLFxl6IXXJZB3T0Y3wuWHCNBQp3wBxrFdiGY6A%2FWVf7VDIto9Zlr5neGbQpUwSWwnC4MzaDeHHqPSdWMCtj4Fd0fVviv5gi8%2Bt1Ub5HbRSl2cijuTW%2FffZlTMZSw5J48V8jH4H%2B6iI9GgCSIlHI3A%3D%3D" class="img-fluid" alt="...">
-      <div class="imgText mt-4">
-      <h4>半皮沙發</h4>
-      <p>部分皮質為牛皮<br>與全皮外觀差異不大易維護</p>
-    </div>
-    </div>
-    <div class="col-6 text-center mt-3">
-      <router-link to="/user/products">
-        <button class="btn btn-btn-bg btn-lg text-white btn-view">View More</button>
-      </router-link>
-    </div>
-  </div>
-  <div class="row text-center mt-5 text-black align-items-center">
-    <h4>New Post</h4>
-    <div class="col-lg-3 col-md-6 mt-3 ">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629649408.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=qDipYug7%2FuPHex%2B2Edb4cm9l1wSjplWUw45wiRVvhZnUd8StptUkpjM0DjhfwRZqaDBwNB0Uh%2BZP1pfkfKA%2BmW2ENmg6XWgqLlleSLr9Z2%2F4CFSp5LGu%2B%2FxYKM8F1WKOE79%2BVnNQqRXnFhlccxubHWAeaqd9mfW1Twk%2Fi%2BRgB9zHhMDJmqHdBCEC%2FIkmBHUUyh%2BYeV%2Fl%2BFJVn8OwFUtP%2FKl1sz2BGaOC%2FNYSG9pIkaujNY4bNcaoeaK4ONhsrVhmdWK9N%2BpOpshftgw1Iz2kCy2Qa%2Fr%2B5xmQNnMJH4IS%2FW5kFGnT%2BRuNDLK6h7WCYYuxQ5udwp9GatzElsIdWzTCGA%3D%3D" class="img-fluid" alt="">
-    </div>
-    <div class="col-lg-3 col-md-6 mt-3 text-black link-bottom">傢俱雜誌 第154期<br>2015/1&2月新發行</div>
-    <div class="col-lg-3 col-md-6 mt-3">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629676867.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=R6X4XrJ%2BCSMUJz5V7UtbFBnIKD2v4rb4NJJpChi02VXj6a1SaX1lKCaFuXZVqnbEFMKKJ2g3YsKnZoNCyNCHIJIrFselUbE2Fbewf60Ryxg42baY8xWKPjm%2FBraHbvX8C%2BaDmaSUeM1ZvWb4lX2clsMZxBqe4vdHbjNqkypxfcdZMRUjGYVvB7X5v7nDEVNUerp3PevVkdz4EN3surwfid3Rj668C9TbnVsKEdf1i5xC1P8txlRLCLa4fAqs5fl6L7QZYrZtOPt%2BZZEt3XEC98oIfStTiJH3HbJtbtfwv45CrHmjLbvW8%2Fp7sQxsmp%2BEKTB2bqhcbCc0ZaoVRAMdHA%3D%3D" class="img-fluid" alt="">
-    </div>
-    <div class="col-lg-3 col-md-6 mt-3 text-black link-bottom">傢飾雜誌 第155期<br>2017/2018新發行</div>
-    <div class="col-lg-3 col-md-6 mt-4 text-black link-bottom d-flex justify-content-center order-2 order-md-1">傢飾雜誌 第156期<br>2017/2018新發行</div>
-    <div class="col-lg-3 col-md-6 mt-4 order-1 order-md-2">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629649408.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=qDipYug7%2FuPHex%2B2Edb4cm9l1wSjplWUw45wiRVvhZnUd8StptUkpjM0DjhfwRZqaDBwNB0Uh%2BZP1pfkfKA%2BmW2ENmg6XWgqLlleSLr9Z2%2F4CFSp5LGu%2B%2FxYKM8F1WKOE79%2BVnNQqRXnFhlccxubHWAeaqd9mfW1Twk%2Fi%2BRgB9zHhMDJmqHdBCEC%2FIkmBHUUyh%2BYeV%2Fl%2BFJVn8OwFUtP%2FKl1sz2BGaOC%2FNYSG9pIkaujNY4bNcaoeaK4ONhsrVhmdWK9N%2BpOpshftgw1Iz2kCy2Qa%2Fr%2B5xmQNnMJH4IS%2FW5kFGnT%2BRuNDLK6h7WCYYuxQ5udwp9GatzElsIdWzTCGA%3D%3D" class="img-fluid" alt="">
-    </div>
-    <div class="col-lg-3 col-md-6 mt-4 text-black link-bottom d-flex justify-content-center order-4 order-md-3">傢俱雜誌 第157期<br>2015/1&2月新發行</div>
-    <div class="col-lg-3 col-md-6 mt-4 order-3 order-md-4">
-      <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704629676867.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=R6X4XrJ%2BCSMUJz5V7UtbFBnIKD2v4rb4NJJpChi02VXj6a1SaX1lKCaFuXZVqnbEFMKKJ2g3YsKnZoNCyNCHIJIrFselUbE2Fbewf60Ryxg42baY8xWKPjm%2FBraHbvX8C%2BaDmaSUeM1ZvWb4lX2clsMZxBqe4vdHbjNqkypxfcdZMRUjGYVvB7X5v7nDEVNUerp3PevVkdz4EN3surwfid3Rj668C9TbnVsKEdf1i5xC1P8txlRLCLa4fAqs5fl6L7QZYrZtOPt%2BZZEt3XEC98oIfStTiJH3HbJtbtfwv45CrHmjLbvW8%2Fp7sQxsmp%2BEKTB2bqhcbCc0ZaoVRAMdHA%3D%3D" class="img-fluid" alt="">
-    </div>
-  </div>
-</div> -->
   <div class="container-fluid mt-5">
     <div class="row align-items-center bg-text-bg">
       <div class="col-md-6 gx-0">
@@ -159,5 +109,7 @@
 </template>
 <script>
 export default {
+  methods: {
+  },
 };
 </script>
