@@ -51,18 +51,28 @@
         </div>
       </div>
     </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 d-flex justify-content-center gx-0 order-2 order-md-1">
+        <div class="d-flex flex-column mr-5 ms-5 content">
+          <p>{{ descriptionList[2] }}</p>
+        </div>
+      </div>
+      <div class="col-md-6 gx-0 order-1 order-md-2">
+        <img :src="images[4]" alt="" class="img-fluid">
+      </div>
+    </div>
   </div>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-6 mt-3 mb-3"
        v-for="(image, key) in imagesList" :key="`image${key}`">
         <img :src="image" alt="" class="img-fluid">
       </div>
     </div>
-  </div>
-  <div class="container mt-5 mb-5">
+  </div> -->
+  <div class="container mt-5 mb-5" v-if="relatedProduct > 0">
     <div class="row">
-      <h3 class="text-center">相關產品</h3>
+      <h3 class="text-center mb-4">相關產品</h3>
       <div class="col-sm-12 col-md-6 col-xl-3 py-2" v-for="(product,index) in relatedProducts"
        :key="product.Id" v-bind="product">
         <div class="card rounded-0">
@@ -110,7 +120,12 @@ export default {
       relatedProducts: [],
       showImage: true,
       n: 0,
+      elTop: 0, // 滾動前,捲軸距離視窗頂部的距離
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.scrolling);
+    // 資料掛載完, window去監聽scroll事件
   },
   methods: {
     getProduct() {
@@ -120,13 +135,14 @@ export default {
         .then((res) => {
           this.tempProduct = res.data.product;
           this.images = this.tempProduct.images;
-          this.imagesList = this.tempProduct.images.slice(4);
+          this.imagesList = this.tempProduct.images.slice(5);
           const { content } = this.tempProduct;
           this.contentList = content.split('\n');
           const { description } = this.tempProduct;
           this.descriptionList = description.split('；');
           this.same(this.tempProduct.category);
           this.isLoading = false;
+          this.scrollTop();
         });
     },
     addCart(id) {
@@ -162,6 +178,20 @@ export default {
     leaveFun(index) {
       this.showImage = true;
       this.n = index;
+    },
+    // 要滑到top為0的位置, 使用smooth的模式
+    scrollTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    },
+
+    scrolling() {
+      // 捲軸距離視窗頂部的距離
+      const scrolltoTop = window.pageYOffset;
+      // 更新: 滾動前,捲軸距離視窗頂部的距離
+      this.elTop = scrolltoTop;
     },
   },
   created() {
