@@ -9,7 +9,7 @@
       <div class="col-md-6 gx-0 mt-5">
         <img :src="tempProduct.imageUrl" alt="" class="img-fluid">
       </div>
-      <div class="col-md-6 d-flex justify-content-start gx-0">
+      <div class="col-md-6 d-flex justify-content-start gx-0 mt-md-5">
         <div class="d-flex flex-column m-5 ps-md-5">
           <h4 class="font-md-l fw-bold mb-3 ">{{ tempProduct.title }}</h4>
           <p class="mb-5 fs-5 text-theme">售價：${{ tempProduct.price }}</p>

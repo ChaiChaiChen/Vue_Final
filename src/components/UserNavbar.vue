@@ -15,13 +15,13 @@
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
              aria-current="page" to="/products">
-              <h4><strong>商品一覽</strong></h4>
+              <h5><strong>商品一覽</strong></h5>
             </router-link>
           </li>
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link" @click="mobileBtn = false"
              aria-current="page" to="/about">
-             <h4><strong>關於我們</strong></h4>
+             <h5><strong>關於我們</strong></h5>
             </router-link>
           </li>
         </ul>
@@ -39,13 +39,13 @@
         </div>
         <div class="nav navbar-nav ms-auto d-lg-none d-xl-none">
           <li class="me-2 ms-2">
-            <router-link class="nav-link fs-5" @click="mobileBtn = false"
-             aria-current="page" to="/checkout"><strong>購物車</strong>
+            <router-link class="nav-link" @click="mobileBtn = false"
+             aria-current="page" to="/checkout"><h5><strong>購物車</strong></h5>
             </router-link>
           </li>
           <li class="me-5 ms-2">
-            <router-link class="nav-link fs-5" @click="mobileBtn = false"
-             aria-current="page" to="/login"><strong>後台登入</strong>
+            <router-link class="nav-link" @click="mobileBtn = false"
+             aria-current="page" to="/login"><h5><strong>後台登入</strong></h5>
             </router-link>
           </li>
         </div>
