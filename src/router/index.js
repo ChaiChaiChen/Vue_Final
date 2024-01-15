@@ -29,11 +29,6 @@ const routes = [
         path: 'pay/:orderId',
         component: () => import('../views/UserPay.vue'),
       },
-      {
-        path: '/login',
-        name: 'login',
-        component: () => import('../views/Login.vue'),
-      },
     ],
   },
   {
@@ -53,6 +48,11 @@ const routes = [
         component: () => import('../views/Coupons.vue'),
       },
     ],
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/Login.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
