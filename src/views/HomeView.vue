@@ -14,21 +14,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704599984989.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=YfMM%2FC4HTyvo1ZSnrmVHAcb4OQwxp%2FwAOo%2Bbzuqf464o%2F46SzTQxy366d2fB%2BRW0BDPG3MAOdWgbtLgHwX2IIdw8l8kzyHO5b7YffjtgR9BadR36Ir%2BjrJ4wMPD2Hkz77RXAWVmds0FSIeKC94N2tXyLb69AZoMTjFjPO04yLyXMLkkHPrbjvHZbCCLpzUE5jcYf6nXjHtx2qMsuZFNk%2F4RIhs1IQL1ZnZaIxHek17sHuy5EfyGQ0MNuX0eLBRby%2FUyqRv3iZGkqtyUVQXaJqLgX4f2WDqLGVsLDUeIG5DU6AkS5JDre25SWO2G4Xy8D4dvyS1PIGk9%2B1VUUkqYGEw%3D%3D" class="img-fluid" alt="...">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311402637.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QLjGMCEC%2BUAICf0hSSZ4VJUo7ww6ANtpWBMInS%2BAm%2BO1HbYu2%2FuMdRDk2IkHtRSOQmj%2BDhPgcRcLHg81BGtz%2Fd8It0KeNdAs2zs%2F4Zr1m7Al%2FvWmrByB9YTXbQYx%2Fl70Yxg2fj%2BpFIrvDKVt9dhhhSEpA9JHW8QdjXKV%2F3CxEsP%2B3SuyslZ4zFIDsmvXhC8vDxIrcVqBbHqIyksHPyE9mIcKvF9dzeFcUBgdfAzWyMMWNTg46dyLVr9m1BOC9h%2FHswBDJotROHD5mAqyo%2FVhHqCXQXvajSev64npZR03vFZt5VMDBHzDx9eyGIBsQlpRdnffq355dv1TZEk9ZYRy0w%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
           <h1><strong>極致舒適&emsp;<br>&emsp;優雅生活</strong></h1>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704601966892.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=TjDAlYUMSWoDZ60Zq%2BFHJdj6yooNwzKzNK4kEbp4SELbTtYawELSGhoWXLA59vjTFyWoM%2FhrSo3uNuBksBHr7vyYnOw60vQaVdq1ZRkG93PW7S7PgLY5QMGVilSYgY9uhprSNCU8tmwHy3a3M4BfYvR%2BPmLWVwgZ68CCPLXZtKZYLWaNn7OVnOL9qK1Prl9gV%2BR3AXkwQHg%2FCm9HrKT3cjTP21QfZtbXd45O4Z0dLFmJG5GdK1l5mHrLD2FMTn52A2ClLQXa6Tg1KDVwz3YwTcXgMnQuHhUitZTJWBP9AdLClRdLQeJUp9jGiBL9gfwKVKWWvhCiw26EFhoniS0ZHQ%3D%3D" class="img-fluid" alt="...">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311990681.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eTGojm8G75jJYEjyGnerTWsSS%2B626TnSS4Yxl%2FiTX7GJA27x401h7kufycqaJLZGrXeG66UvKUdl5DzZg%2F2lnmd4zXXHU8q90oYZ5neM%2F6nPx1KDEgTfH9ixTbykmNIrVgHYyiN5gDWesFYmea5aKzDnw0AyZ3%2FakkJVAWeUJrRmxphicBSpB2A1tYXoKCVgHAdmDb5i%2FQ6WW55b6jKxM6uLv1K7yLVmFi7SUDEOjY43POtwU9EpGRUCIvxH4vvli13og1QkgEndPOPGxxZhcaHhl2jVzloZW4VMNGwckA4XkUEOk8tgKs3hl8%2BZipo1p8ObQJObuGBfq%2Fjv%2BJsgHQ%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
-          <h1><strong>輕奢設計&emsp;<br>&emsp;添色於你的家居</strong></h1>
+          <h1><strong>輕奢設計<br>添色於你的家居</strong></h1>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704602215770.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Rf6HfbsW0Rcso7vyJ0N%2B0n1dA4NKGCh2sO11obwizz8PAF6BtsEAlYQC7tV9kHk9k%2FpuB25h0RyI%2Ba6fT9mO0670TGV%2Fn%2BnqUIDCbNH0UEJoj0fcftskG58d6lKaEWGReBWGn108Bd4Gfn7lE7XX1IiKSg%2B5vaL2%2FWWNjm9R%2FLr%2Bmy6l3xx5ZFNA2W9Epv3nAYyZvpXbXXNRfz4P9SjQVPk%2Btk1zm252tx%2F%2FiVd2OnURSAKrZ7WW%2BI2KWkrOZmnZOnIFkn31mejwe4MMX8o2CfOwZzhhAUrHXIBw%2BQVN1%2F5akCR%2FRnzQmDBBWuXb0Z7jv2Vj9hg8%2FRFMew3keMxN6w%3D%3D" class="img-fluid" alt="...">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705312139600.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eZKkrOkD4NBLlJQDJ2NMbfXk0wiU7w7Xy32jCbWrwn2ceoqD%2FzXhgDF3exQ6omXa8gsS5bP3fVdO926IX3Chcn1tERCMDGB4XcCTAqWu9e2g2mzf7wNkK4eCW1RGlNaHhVBQj3u56FKV0LmRStG8IuRRbuBJdGiB0%2B1FTSU85RHnsLWxNKY3HmqI6Mzd9YOAtEhnqFYvv%2BAAkNis3aqap7wC7sRFbqI8Gz03oBmg%2BwDflnyqfYvJFcu25L2Mq7LFsseyLZ3xQrExnxK2rIMVUrNwCBiQeWPOUJQ%2BeMJI%2BV6RjAayZ8t4HDKBoh97c1KySiONcULh8baMqTI5godgWA%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
-          <h1><strong>專屬你的沙發時光&emsp;<br>&emsp;品味獨特生活</strong></h1>
+          <h1><strong>專屬你的沙發時光<br>品味獨特生活</strong></h1>
         </div>
       </div>
     </div>
