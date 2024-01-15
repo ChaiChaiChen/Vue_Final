@@ -5,8 +5,8 @@
 <template>
   <Loading :active="isLoading"></Loading>
   <div class="container-fluid mt-5">
-    <div class="row align-items-center bg-gray">
-      <div class="col-md-6 gx-0">
+    <div class="row align-items-center bg-gray mt-5">
+      <div class="col-md-6 gx-0 mt-5">
         <img :src="tempProduct.imageUrl" alt="" class="img-fluid">
       </div>
       <div class="col-md-6 d-flex justify-content-start gx-0">
