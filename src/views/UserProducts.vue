@@ -17,6 +17,7 @@
     </div>
   </div>
   <div class="container">
+  <Loading :active="isLoading"></Loading>
     <div class="row">
       <div class="col">
         <ul class="list-group list-group-horizontal justify-content-center mt-3">
@@ -30,7 +31,7 @@
 </div>
 
 <div class="container">
-  <div class="row mt-5">
+  <div class="row mt-5 mb-5">
     <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in relatedProducts" :key="product.Id" v-bind="product">
       <div class="card rounded-0">
         <!-- https://www.yisu.com/zixun/153224.html -->
@@ -59,6 +60,7 @@
 export default {
   data() {
     return {
+      isLoading: false,
       productList: [], // 存放所有產品
       status: {
         loadingItem: '', // 對應品項id
@@ -72,10 +74,12 @@ export default {
   methods: {
     getProducts() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
+      this.isLoading = true;
       this.$http.get(url).then((response) => {
         this.productList = response.data.products;
         this.relatedProducts = this.productList;
         console.log(this.productList);
+        this.isLoading = false;
       });
     },
     getFilter() { // 切換產品

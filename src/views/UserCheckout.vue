@@ -11,6 +11,7 @@
       </div>
     </div>
   </div>
+  <Loading :active="isLoading"></Loading>
   <div class="my-5 row justify-content-center">
     <div class="col-md-8">
       <table class="table">
@@ -123,6 +124,7 @@
 export default {
   data() {
     return {
+      isLoading: false,
       productList: [],
       cartsList: [],
       status: {
@@ -147,10 +149,12 @@ export default {
     },
     getCart() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
+      this.isLoading = true;
       this.$http.get(url).then((response) => {
         console.log(response);
         this.cartsList = response.data.data;
         console.log('cartsList', this.cartsList);
+        this.isLoading = false;
       });
     },
     addCouponCode() {

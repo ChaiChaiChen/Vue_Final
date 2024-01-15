@@ -3,6 +3,7 @@
 <!-- eslint-disable vuejs-accessibility/mouse-events-have-key-events -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <Loading :active="isLoading"></Loading>
   <div class="container-fluid mt-5">
     <div class="row align-items-center bg-gray">
       <div class="col-md-6 gx-0">
@@ -66,9 +67,9 @@
        :key="product.Id" v-bind="product">
         <div class="card rounded-0">
           <!-- https://www.yisu.com/zixun/153224.html -->
-          <div class="card border border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @click="relatedProduct(product.id)">
-            <img v-if="showImage || n != index" :src="product.images[0]" alt="" class="img-cover imageSize" height="320">
-            <img v-else :src="product.images[1]" alt="" class="img-cover imageSize" height="320">
+          <div class="card border border-white text-white text-left imgHover" @mouseenter="enterFun(index)"  @mouseleave="leaveFun(index)" @click="relatedProduct(product.id)">
+            <img v-if="showImage || n != index" :src="product.images[0]" alt="" class="img-cover imageSize" height="300">
+            <img v-else :src="product.images[1]" alt="" class="img-cover imageSize" height="300">
           </div>
           <div class="card-body text-center">
             <h5 class="card-img-title-lg">{{ product.title }}</h5>
@@ -96,6 +97,7 @@
 export default {
   data() {
     return {
+      isLoading: false,
       tempProduct: {},
       id: '',
       status: {
@@ -113,6 +115,7 @@ export default {
   methods: {
     getProduct() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/product/${this.id}`;
+      this.isLoading = true;
       this.$http.get(api)
         .then((res) => {
           this.tempProduct = res.data.product;
@@ -123,6 +126,7 @@ export default {
           const { description } = this.tempProduct;
           this.descriptionList = description.split('；');
           this.same(this.tempProduct.category);
+          this.isLoading = false;
         });
     },
     addCart(id) {
