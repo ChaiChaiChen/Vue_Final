@@ -53,7 +53,7 @@
           <p class="mt-4 mb-4 lh-lg">我們為每一位注重生活品質的顧客打造了一個極致奢華的客廳體驗。<br>提供優質、個性化的沙發，打造出滿足顧客期望的獨特家居風格。</p>
 
         <router-link to="/products">
-          <button class="btn btn-btn-bg btn-lg text-white btn-view ">View More</button>
+          <button class="btn btn-btn-bg btn-lg text-white btn-add-view ">View More</button>
         </router-link>
 
       </div>
