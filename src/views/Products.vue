@@ -1,7 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <div class="container">
+    <div class="row mt-5">
   <Loading :active="isLoading"></Loading>
-    <div class="text-end">
+    <div class="text-end mt-5">
     <!-- Button trigger modal -->
         <button class="btn btn-primary" type="button"
          @click.prevent="openModal(true)">
@@ -45,6 +47,9 @@
     <ProductModal ref="productModal" :product="tempProduct"
     @update-product="updateProduct"></ProductModal>
     <DelModal :item="tempProduct" ref="delModal" @del-item="delProduct"></DelModal>
+
+  </div>
+  </div>
 </template>
 <script>
 import ProductModal from '../components/ProductModal.vue';
