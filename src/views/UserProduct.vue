@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vuejs-accessibility/mouse-events-have-key-events -->
@@ -10,10 +11,19 @@
   <div class="container-fluid">
     <div class="row align-items-center bg-gray">
       <div class="col-md-6 gx-0 mt-5">
-        <img :src="tempProduct.imageUrl" alt="" class="img-fluid">
+        <div class="col d-flex justify-content-center">
+          <img :src="enterImage" alt="" class="img-fluid" style="height: 480px;">
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="secImg-box m-3" v-for="secImage in imagesList" :key="secImage">
+            <a href="#" @click.prevent="changeEnterImage(secImage)">
+              <img :src="secImage" style="height: 140px;" alt="">
+            </a>
+        </div>
+        </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-start gx-0 mt-md-5">
-        <div class="d-flex flex-column m-5 ps-md-5">
+      <div class="col-md-6 d-flex justify-content-start gx-0 mt-md-3">
+        <div class="d-flex flex-column m-4">
           <h4 class="font-md-l fw-bold mb-3 ">{{ tempProduct.title }}</h4>
           <p class="mb-5 fs-5 text-theme">售價：${{ tempProduct.price }}</p>
           <p v-for="(content) in contentList" :key="content">{{ content }}</p>
@@ -37,7 +47,7 @@
     </div>
     <div class="row align-items-center">
       <div class="col-md-6 d-flex justify-content-center gx-0 order-2 order-md-1">
-        <div class="d-flex flex-column mr-5 ms-5 content">
+        <div class="d-flex flex-column ms-4 content lh-lg">
           <p>{{ descriptionList[0] }}</p>
         </div>
       </div>
@@ -49,15 +59,15 @@
       <div class="col-md-6 gx-0">
         <img :src="images[3]" alt="" class="img-fluid">
       </div>
-      <div class="col-md-6 d-flex justify-content-center gx-0">
-        <div class="d-flex flex-column content ms-md-5 ps-5">
+      <div class="col-md-6 d-flex gx-0">
+        <div class="d-flex flex-column justify-content-center content ms-4 ms-lg-5 lh-lg">
           <p>{{ descriptionList[1] }}</p>
         </div>
       </div>
     </div>
     <div class="row align-items-center">
       <div class="col-md-6 d-flex justify-content-center gx-0 order-2 order-md-1">
-        <div class="d-flex flex-column mr-5 ms-5 content">
+        <div class="d-flex flex-column ms-4 content lh-lg">
           <p>{{ descriptionList[2] }}</p>
         </div>
       </div>
@@ -116,6 +126,13 @@
   white-space: nowrap;
   animation: coupon 15s linear infinite;
 }
+.secImg-box{
+  transform:scale(1,1);
+  transition: all 0.3s ease-out;
+}
+.secImg-box:hover{
+  transform:scale(1.1,1.1);
+}
 
 @keyframes coupon {
   0% {
@@ -132,6 +149,7 @@ export default {
     return {
       isLoading: false,
       tempProduct: {},
+      enterImage: '',
       id: '',
       status: {
         loadingItem: '', // 對應品項id
@@ -158,6 +176,7 @@ export default {
       this.$http.get(api)
         .then((res) => {
           this.tempProduct = res.data.product;
+          this.enterImage = this.tempProduct.imageUrl;
           this.images = this.tempProduct.images;
           this.imagesList = this.tempProduct.images.slice(5);
           const { content } = this.tempProduct;
@@ -222,6 +241,9 @@ export default {
         .then(() => {
           console.log('分享');
         });
+    },
+    changeEnterImage(secImage) {
+      this.enterImage = secImage;
     },
   },
   created() {
