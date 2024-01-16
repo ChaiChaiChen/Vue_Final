@@ -16,7 +16,7 @@
         </div>
         <div class="col d-flex justify-content-center">
           <div class="secImg-box m-3" v-for="secImage in imagesList" :key="secImage">
-            <a href="#" @click.prevent="changeEnterImage(secImage)">
+            <a @mouseover="changeEnterImage(secImage)">
               <img :src="secImage" style="height: 140px;" alt="">
             </a>
         </div>
@@ -250,6 +250,14 @@ export default {
     // 透過$route.params接收UserCart所傳送的prouctId
     this.id = this.$route.params.productId;
     this.getProduct();
+    let i = 1;
+    setInterval(() => {
+      this.enterImage = this.imagesList[i];
+      i += 1;
+      if (i >= this.imagesList.length) {
+        i = 0;
+      }
+    }, 5000);
   },
 };
 </script>
