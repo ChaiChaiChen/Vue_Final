@@ -114,7 +114,7 @@
 .coupon-content {
   display: inline-block;
   white-space: nowrap;
-  animation: coupon 10s linear infinite;
+  animation: coupon 15s linear infinite;
 }
 
 @keyframes coupon {

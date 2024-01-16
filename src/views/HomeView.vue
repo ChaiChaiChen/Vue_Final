@@ -15,19 +15,19 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img :src=banners.img[0] class="img-fluid" alt="...">
-        <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
+        <div class="carousel-caption justify-content-center carousel-home-text">
           <h1 class="bannerText">極致舒適&emsp;<br>&emsp;優雅生活</h1>
         </div>
       </div>
       <div class="carousel-item">
         <img :src=banners.img[1] class="img-fluid" alt="...">
-        <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
+        <div class="carousel-caption justify-content-center carousel-home-text">
           <h1 class="bannerText">輕奢設計<br>添色於你的家居</h1>
         </div>
       </div>
       <div class="carousel-item">
         <img :src=banners.img[2] class="img-fluid" alt="...">
-        <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
+        <div class="carousel-caption justify-content-center carousel-home-text">
           <h1 class="bannerText">專屬你的沙發時光<br>品味獨特生活</h1>
         </div>
       </div>
