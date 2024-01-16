@@ -4,8 +4,11 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <Loading :active="isLoading"></Loading>
-  <div class="container-fluid mt-5">
-    <div class="row align-items-center bg-gray mt-5">
+<div class="coupon-container bg-theme text-white text-center d-flex align-items-center justify-content-center" style="margin-top: 85px; height: 40px;">
+  <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
+</div>
+  <div class="container-fluid">
+    <div class="row align-items-center bg-gray">
       <div class="col-md-6 gx-0 mt-5">
         <img :src="tempProduct.imageUrl" alt="" class="img-fluid">
       </div>
@@ -24,6 +27,7 @@
                 </div>
                 加入購物車</button>
                 <button class="btn btn-btn-share-bg btn-share-view btn-xl m-1"
+                @click="shareUrl"
                 :disabled ="this.status.loadingItem === tempProduct.id"
                 >
                 分享 <i class="bi bi-share"></i></button>
@@ -102,6 +106,25 @@
 .content{
   white-space: pre-wrap;
 }
+.coupon-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.coupon-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: coupon 10s linear infinite;
+}
+
+@keyframes coupon {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 </style>
 <script>
 export default {
@@ -121,6 +144,7 @@ export default {
       showImage: true,
       n: 0,
       elTop: 0, // 滾動前,捲軸距離視窗頂部的距離
+      share: '',
     };
   },
   mounted() {
@@ -192,6 +216,12 @@ export default {
       const scrolltoTop = window.pageYOffset;
       // 更新: 滾動前,捲軸距離視窗頂部的距離
       this.elTop = scrolltoTop;
+    },
+    shareUrl() {
+      navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+          console.log('分享');
+        });
     },
   },
   created() {

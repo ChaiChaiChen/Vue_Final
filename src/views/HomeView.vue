@@ -14,19 +14,19 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311402637.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QLjGMCEC%2BUAICf0hSSZ4VJUo7ww6ANtpWBMInS%2BAm%2BO1HbYu2%2FuMdRDk2IkHtRSOQmj%2BDhPgcRcLHg81BGtz%2Fd8It0KeNdAs2zs%2F4Zr1m7Al%2FvWmrByB9YTXbQYx%2Fl70Yxg2fj%2BpFIrvDKVt9dhhhSEpA9JHW8QdjXKV%2F3CxEsP%2B3SuyslZ4zFIDsmvXhC8vDxIrcVqBbHqIyksHPyE9mIcKvF9dzeFcUBgdfAzWyMMWNTg46dyLVr9m1BOC9h%2FHswBDJotROHD5mAqyo%2FVhHqCXQXvajSev64npZR03vFZt5VMDBHzDx9eyGIBsQlpRdnffq355dv1TZEk9ZYRy0w%3D%3D" class="img-fluid" alt="...">
+        <img :src=banners.img[0] class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
           <h1 class="bannerText">極致舒適&emsp;<br>&emsp;優雅生活</h1>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311990681.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eTGojm8G75jJYEjyGnerTWsSS%2B626TnSS4Yxl%2FiTX7GJA27x401h7kufycqaJLZGrXeG66UvKUdl5DzZg%2F2lnmd4zXXHU8q90oYZ5neM%2F6nPx1KDEgTfH9ixTbykmNIrVgHYyiN5gDWesFYmea5aKzDnw0AyZ3%2FakkJVAWeUJrRmxphicBSpB2A1tYXoKCVgHAdmDb5i%2FQ6WW55b6jKxM6uLv1K7yLVmFi7SUDEOjY43POtwU9EpGRUCIvxH4vvli13og1QkgEndPOPGxxZhcaHhl2jVzloZW4VMNGwckA4XkUEOk8tgKs3hl8%2BZipo1p8ObQJObuGBfq%2Fjv%2BJsgHQ%3D%3D" class="img-fluid" alt="...">
+        <img :src=banners.img[1] class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
           <h1 class="bannerText">輕奢設計<br>添色於你的家居</h1>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705312139600.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eZKkrOkD4NBLlJQDJ2NMbfXk0wiU7w7Xy32jCbWrwn2ceoqD%2FzXhgDF3exQ6omXa8gsS5bP3fVdO926IX3Chcn1tERCMDGB4XcCTAqWu9e2g2mzf7wNkK4eCW1RGlNaHhVBQj3u56FKV0LmRStG8IuRRbuBJdGiB0%2B1FTSU85RHnsLWxNKY3HmqI6Mzd9YOAtEhnqFYvv%2BAAkNis3aqap7wC7sRFbqI8Gz03oBmg%2BwDflnyqfYvJFcu25L2Mq7LFsseyLZ3xQrExnxK2rIMVUrNwCBiQeWPOUJQ%2BeMJI%2BV6RjAayZ8t4HDKBoh97c1KySiONcULh8baMqTI5godgWA%3D%3D" class="img-fluid" alt="...">
+        <img :src=banners.img[2] class="img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block justify-content-center carousel-home-text">
           <h1 class="bannerText">專屬你的沙發時光<br>品味獨特生活</h1>
         </div>
@@ -43,15 +43,13 @@
     </div>
   </div>
   <div class="container mt-xl-5">
-    <div class="row g-3">
+    <div class="row g-3 align-items-center">
       <div class="col-xl-7 d-flex order-2 order-xl-1">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705157449372.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=U50nUI5gDnrJGIEYP7nCnWaL7VlDZbbHNoNUC1uGXwUeFQ%2BpduJVwkcR1DmOpPSWiPADBSteF3BQz8L5fddRUhaqI7odZEnZm8lGh64vGbEjqRyvkn8BrEF19uIsvTqaHb7%2FV6hi8esQd7c0VKQb%2BXgYWFnlpJVdy37wMNnQwX1CXYFbfdE3hGIXmcfmZCPEEv6RwsxoaygxtkSKRqotZA68iQ3RdUAprjXLgaw3HSxGHhWMSEsevkfb8oaUqPRpSLVEW%2FtnDsntNJa3B%2BKd5wHLsf4CXbRP5F2BbDm6Uo8W0d%2BXZVumoaq6ighDxOk3wWVZ82MsJVRqFM%2BuTY6KMQ%3D%3D" class="img-fluid imgIntroduce" alt="">
       </div>
       <div class="col-xl-5 col-sm-12 order-1 order-xl-2 text-center text-xl-start">
-
           <h1 class="text-theme">打造您理想的家居空間</h1>
           <p class="mt-4 mb-4 lh-lg">我們為每一位注重生活品質的顧客打造了一個極致奢華的客廳體驗。<br>提供優質、個性化的沙發，打造出滿足顧客期望的獨特家居風格。</p>
-
         <router-link to="/products">
           <button class="btn btn-btn-bg btn-lg text-white btn-add-view ">View More</button>
         </router-link>
@@ -101,7 +99,7 @@
   </div>
   <div class="row">
     <div class="col-12 middleBg gy-0 d-flex align-items-center justify-content-center">
-      <button class="btn btn-btn-bg btn-lg btn-add-view">領取優惠碼</button>
+      <button class="btn btn-btn-bg btn-lg btn-add-view" @click="coupon">領取優惠碼</button>
     </div>
   </div>
 </div>
@@ -109,7 +107,23 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      banners: {
+        img: ['https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311402637.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QLjGMCEC%2BUAICf0hSSZ4VJUo7ww6ANtpWBMInS%2BAm%2BO1HbYu2%2FuMdRDk2IkHtRSOQmj%2BDhPgcRcLHg81BGtz%2Fd8It0KeNdAs2zs%2F4Zr1m7Al%2FvWmrByB9YTXbQYx%2Fl70Yxg2fj%2BpFIrvDKVt9dhhhSEpA9JHW8QdjXKV%2F3CxEsP%2B3SuyslZ4zFIDsmvXhC8vDxIrcVqBbHqIyksHPyE9mIcKvF9dzeFcUBgdfAzWyMMWNTg46dyLVr9m1BOC9h%2FHswBDJotROHD5mAqyo%2FVhHqCXQXvajSev64npZR03vFZt5VMDBHzDx9eyGIBsQlpRdnffq355dv1TZEk9ZYRy0w%3D%3D',
+          'https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311990681.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eTGojm8G75jJYEjyGnerTWsSS%2B626TnSS4Yxl%2FiTX7GJA27x401h7kufycqaJLZGrXeG66UvKUdl5DzZg%2F2lnmd4zXXHU8q90oYZ5neM%2F6nPx1KDEgTfH9ixTbykmNIrVgHYyiN5gDWesFYmea5aKzDnw0AyZ3%2FakkJVAWeUJrRmxphicBSpB2A1tYXoKCVgHAdmDb5i%2FQ6WW55b6jKxM6uLv1K7yLVmFi7SUDEOjY43POtwU9EpGRUCIvxH4vvli13og1QkgEndPOPGxxZhcaHhl2jVzloZW4VMNGwckA4XkUEOk8tgKs3hl8%2BZipo1p8ObQJObuGBfq%2Fjv%2BJsgHQ%3D%3D',
+          'https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705312139600.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eZKkrOkD4NBLlJQDJ2NMbfXk0wiU7w7Xy32jCbWrwn2ceoqD%2FzXhgDF3exQ6omXa8gsS5bP3fVdO926IX3Chcn1tERCMDGB4XcCTAqWu9e2g2mzf7wNkK4eCW1RGlNaHhVBQj3u56FKV0LmRStG8IuRRbuBJdGiB0%2B1FTSU85RHnsLWxNKY3HmqI6Mzd9YOAtEhnqFYvv%2BAAkNis3aqap7wC7sRFbqI8Gz03oBmg%2BwDflnyqfYvJFcu25L2Mq7LFsseyLZ3xQrExnxK2rIMVUrNwCBiQeWPOUJQ%2BeMJI%2BV6RjAayZ8t4HDKBoh97c1KySiONcULh8baMqTI5godgWA%3D%3D'],
+      },
+    };
+  },
+  inject: ['emitter'],
   methods: {
+    coupon() {
+      navigator.clipboard.writeText('95%')
+        .then(() => {
+          console.log('已複製');
+        });
+    },
   },
 };
 </script>

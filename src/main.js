@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable vue/multi-word-component-names */
 import { createApp } from 'vue';
+import VueClipboard from 'vue3-clipboard';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import Loading from 'vue3-loading-overlay';
@@ -42,4 +43,5 @@ app.component('Field', Field);
 app.component('ErrorMessage', ErrorMessage);
 app.component('Loading', Loading);
 app.use(VueAxios, axios);
+app.use(VueClipboard);
 app.mount('#app');
