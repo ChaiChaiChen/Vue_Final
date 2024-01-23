@@ -1,8 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div>
+    <div class="container">
+      <div class="row mt-5">
       <Loading :active="isLoading"></Loading>
-      <div class="text-end mt-4">
+      <div class="text-end mt-5">
         <button class="btn btn-primary" @click="openCouponModal(true)">
           建立新的優惠券
         </button>
@@ -43,6 +44,7 @@
       @update-coupon="updateCoupon"/>
       <DelModal :item="tempCoupon" ref="delModal" @del-item="delCoupon"/>
     </div>
+  </div>
   </template>
 
 <script>

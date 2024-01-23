@@ -250,7 +250,7 @@ export default {
     // 透過$route.params接收UserCart所傳送的prouctId
     this.id = this.$route.params.productId;
     this.getProduct();
-    let i = 1;
+    let i = 0;
     setInterval(() => {
       this.enterImage = this.imagesList[i];
       i += 1;
