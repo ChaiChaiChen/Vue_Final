@@ -1,8 +1,14 @@
 <template>
-  <div class="toast-container position-fixed pe-3 top-0 end-0">
+  <div class="toast-container position-fixed pe-3 top-0 end-0 msg-title">
     <Toast v-for="(msg, key) in messages" :key="key" :msg="msg"></Toast>
   </div>
 </template>
+<style>
+.msg-title{
+  width: 20%;
+  margin-top: 6rem;
+}
+</style>
 <script>
 import Toast from '@/components/Toast.vue';
 
