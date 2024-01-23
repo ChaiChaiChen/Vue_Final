@@ -71,6 +71,7 @@ export default {
       n: 0,
     };
   },
+  inject: ['emitter'],
   methods: {
     getProducts() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
@@ -113,6 +114,7 @@ export default {
       this.$http.post(url, { data: cart }).then((response) => {
         this.status.loadingItem = '';
         console.log('Products', response);
+        this.$httpMessageState(response, '已加入購物車');
       });
     },
     enterFun(index) {

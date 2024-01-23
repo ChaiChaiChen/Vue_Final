@@ -121,7 +121,13 @@ export default {
     coupon() {
       navigator.clipboard.writeText('95%')
         .then(() => {
-          console.log('已複製');
+          const response = {
+            // eslint-disable-next-line no-undef
+            data: {
+              success: true,
+            },
+          };
+          this.$httpMessageState(response, '已複製序號');
         });
     },
   },

@@ -164,7 +164,7 @@ export default {
       };
       this.isLoading = true;
       this.$http.post(url, { data: coupon }).then((response) => {
-        this.$httpMessageState(response, '加入優惠券');
+        this.$httpMessageState(response, '使用優惠券');
         this.getCart();
         this.isLoading = false;
       });
