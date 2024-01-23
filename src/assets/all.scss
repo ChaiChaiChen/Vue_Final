@@ -131,18 +131,22 @@ html, body {
     height: 400px;
     position: relative;
     display: block;
-  }
-  
-  .link-bottom{
-    border-bottom: solid #888888 1px;
-  }
-  
-  .imgText{
-    border-style:solid;
-    border-width:1px;
-    margin: 0 2rem;
-    padding: 4rem 0;
-  }
+}
+
+.link-bottom{
+  border-bottom: solid #888888 1px;
+}
+
+.imgText{
+  border-style:solid;
+  border-width:1px;
+  margin: 0 2rem;
+  padding: 4rem 0;
+}
+.msg-title{
+  margin-top: 6rem;
+  width: 20%;
+}
 @media (max-width: 1200px) {
     .imgText{
         margin: 0 1.5rem;
@@ -166,7 +170,10 @@ html, body {
     }
     .imgSize{
         height: 400px;
-      }
+    }
+    .msg-title{
+      width: 40%;
+    }
 }
 @media (max-width: 768px){
     .carousel-item{
@@ -189,5 +196,8 @@ html, body {
       left: -9999px;
       right: -9999px;
       margin: auto;
+    }
+    .msg-title{
+      width: 60%;
     }
   }

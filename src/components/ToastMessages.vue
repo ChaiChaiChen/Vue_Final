@@ -4,10 +4,6 @@
   </div>
 </template>
 <style>
-.msg-title{
-  width: 20%;
-  margin-top: 6rem;
-}
 </style>
 <script>
 import Toast from '@/components/Toast.vue';
