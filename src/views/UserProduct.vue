@@ -165,6 +165,7 @@ export default {
       share: '',
     };
   },
+  inject: ['emitter'],
   mounted() {
     window.addEventListener('scroll', this.scrolling);
     // 資料掛載完, window去監聽scroll事件
@@ -198,6 +199,7 @@ export default {
       this.$http.post(url, { data: cart }).then((response) => {
         this.status.loadingItem = '';
         console.log('Products', response);
+        this.$httpMessageState(response, '加入購物車');
       });
     },
     same(productCategory) {
@@ -239,7 +241,13 @@ export default {
     shareUrl() {
       navigator.clipboard.writeText(window.location.href)
         .then(() => {
-          console.log('分享');
+          const response = {
+            // eslint-disable-next-line no-undef
+            data: {
+              success: true,
+            },
+          };
+          this.$httpMessageState(response, '複製連結');
         });
     },
     changeEnterImage(secImage) {
