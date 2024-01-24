@@ -22,13 +22,13 @@
       <div class="carousel-item">
         <img :src=banners.img[1] class="img-fluid" alt="...">
         <div class="carousel-caption justify-content-center carousel-home-text">
-          <h1 class="bannerText">輕奢設計<br>添色於你的家居</h1>
+          <h1 class="bannerText">走進舒適&emsp;<br>&emsp;走進幸福</h1>
         </div>
       </div>
       <div class="carousel-item">
         <img :src=banners.img[2] class="img-fluid" alt="...">
         <div class="carousel-caption justify-content-center carousel-home-text">
-          <h1 class="bannerText">專屬你的沙發時光<br>品味獨特生活</h1>
+          <h1 class="bannerText">簡約時尚&emsp;<br>&emsp;質感至上</h1>
         </div>
       </div>
     </div>
@@ -67,6 +67,12 @@
     <div class="row mt-3 justify-content-center text-center align-items-center bg-gray">
       <div class="col-xl-2 col-6">
         <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
+        <h1 class="mt-3 text-brown"><strong>30</strong></h1>
+        <p>間分店</p>
+      </div>
+      </div>
+      <div class="col-xl-2 col-6">
+        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
         <h1 class="mt-3 text-brown fw-bolder"><strong>10+</strong></h1>
         <p>年服務經驗</p>
         </div>
@@ -83,26 +89,20 @@
         <p>名顧客滿意</p>
         </div>
       </div>
-      <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
-        <h1 class="mt-3 text-brown"><strong>30</strong></h1>
-        <p>間分店</p>
-      </div>
-      </div>
     </div>
-    <div class="row mt-3 justify-content-center text-center g-0">
-      <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg">
+    <div class="row mt-3 justify-content-center text-center g-0" >
+      <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg p-3">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706069120498.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Cwk3mU475auI7rkk%2BlKFG8sMIrIv4nt7fZwEXnXSuZauLVOhUERmY5TEENSF%2BbDCQ2BxhDUM%2FWqCoVExaN%2F1N7KbZ4D9ZpbSJUOhtBbE1K69BkBvf4oQbuvWCfL%2FU5MtmU6kXltEr%2Fld9%2B9FkCwKYGe7RsrdZdK3BO3cTRBNifC1MQ6hW9Oz2GxsCv0JOXxLqJTbBc90xMgt%2BPhcDLli3RYt4PRwAN4ufd4Ke2NMpQNketwyEtUZMQg0PX1OEamF5p9jc%2BtxOlARNp8drLAW69StsM3jdw0%2Br3OjXGG2HQ9o4dVFw56T5IJcVyMWMF77KAN0Wq1JqzixvwvEao6bPg%3D%3D" class="img-fluid mt-3" alt="">
         <h5 class="mt-3 text-brown"><strong>Step 1-確定需求和空間</strong></h5>
         <p>測量您想放置沙發的空間，確保沙發的尺寸符合空間的大小。<br>
           確定您對沙發的功能性需求</p>
       </div>
-      <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg">
+      <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg p-3">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706069159767.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=gSTVSPElv6ZGc9gYosibBBQMn6tfs2Vwf1S6KSAVytDmNIC3y4jNDgjxUYDWXcvckcMlfJS5jOyNr0eyH%2FFyndiYLfJmdCGhuQQ2qpgNpT71w6cAe5VukMOIcBV8hHkBXxRcmky8tdi1HYa2bEnThNtnCB79%2F78EQxnp%2BAH9tby5lOUGv0D7Hohb0JEZ3VuOWurHhirj6awazdVD2FM1%2Fc2tVhb3W%2BGCNsTIOwfy56HxkZ8Ye2IpjAsI5LldC6j3LRw2s2LxSJnOnXmj8VKZdlaaA4l%2FhQAj6Bu62regK%2FeS3v2mJad6nIWleUNCyYcG65ywAV%2FvdOrgTQ5yKtnm%2BA%3D%3D" class="img-fluid mt-3" alt="">
         <h5 class="mt-3 text-brown"><strong>Step 2-材質選擇</strong></h5>
         <p>根據個人偏好和預算，選擇沙發的材質，無論是布質、全皮還是合成纖維。</p>
       </div>
-      <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg">
+      <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg p-3">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706069096001.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=gIQRSD4jJuHE%2F%2FqYOmDeonzrktb%2BNKNCLrEK%2FBi%2FleGQlk4jsQaBWdZbKIjxDCoeFc9tONw8VufwQ9FKprvRJK4qDww%2BSBrJyIT4Vz%2FrLR1k6zwbvwGfTGOT4fQI1JiauqSL%2FMuYcy02t0NVC7dZ1N2f5qeknmZon6ilPBAW0MsTrHJFJMiOf77vHd9pZV9EsJapn8Fy8jD95bzcSF73sH51wFOULVWOYUrEXN5hYml0PIs0KotUgXjrNKSNG9gXq4rsUnuw3elV6OSmhrbzSD99no12uh%2Fk6yT%2B7UbA6pq0GmhQoRF8gNAYSoTgCSQZfSlymxWILbaA0KtnuSiYXg%3D%3D" class="img-fluid mt-3" alt="">
         <h5 class="mt-3 text-brown"><strong>Step 3-試坐和比較</strong></h5>
         <p>親自到店鋪試坐沙發，感受座椅的舒適度和支撐性。</p>

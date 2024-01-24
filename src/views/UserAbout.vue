@@ -3,7 +3,7 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704688694154.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=TDqPpRKduKijGpwaoRFJepfnRIfVupIvLLZe9pIoUDztJ5T0%2B5gd74UhQAYGPuJbfa713z%2FGCNmeWbrXGVJJMLIAi%2BkLgDX1b5CYuSDzhtBke4vmafE4%2FZIuJl0DW1x1F34UbBTZTH%2F52yIVBQGKhgeQG3JNP6hYOl9t82FsaWYibPEH%2FhL2UVJMss8FsKbNfH0zVbxF96Uk9HDAD3jjRDfKsQnmJ5gzeLVtU3vP6GI7C%2B1ATnTWWxsJWG0UjUXF0mKvIB38f5yT7n%2FFRHPAwoPCqrx4d70Wkxxjd5R58VPD%2BST65W0%2FjGNCyf35O2YE42Y%2FXeQlvxgbScHKFMQ5og%3D%3D" class="img-fluid" alt="...">
+        <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706077463262.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QXfnqNZnXmmFs6cbZe%2B9zxEhBhrLaFiBOvWI6UCSblbdA5aNmKSWPFm4aLSSlfiqOE9sSjRwND6a7QOJiAxA%2FcI3db944J87n5H%2B9wLO3A0hucrwGkjYCfUAW%2FO6cGK7PeNAsrgxvdDXMuW%2Bgox9oVNZMiz0Y%2BFWNn%2BBExrKD9vCrxZOX9v787IyOXgtVixOsnN573CdXko1DiWhyPlSjXHnUvb4T4MKP8upsrOYm4dYbp05Y36c8bQrFeZwnpx9VNvTOPSRCIAsCANjAV3wxWmcprl9vvfrMdzO%2B%2BiCfv0N1ng4mWrTulCvuiJGRYiAYzuu3kIL3ENFv70QaAMvnw%3D%3D" class="img-fluid" alt="...">
         <div class="carousel-caption justify-content-center carousel-home-text">
         <h1 class="bannerText">關於我們</h1>
       </div>
