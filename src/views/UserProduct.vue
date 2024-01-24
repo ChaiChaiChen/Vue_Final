@@ -97,7 +97,7 @@
           </div>
           <div class="card-body text-center">
             <h5 class="card-img-title-lg">{{ product.title }}</h5>
-              <p class="card-text">售價：{{ product.price }}</p>
+              <p class="card-text">售價：{{ $filters.currency(product.price) }}</p>
             <button class="btn btn-btn-bg btn-add-view btn-xl"
             :disabled ="this.status.loadingItem === product.id"
             @click="addCart(product.id)">

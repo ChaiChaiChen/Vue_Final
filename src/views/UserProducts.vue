@@ -41,7 +41,7 @@
         </div>
         <div class="card-body text-center">
           <h5 class="card-img-title-lg">{{ product.title }}</h5>
-            <p class="card-text">售價：{{ product.price }}</p>
+            <p class="card-text">售價：{{ $filters.currency(product.price) }}</p>
           <button class="btn btn-btn-bg btn-add-view btn-xl"
           :disabled ="this.status.loadingItem === product.id"
           @click="addCart(product.id)">
@@ -114,7 +114,7 @@ export default {
       this.$http.post(url, { data: cart }).then((response) => {
         this.status.loadingItem = '';
         console.log('Products', response);
-        this.$httpMessageState(response, '已加入購物車');
+        this.$httpMessageState(response, '加入購物車');
       });
     },
     enterFun(index) {

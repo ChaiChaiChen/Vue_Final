@@ -11,27 +11,27 @@
       </div>
     </div>
   </div>
+  <div class="container">
   <Loading :active="isLoading"></Loading>
-  <div class="my-5 row justify-content-center">
+  <div class="my-5 row justify-content-center text-center">
+    <!-- <div class="col-12">
+      <div class="col-4 circle">1</div>
+      <div class="col-4 circle">2</div>
+      <div class="col-4 circle">3</div>
+      </div> -->
     <div class="col-md-8">
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr>
-            <th></th>
             <th>品名</th>
             <th style="width: 100px">數量</th>
             <th>單價</th>
+            <th>刪除</th>
           </tr>
         </thead>
         <tbody>
             <tr v-for="cart in cartsList.carts" :key="cart.Id">
-            <td>
-              <button class="btn btn-outline-danger btn-sm"
-              type="button" @click="deleteCartItem(cart.id)">
-                <i class="bi bi-x"></i>
-              </button>
-            </td>
-            <td>
+            <td class="bg-table-title">
               {{ cart.product.title }}
             </td>
             <td>
@@ -45,16 +45,24 @@
                     <small v-if="cart.final_total !== cart.total" class="text-success">折扣價：</small>
                     {{ $filters.currency(cart.final_total) }}
                   </td>
+                  <td>
+              <button class="btn btn-outline-danger btn-sm"
+              type="button" @click="deleteCartItem(cart.id)">
+              <i class="bi bi-trash3"></i>
+              </button>
+            </td>
             </tr>
         </tbody>
         <tfoot>
           <tr>
                 <td colspan="3" class="text-end">總計</td>
-                <td class="text-end">{{ (cartsList.total) }}</td>
+                <td class="text-end">{{ $filters.currency(cartsList.total) }}</td>
               </tr>
               <tr v-if="cartsList.final_total !== cartsList.total">
                 <td colspan="3" class="text-end text-success">折扣價</td>
-                <td class="text-end text-success">{{ (cartsList.final_total) }}</td>
+                <td class="text-end text-success">
+                  {{ $filters.currency(cartsList.final_total) }}
+                </td>
               </tr>
         </tfoot>
       </table>
@@ -71,9 +79,15 @@
   <div class="my-5 row justify-content-center" v-if="cartsList.total > 0">
       <Form class="col-md-6" v-slot="{ errors }"
             @submit="createOrder">
+        <!-- <div class="input-group">
+          <input type="text" class="input" required id="username">
+          <label class="label" for="username">Username</label>
+          <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
+        </div> -->
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <Field id="email" name="email" type="email" class="form-control"
+          <Field id="email" name="email" type="email" class="form-control rounded-0
+           form-style"
                    :class="{ 'is-invalid': errors['email'] }"
                    placeholder="請輸入 Email" rules="email|required"
                    v-model="form.user.email"></Field>
@@ -82,7 +96,7 @@
 
         <div class="mb-3">
           <label for="name" class="form-label">收件人姓名</label>
-          <Field id="name" name="姓名" type="text" class="form-control"
+          <Field id="name" name="姓名" type="text" class="form-control rounded-0 form-style"
                    :class="{ 'is-invalid': errors['姓名'] }"
                    placeholder="請輸入姓名" rules="required"
                    v-model="form.user.name"></Field>
@@ -91,7 +105,7 @@
 
         <div class="mb-3">
           <label for="tel" class="form-label">收件人電話</label>
-          <Field id="tel" name="電話" type="tel" class="form-control"
+          <Field id="tel" name="電話" type="tel" class="form-control rounded-0 form-style"
                    :class="{ 'is-invalid': errors['電話'] }"
                    placeholder="請輸入電話" rules="required"
                    v-model="form.user.tel"></Field>
@@ -100,7 +114,7 @@
 
         <div class="mb-3">
           <label for="address" class="form-label">收件人地址</label>
-          <Field id="address" name="地址" type="text" class="form-control"
+          <Field id="address" name="地址" type="text" class="form-control rounded-0 form-style"
                    :class="{ 'is-invalid': errors['地址'] }"
                    placeholder="請輸入地址" rules="required"
                    v-model="form.user.address"></Field>
@@ -109,7 +123,8 @@
 
         <div class="mb-3">
           <label for="message" class="form-label">留言</label>
-          <textarea name="" id="message" class="form-control" cols="30" rows="10"
+          <textarea name="" id="message" class="form-control rounded-0
+           form-style" cols="30" placeholder="留言"
                     v-model="form.message"></textarea>
         </div>
         <div class="text-end">
@@ -117,8 +132,60 @@
         </div>
       </Form>
     </div>
+  </div>
   </template>
-
+<style>
+tr{
+  border-color: #be9a6b;
+}
+.input-group{
+  position: relative;
+  --primary: #19d093;
+}
+.input{
+  all: unset;
+  color: #9b5e35;
+  padding: 1rem;
+  border: 1px solid #d19222;
+  transition: 150ms cubic-bezier(0.4, 0,0.2,1);
+}
+.input:focus{
+  border: 1px solid var(--primary);
+}
+.input:is(:focus, :valid) ~ label{
+  transform: translateY(-120%) scale(0.7);
+  background-color: #1a1a1a;
+  padding-inline: 0.3rem;
+  color: var(--primary);
+}
+.label{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #9b5e35;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0,0.2,1);
+}
+.form-style{
+  border: none;
+  border-bottom: 1px solid #9b5e35;
+}
+.circle{
+  display: inline-block;
+    text-align: center;
+    /* width: 10%; */
+    /* border: 1.2em solid #dddddd; */
+    background-color: #ddd;
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.4em;
+    border-radius: 50%;
+    /* max-width: 1.2em; */
+    /* max-height: 1.2em; */
+    /* box-sizing: border-box; */
+    /* margin: 0 auto; */
+}
+</style>
 <script>
 
 export default {

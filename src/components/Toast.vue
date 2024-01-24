@@ -10,6 +10,13 @@
       </div>
     </div>
   </template>
+
+<style>
+
+.toast-header{
+      background-color: #fff6e5;
+    }
+    </style>
 <script>
 import Toast from 'bootstrap/js/dist/toast';
 

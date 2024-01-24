@@ -4,6 +4,7 @@
   </div>
 </template>
 <style>
+
 </style>
 <script>
 import Toast from '@/components/Toast.vue';

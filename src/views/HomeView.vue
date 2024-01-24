@@ -62,6 +62,20 @@
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705157491372.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=P%2FJVFBTOu%2F6YoXS0Lqcp3%2B9rZE8DIuwuggPf4mECZxErDBkdcNGVfWQI97R0OF4z5g%2BALCsexb3KuE3%2Bbq4t0Mawx1AhuBak98eHDf2vWDQbEJ5M2y6ENY%2BbwmTSIEK8A%2BR6qLiGGOMGRRFVcW1xbXwUxtfqzHzRuB7kjedXSB77%2Bb%2FoyaIQUTwpRG0mxCjiQTWMS1%2FnXiqoPJa0R8D9nvXHQLKP1P1UZQ9%2FJcD3p8PBsY5pjhwEnDlY%2Fbjzg6q5cutOuuvG7ZHG4ZQ6x2dLiNOUc8Oh0Nsrt5zx4TMV89FQwjB1Iew5w8RYOQO9v4T5vLZ1eAHZKIVNfFhlkUodkw%3D%3D" class="img-fluid imgIntroduce" alt="">
       </div>
     </div>
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-3">
+        
+      </div>
+      <div class="col-3">
+        
+      </div>
+      <div class="col-3">
+        
+      </div>
+    </div>
   </div>
   <div class="container-fluid mt-5">
     <div class="row align-items-center bg-text-bg">
