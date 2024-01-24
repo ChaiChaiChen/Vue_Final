@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <router-link to="/" class="navbar-brand mt-2 ms-2">
+      <router-link to="/" class="navbar-brand mt-2 ms-2" @click="mobileBtn = false">
         <img src="../assets/static/soffa.png" style="height:50px;" alt="">
         </router-link>
       <button class="navbar-toggler" type="button"

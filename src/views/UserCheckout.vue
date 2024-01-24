@@ -33,7 +33,7 @@
         <tbody>
             <tr v-for="cart in cartsList.carts" :key="cart.Id">
               <td>
-                <img :src="cart.product.imageUrl" style="height: 50px;" alt="">
+                <img :src="cart.product.images[0]" style="height: 50px;" alt="">
               </td>
             <td class="bg-table-title">
               <router-link :to="`/product/${cart.product_id}`"
@@ -62,11 +62,11 @@
         </tbody>
         <tfoot>
           <tr>
-                <td colspan="3" class="text-end">總計</td>
+                <td colspan="4" class="text-end">總計</td>
                 <td class="text-end">{{ $filters.currency(cartsList.total) }}</td>
               </tr>
               <tr v-if="cartsList.final_total !== cartsList.total">
-                <td colspan="3" class="text-end text-success">折扣價</td>
+                <td colspan="4" class="text-end text-success">折扣價</td>
                 <td class="text-end text-success">
                   {{ $filters.currency(cartsList.final_total) }}
                 </td>
