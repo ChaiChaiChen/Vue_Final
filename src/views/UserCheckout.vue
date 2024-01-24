@@ -23,6 +23,7 @@
       <table class="table table-hover">
         <thead>
           <tr>
+            <th></th>
             <th>品名</th>
             <th style="width: 100px">數量</th>
             <th>單價</th>
@@ -31,6 +32,9 @@
         </thead>
         <tbody>
             <tr v-for="cart in cartsList.carts" :key="cart.Id">
+              <td>
+                <img :src="cart.product.imageUrl" style="height: 50px;" alt="">
+              </td>
             <td class="bg-table-title">
               <router-link :to="`/product/${cart.product_id}`"
                class="text-decoration-none text-theme">
@@ -141,6 +145,9 @@
   </div>
   </template>
 <style>
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #ffdf9ae5;
+}
 tr{
   border-color: #be9a6b;
 }
