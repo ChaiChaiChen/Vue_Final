@@ -24,7 +24,7 @@
                     {{ product.product.unit }}
                   </div>
                 </td>
-                <td class="text-right">{{ order.total }}</td>
+                <td class="text-right">{{ $filters.currency(order.total) }}</td>
                 <td>
                     <span class="text-success" v-if="order.is_paid">已付款</span>
                     <span class="text-muted" v-else>未付款</span>
@@ -32,6 +32,7 @@
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-outline-primary btn-sm"
+                        @click.prevent="openModal(order)"
                         >檢視</button>
                     <button class="btn btn-outline-danger btn-sm"
                      @click.prevent="openDelOrderModal(order)">
@@ -47,7 +48,7 @@
   <DelModal :item="tempOrder" ref="delModal" @del-item="delOrder"></DelModal>
 </template>
 <script>
-import DelModal from '../components/DelModal.vue';
+import DelModal from '../../components/DelModal.vue';
 
 export default {
   data() {

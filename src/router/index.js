@@ -3,49 +3,49 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    component: () => import('../views/Userboard.vue'),
+    component: () => import('../views/frontend/Userboard.vue'),
     children: [
       {
         path: '',
-        component: () => import('../views/HomeView.vue'),
+        component: () => import('../views/frontend/HomeView.vue'),
       },
       {
         path: 'products',
-        component: () => import('../views/UserProducts.vue'),
+        component: () => import('../views/frontend/UserProducts.vue'),
       },
       {
         path: 'about',
-        component: () => import('../views/UserAbout.vue'),
+        component: () => import('../views/frontend/UserAbout.vue'),
       },
       {
         path: 'product/:productId',
-        component: () => import('../views/UserProduct.vue'),
+        component: () => import('../views/frontend/UserProduct.vue'),
       },
       {
         path: 'checkout',
-        component: () => import('../views/UserCheckout.vue'),
+        component: () => import('../views/frontend/UserCheckout.vue'),
       },
       {
         path: 'pay/:orderId',
-        component: () => import('../views/UserPay.vue'),
+        component: () => import('../views/frontend/UserPay.vue'),
       },
     ],
   },
   {
     path: '/dashboard',
-    component: () => import('../views/Dashboard.vue'),
+    component: () => import('../views/backend/Dashboard.vue'),
     children: [
       {
         path: 'products',
-        component: () => import('../views/Products.vue'),
+        component: () => import('../views/backend/Products.vue'),
       },
       {
         path: 'orders',
-        component: () => import('../views/Orders.vue'),
+        component: () => import('../views/backend/Orders.vue'),
       },
       {
         path: 'coupons',
-        component: () => import('../views/Coupons.vue'),
+        component: () => import('../views/backend/Coupons.vue'),
       },
     ],
   },
@@ -56,7 +56,7 @@ const routes = [
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('../views/NotFound.vue'),
+    component: () => import('../views/frontend/NotFound.vue'),
   },
 ];
 

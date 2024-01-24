@@ -8,8 +8,8 @@
 </template>
 <script>
 import emitter from '@/methods/emitter';
-import Navbar from '../components/Navbar.vue';
-import ToastMessages from '../components/ToastMessages.vue';
+import Navbar from '../../components/Navbar.vue';
+import ToastMessages from '../../components/ToastMessages.vue';
 
 export default {
 // 區域註冊Navbar
