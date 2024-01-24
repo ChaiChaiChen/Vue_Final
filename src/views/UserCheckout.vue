@@ -32,7 +32,10 @@
         <tbody>
             <tr v-for="cart in cartsList.carts" :key="cart.Id">
             <td class="bg-table-title">
-              {{ cart.product.title }}
+              <router-link :to="`/product/${cart.product_id}`"
+               class="text-decoration-none text-theme">
+              {{ cart.product.title }}<i class="bi bi-link-45deg fs-5 text-danger"></i>
+              </router-link>
             </td>
             <td>
               <div class="input-group input-group-sm">
