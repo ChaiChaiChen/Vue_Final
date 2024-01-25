@@ -224,6 +224,7 @@ export default {
       this.showImage = true;
       this.n = index;
     },
+    // https://hackmd.io/@JCtsai/H1IhyB0Ni
     // 要滑到top為0的位置, 使用smooth的模式
     scrollTop() {
       window.scrollTo({

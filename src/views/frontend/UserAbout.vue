@@ -11,8 +11,12 @@
     </div>
   </div>
 <div class="container mt-5 mb-5">
-  <div class="row row-cols-3">
-    <div class="col-3 mt-4">
+  <div class="row justify-content-center text-center">
+    <div class="col-8">
+      <h3>去年業績銷量</h3>
+      <LineChart></LineChart>
+    </div>
+    <!-- <div class="col-3 mt-4">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704702228996.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=DqDO8GjdIXDFACQYa6H%2FOSPWSOlnqQeQ2fv%2FcEUffVlZGk8zms30MkCYg%2FBQhyGKXmW4MHCI3QGCfzc99M9SFy0rRzOntiVMOtDp63rP1utcGWXCXZbTftaLGa5Oj2rCEr9D529QfOfRVp7h5Nt%2F2YU1GxoCARDM8rMuZCmA8I2LAeQDwKWISLaj9EEiy3CNVQcbWPtNWO%2FQVKn8MfZZSm5AIHXn%2Fy3WcAjj6iutBIYKEedidOXhV3WIfk%2BilAZY4%2BiAp2pRdSB6Bc2ZuRGU0jxMQMmQ4noOkYd4qiS%2FXZi8E0gd5l4BBupVx%2F8BzALVKOKacX426au7djho3HF2pA%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
     </div>
     <div class="col-5 mt-4">
@@ -37,8 +41,17 @@
     </div>
     <div class="col-4 mt-4">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704704370543.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Xfrr5Tc9Mzpk7pKbsFow3CWEtrDfxQ7KKMAkQSyoLybbewB1vFiH7DGxy6eM04PAfeHhDmf%2FocGW0UizPTfYV43CsP5gAjdcPZJadxv6bKjScLZCfKSoxJub2nN66SH1fxRjQ8ev5sXgIbe%2FKjqWF4DeBPjvDHYS0h%2BbzNDTSil6rNA05iFSH4k471R3cYdsl0tvrkz4uZbVgHFXe5LHfiPyWCBaR4iGnjLiQgDpvRUCr0UQC9lOIVPqU0rSgNwsrbs5B%2B3B8rwGsRQSB5XQQAXZOjgn7yPaRo7dwFkC1FAGv9kKKB7vCQDFaWks2byj8dhAkFff9FV3D27%2FZa2HhQ%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
-    </div>
+    </div> -->
   </div>
 
 </div>
 </template>
+
+<script>
+import LineChart from '../../components/Chart.vue';
+
+export default {
+
+  components: { LineChart },
+};
+</script>
