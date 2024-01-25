@@ -11,6 +11,7 @@ import {
 import { required, email, min } from '@vee-validate/rules'; // 匯入 vee-validate 相關規則
 import { localize, setLocale } from '@vee-validate/i18n'; // 匯入多國語系的功能
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'; // 匯入繁體中文語系檔案
+import VueAnalytics from 'vue-analytics';
 import App from './App.vue';
 import router from './router';
 import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
@@ -31,6 +32,9 @@ configure({
 setLocale('zh_TW'); // 設定預設語系
 // 設定預設語系
 const app = createApp(App);
+app.use(VueAnalytics, {
+  id: 'G-3PLG3X9M9E',
+});
 app.use(router);
 app.config.globalProperties.$filters = {
   currency,
