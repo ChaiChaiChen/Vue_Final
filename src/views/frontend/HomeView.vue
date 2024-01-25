@@ -42,7 +42,7 @@
     </button>
     </div>
   </div>
-  <div class="container mt-xl-5">
+  <div class="container mt-xl-5 mt-lg-0 mt-sm-3">
     <div class="row g-3 align-items-center">
       <div class="col-xl-7 d-flex order-2 order-xl-1">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705157449372.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=U50nUI5gDnrJGIEYP7nCnWaL7VlDZbbHNoNUC1uGXwUeFQ%2BpduJVwkcR1DmOpPSWiPADBSteF3BQz8L5fddRUhaqI7odZEnZm8lGh64vGbEjqRyvkn8BrEF19uIsvTqaHb7%2FV6hi8esQd7c0VKQb%2BXgYWFnlpJVdy37wMNnQwX1CXYFbfdE3hGIXmcfmZCPEEv6RwsxoaygxtkSKRqotZA68iQ3RdUAprjXLgaw3HSxGHhWMSEsevkfb8oaUqPRpSLVEW%2FtnDsntNJa3B%2BKd5wHLsf4CXbRP5F2BbDm6Uo8W0d%2BXZVumoaq6ighDxOk3wWVZ82MsJVRqFM%2BuTY6KMQ%3D%3D" class="img-fluid imgIntroduce" alt="">
@@ -64,28 +64,28 @@
     </div>
   </div>
   <div class="container-fluid mt-5">
-    <div class="row mt-3 justify-content-center text-center align-items-center bg-gray">
+    <div class="row mt-3 justify-content-center text-center align-items-center bg-text-bg">
       <h3 class="mt-5 mb-xl-3 mb-5">關於我們</h3>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
+        <div class="bg-gray shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
         <h1 class="mt-3 text-brown"><strong>60</strong></h1>
         <p>間分店</p>
       </div>
       </div>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
+        <div class="bg-gray shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
         <h1 class="mt-3 text-brown fw-bolder"><strong>10+</strong></h1>
         <p>年服務經驗</p>
         </div>
       </div>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
+        <div class="bg-gray shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
           <h1 class="mt-3 text-brown"><strong>20,000+</strong></h1>
           <p>銷售紀錄</p>
         </div>
       </div>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
+        <div class="bg-gray shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
         <h1 class="mt-3 text-brown"><strong>15,000+</strong></h1>
         <p>名顧客滿意</p>
         </div>

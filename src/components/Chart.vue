@@ -34,13 +34,13 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
         datasets: [
           {
             label: '銷售量',
             backgroundColor: '#F76B11',
             pointRadius: 5,
-            data: [40, 39, 30, 48, 39, 60, 40],
+            data: [76, 54, 55, 48, 65, 45, 28, 32, 39, 43, 57, 85, 78, 93],
           },
         ],
       },
