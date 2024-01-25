@@ -17,6 +17,7 @@ import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { currency, date } from './methods/filters';
 import $httpMessageState from './methods/pushMessageState';
+import { scrollTop, scrolling } from './methods/scroll';
 import 'bootstrap';
 
 defineRule('required', required);
@@ -34,6 +35,10 @@ app.use(router);
 app.config.globalProperties.$filters = {
   currency,
   date,
+};
+app.config.globalProperties.$scroll = {
+  scrollTop,
+  scrolling,
 };
 app.config.globalProperties.$httpMessageState = $httpMessageState;
 // eslint-disable-next-line vue/multi-word-component-names

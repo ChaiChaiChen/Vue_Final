@@ -65,7 +65,7 @@
   </div>
   <div class="container-fluid mt-5">
     <div class="row mt-3 justify-content-center text-center align-items-center bg-gray">
-      <h3 class="mt-5">關於我們</h3>
+      <h3 class="mt-5 mb-xl-3 mb-5">關於我們</h3>
       <div class="col-xl-2 col-6">
         <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
         <h1 class="mt-3 text-brown"><strong>60</strong></h1>
@@ -180,7 +180,7 @@ export default {
               success: true,
             },
           };
-          this.$httpMessageState(response, '已複製序號');
+          this.$httpMessageState(response, '複製優惠碼');
         });
     },
   },

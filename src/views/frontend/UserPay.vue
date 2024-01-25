@@ -88,6 +88,7 @@ export default {
             this.order = res.data.order;
             console.log(this.order);
             this.isLoading = false;
+            this.$scroll.scrollTop();
           }
         });
     },

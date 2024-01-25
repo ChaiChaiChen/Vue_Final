@@ -5,11 +5,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <Loading :active="isLoading"></Loading>
-<div class="coupon-container bg-theme text-white text-center d-flex align-items-center justify-content-center" style="margin-top: 85px; height: 40px;">
+
+  <div class="container-fluid">
+
+    <div class="row align-items-center bg-gray mt-5">
+      <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
   <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
 </div>
-  <div class="container-fluid">
-    <div class="row align-items-center bg-gray">
       <div class="col-md-6 gx-0 mt-5">
         <div class="col d-flex justify-content-center">
           <img :src="enterImage" alt="" class="img-fluid" style="height: 480px;">
@@ -133,7 +135,6 @@
 .secImg-box:hover{
   transform:scale(1.1,1.1);
 }
-
 @keyframes coupon {
   0% {
     transform: translateX(100%);
@@ -166,10 +167,6 @@ export default {
     };
   },
   inject: ['emitter'],
-  mounted() {
-    window.addEventListener('scroll', this.scrolling);
-    // 資料掛載完, window去監聽scroll事件
-  },
   methods: {
     getProduct() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/product/${this.id}`;
@@ -186,7 +183,7 @@ export default {
           this.descriptionList = description.split('；');
           this.same(this.tempProduct.category);
           this.isLoading = false;
-          this.scrollTop();
+          this.$scroll.scrollTop();
         });
     },
     addCart(id) {
@@ -223,21 +220,6 @@ export default {
     leaveFun(index) {
       this.showImage = true;
       this.n = index;
-    },
-    // https://hackmd.io/@JCtsai/H1IhyB0Ni
-    // 要滑到top為0的位置, 使用smooth的模式
-    scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    },
-
-    scrolling() {
-      // 捲軸距離視窗頂部的距離
-      const scrolltoTop = window.pageYOffset;
-      // 更新: 滾動前,捲軸距離視窗頂部的距離
-      this.elTop = scrolltoTop;
     },
     shareUrl() {
       navigator.clipboard.writeText(window.location.href)
