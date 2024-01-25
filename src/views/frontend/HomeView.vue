@@ -65,32 +65,34 @@
   </div>
   <div class="container-fluid mt-5">
     <div class="row mt-3 justify-content-center text-center align-items-center bg-gray">
+      <h3 class="mt-5">關於我們</h3>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
-        <h1 class="mt-3 text-brown"><strong>30</strong></h1>
+        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
+        <h1 class="mt-3 text-brown"><strong>60</strong></h1>
         <p>間分店</p>
       </div>
       </div>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
+        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
         <h1 class="mt-3 text-brown fw-bolder"><strong>10+</strong></h1>
         <p>年服務經驗</p>
         </div>
       </div>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
+        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
           <h1 class="mt-3 text-brown"><strong>20,000+</strong></h1>
           <p>銷售紀錄</p>
         </div>
       </div>
       <div class="col-xl-2 col-6">
-        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mt-3 mb-3">
+        <div class="bg-gray p-5 shadow-lg p-3 bg-body rounded mt-xl-5 mb-xl-5 mb-3">
         <h1 class="mt-3 text-brown"><strong>15,000+</strong></h1>
         <p>名顧客滿意</p>
         </div>
       </div>
     </div>
     <div class="row mt-3 justify-content-center text-center g-0" >
+      <h3 class="mt-5">如何挑選沙發</h3>
       <div class="col-xl-3 col-md-12 bg-white m-xl-5 m-3 selection-process rounded shadow-lg p-3">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706069120498.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Cwk3mU475auI7rkk%2BlKFG8sMIrIv4nt7fZwEXnXSuZauLVOhUERmY5TEENSF%2BbDCQ2BxhDUM%2FWqCoVExaN%2F1N7KbZ4D9ZpbSJUOhtBbE1K69BkBvf4oQbuvWCfL%2FU5MtmU6kXltEr%2Fld9%2B9FkCwKYGe7RsrdZdK3BO3cTRBNifC1MQ6hW9Oz2GxsCv0JOXxLqJTbBc90xMgt%2BPhcDLli3RYt4PRwAN4ufd4Ke2NMpQNketwyEtUZMQg0PX1OEamF5p9jc%2BtxOlARNp8drLAW69StsM3jdw0%2Br3OjXGG2HQ9o4dVFw56T5IJcVyMWMF77KAN0Wq1JqzixvwvEao6bPg%3D%3D" class="img-fluid mt-3" alt="">
         <h5 class="mt-3 text-brown"><strong>Step 1-確定需求和空間</strong></h5>

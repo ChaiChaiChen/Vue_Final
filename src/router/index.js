@@ -14,8 +14,8 @@ const routes = [
         component: () => import('../views/frontend/UserProducts.vue'),
       },
       {
-        path: 'about',
-        component: () => import('../views/frontend/UserAbout.vue'),
+        path: 'news',
+        component: () => import('../views/frontend/UserNews.vue'),
       },
       {
         path: 'product/:productId',
