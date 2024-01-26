@@ -47,10 +47,12 @@
   </div>
   <OrderModal ref="orderModal" :order="tempOrder" @revise-item="reviseItem"></OrderModal>
   <DelModal :item="tempOrder" ref="delModal" @del-item="delOrder"></DelModal>
+  <Pagination :pages="pagination" @emit-pages="getOrders"></Pagination>
 </template>
 <script>
 import OrderModal from '../../components/OrderModal.vue';
 import DelModal from '../../components/DelModal.vue';
+import Pagination from '../../components/Pagination.vue';
 
 export default {
   data() {
@@ -63,11 +65,12 @@ export default {
   components: {
     OrderModal,
     DelModal,
+    Pagination,
   },
   inject: ['emitter'],
   methods: {
-    getOrders() {
-      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders`;
+    getOrders(page = 1) {
+      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders/?page=${page}`;
       this.$http.get(api)
         .then((res) => {
           if (res.data.success) {
