@@ -6,7 +6,7 @@
 <!-- eslint-disable max-len -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706077315976.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=D7%2BEdS2XnksgpFa1QOFNVE0MXXPJC8NCGx1JPzBv5QhXO0BV1fZS3dwdhI04MNzsxeblXDUEb8kyo0BLzgyqud0wg4Kj9c3fNbLbStXlVxGhofVrUYCul8uyes65R5dhMAQCe7lP0esqFKHTEsGatIloErJEUokuD2DUEFNA7aWYDMRAX0UD2efeuK2glXsbIS9uNlzS32Tw9JHpWMwp4pygOy1zVrg85OuVETeQ7UumA821mxIOeMHxZ74sKjimSAeyYNJbkJeY%2FOYUflqdcGcaZh2G6NUzELn3%2Bh5CvesxnVo504e5pXCmPyJHH%2BeaYY9EeJbaeIqeUc6RP2W1IA%3D%3D" class="img-fluid" alt="...">

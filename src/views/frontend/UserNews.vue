@@ -1,6 +1,6 @@
 <!-- eslint-disable max-len -->
 <template>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1706077463262.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QXfnqNZnXmmFs6cbZe%2B9zxEhBhrLaFiBOvWI6UCSblbdA5aNmKSWPFm4aLSSlfiqOE9sSjRwND6a7QOJiAxA%2FcI3db944J87n5H%2B9wLO3A0hucrwGkjYCfUAW%2FO6cGK7PeNAsrgxvdDXMuW%2Bgox9oVNZMiz0Y%2BFWNn%2BBExrKD9vCrxZOX9v787IyOXgtVixOsnN573CdXko1DiWhyPlSjXHnUvb4T4MKP8upsrOYm4dYbp05Y36c8bQrFeZwnpx9VNvTOPSRCIAsCANjAV3wxWmcprl9vvfrMdzO%2B%2BiCfv0N1ng4mWrTulCvuiJGRYiAYzuu3kIL3ENFv70QaAMvnw%3D%3D" class="img-fluid" alt="...">

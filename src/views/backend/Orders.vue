@@ -45,9 +45,11 @@
     </table>
   </div>
   </div>
+  <OrderModal ref="orderModal" :order="tempOrder" @revise-item="reviseItem"></OrderModal>
   <DelModal :item="tempOrder" ref="delModal" @del-item="delOrder"></DelModal>
 </template>
 <script>
+import OrderModal from '../../components/OrderModal.vue';
 import DelModal from '../../components/DelModal.vue';
 
 export default {
@@ -59,8 +61,10 @@ export default {
     };
   },
   components: {
+    OrderModal,
     DelModal,
   },
+  inject: ['emitter'],
   methods: {
     getOrders() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders`;
@@ -72,6 +76,22 @@ export default {
             this.pagination = res.data.pagination;
           }
         });
+    },
+    openModal(order) {
+      this.tempOrder = { ...order };
+      const orderComponent = this.$refs.orderModal;
+      orderComponent.showModal();
+    },
+    reviseItem(item) {
+      this.tempOrder = item;
+      const orderComponent = this.$refs.orderModal;
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/order/${this.tempOrder.id}`;
+      this.$http.put(url, { data: this.tempOrder }).then((response) => {
+        if (response.data.success) {
+          orderComponent.hideModal();
+          this.getOrders();
+        }
+      });
     },
     openDelOrderModal(item) {
       this.tempOrder = { ...item };

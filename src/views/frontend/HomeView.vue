@@ -6,7 +6,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 <div class="container-field">
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -42,8 +42,8 @@
     </button>
     </div>
   </div>
-  <div class="container mt-xl-5 mt-lg-0 mt-sm-3">
-    <div class="row g-3 align-items-center">
+  <div class="container">
+    <div class="row g-3 align-items-center mt-xl-5 mt-lg-0 mt-1">
       <div class="col-xl-7 d-flex order-2 order-xl-1">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705157449372.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=U50nUI5gDnrJGIEYP7nCnWaL7VlDZbbHNoNUC1uGXwUeFQ%2BpduJVwkcR1DmOpPSWiPADBSteF3BQz8L5fddRUhaqI7odZEnZm8lGh64vGbEjqRyvkn8BrEF19uIsvTqaHb7%2FV6hi8esQd7c0VKQb%2BXgYWFnlpJVdy37wMNnQwX1CXYFbfdE3hGIXmcfmZCPEEv6RwsxoaygxtkSKRqotZA68iQ3RdUAprjXLgaw3HSxGHhWMSEsevkfb8oaUqPRpSLVEW%2FtnDsntNJa3B%2BKd5wHLsf4CXbRP5F2BbDm6Uo8W0d%2BXZVumoaq6ighDxOk3wWVZ82MsJVRqFM%2BuTY6KMQ%3D%3D" class="img-fluid imgIntroduce" alt="">
       </div>
