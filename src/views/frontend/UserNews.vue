@@ -12,8 +12,8 @@
   </div>
 <div class="container mt-5 mb-5">
   <div class="row justify-content-center text-center">
-    <div class="col-8">
-      <h3>去年業績銷量</h3>
+    <div class="col-12 col-lg-8">
+      <h3>業績銷量</h3>
       <LineChart></LineChart>
     </div>
     <!-- <div class="col-3 mt-4">
