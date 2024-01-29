@@ -12,11 +12,11 @@
       <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
         <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
       </div>
-      <div class="col-md-4 d-flex justify-content-md-start mt-5">
-          <img :src="enterImage" alt="" class="img-fluid rounded" style="height: 480px;">
+      <div class="col-md-12 col-lg-4 d-flex justify-content-xl-start justify-content-center mt-5">
+          <img :src="enterImage" alt="" class="img-fluid rounded" style="width: 480px;">
       </div>
-      <div class="col-md-3 row justify-content-start">
-        <div class="col-lg-6 col-4 secImg-box mt-4" v-for="secImage in imagesList" :key="secImage">
+      <div class="col-md-12 col-lg-3 row">
+        <div class="col-lg-6 col-4 secImg-box mt-4 d-flex justify-content-xl-end justify-content-center" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
               <img :src="secImage" style="width: 200px;" class="img-fluid rounded" alt="">
             </a>
