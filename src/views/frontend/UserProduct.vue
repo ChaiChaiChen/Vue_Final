@@ -16,7 +16,7 @@
           <img :src="enterImage" alt="" class="img-fluid rounded" style="height: 480px;">
       </div>
       <div class="col-md-4 row justify-content-start">
-        <div class="col-6 secImg-box" v-for="secImage in imagesList" :key="secImage">
+        <div class="col-lg-6 col-4 secImg-box" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
               <img :src="secImage" style="width: 200px;" class="img-fluid mt-5 rounded" alt="">
             </a>
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="col-3 text-center my-3 border bg-white" v-for="(content) in contentList" :key="content">
+      <div class="col-lg-3 text-center my-3 border bg-white" v-for="(content) in contentList" :key="content">
         <div class="box row align-items-center" style="height: 100px;">
           <p><strong>{{ content }}</strong></p>
         </div>
