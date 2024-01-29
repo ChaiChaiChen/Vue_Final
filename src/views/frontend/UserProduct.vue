@@ -43,7 +43,7 @@
           <p class="fs-5 text-theme">售價：${{ tempProduct.price }}</p>
         </div>
         <div class="col-lg-4 col-12 mt-4 row justify-content-center">
-          <div class="btn-group" role="group" aria-label="Basic example">
+          <div class="btn-group" role="group" aria-label="Basic example" style="height: 50px;">
             <button class="btn btn-btn-bg btn-xl btn-add-view m-1"
                 :disabled ="this.status.loadingItem === tempProduct.id"
                 @click="addCart(tempProduct.id)">
