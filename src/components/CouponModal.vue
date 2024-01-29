@@ -75,6 +75,9 @@ export default {
       const dateAndTime = new Date(this.tempCoupon.due_date * 1000)
         .toISOString().split('T');
       [this.due_date] = dateAndTime;
+      if (typeof this.tempCoupon.is_enabled === 'undefined') {
+        this.tempCoupon.is_enabled = 0;
+      }
     },
     due_date() {
       this.tempCoupon.due_date = Math.floor(new Date(this.due_date) / 1000);

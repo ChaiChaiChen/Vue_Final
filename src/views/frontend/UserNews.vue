@@ -18,7 +18,7 @@
        style="max-height: 540px;" @click="getNew(item.id)">
       <div class="row g-0">
         <div class="col-md-4 my-2 ps-2">
-          <img :src="item.imageUrl" class="rounded" style="width: 200px;" alt="...">
+          <img :src="item.imageUrl" class="rounded img-fluid" style="height: 200px; width: 200px;" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -71,6 +71,7 @@
   -webkit-box-orient: vertical;
 }
 .card-shadow {
+  cursor: pointer;
   transition: box-shadow .5s;
 }
 .card-shadow:hover {
