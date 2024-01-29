@@ -13,9 +13,6 @@
   </div>
 <div class="container">
   <div class="row my-5">
-    <div class="col-8">
-    <Chart></Chart>
-    </div>
     <div class="col-sm-6" v-for="(item, key) in news" :key="key">
       <div class="card card-shadow mb-3 border border-gray"
        style="max-height: 540px;" @click="getNew(item.id)">
@@ -59,17 +56,12 @@
 }
 </style>
 <script>
-import Chart from '../../components/Chart.vue';
-
 export default {
   data() {
     return {
       news: [],
       pagination: {},
     };
-  },
-  components: {
-    Chart,
   },
   inject: ['emitter'],
   methods: {

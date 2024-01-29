@@ -12,13 +12,13 @@
       <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
         <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
       </div>
-      <div class="col-md-4 d-flex justify-content-end mt-5">
+      <div class="col-md-4 d-flex justify-content-start mt-5 ms-5">
           <img :src="enterImage" alt="" class="img-fluid rounded" style="height: 480px;">
       </div>
-      <div class="col-md-4 row justify-content-start">
-        <div class="col-lg-6 col-4 secImg-box" v-for="secImage in imagesList" :key="secImage">
+      <div class="col-md-3 row justify-content-start">
+        <div class="col-lg-6 col-4 secImg-box mt-4" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
-              <img :src="secImage" style="width: 200px;" class="img-fluid mt-5 rounded" alt="">
+              <img :src="secImage" style="width: 200px;" class="img-fluid rounded" alt="">
             </a>
         </div>
       </div>
@@ -61,8 +61,8 @@
         </div>
       </div>
       <div class="col-lg-3 text-center my-3 border bg-white" v-for="(content) in contentList" :key="content">
-        <div class="box row align-items-center" style="height: 100px;">
-          <p><strong>{{ content }}</strong></p>
+        <div class="row justify-content-center align-items-center" style="height: 100px;">
+          <p class="mt-3">{{ content }}</p>
         </div>
       </div>
     </div>
