@@ -238,7 +238,7 @@ export default {
     },
   },
   created() {
-    // 透過$route.params接收UserCart所傳送的prouctId
+    // 透過$route.params接收UserCart所傳送的productId
     this.id = this.$route.params.productId;
     this.getProduct();
     let i = 0;

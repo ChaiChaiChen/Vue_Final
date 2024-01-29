@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable max-len -->
 <template>
 <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
@@ -10,11 +11,24 @@
       </div>
     </div>
   </div>
-<div class="container mt-5 mb-5">
-  <div class="row justify-content-center text-center">
-    <div class="col-12 col-lg-8">
-      <h3>業績銷量</h3>
-      <LineChart></LineChart>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-sm-6" v-for="(item, key) in news" :key="key">
+      <div class="card card-shadow mb-3 border border-gray"
+       style="max-height: 540px;" @click="getNew(item.id)">
+      <div class="row g-0">
+        <div class="col-md-4 my-2 ps-2">
+          <img :src="item.imageUrl" class="rounded" style="width: 200px;" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text text-truncate-2 text-dark-gray">{{item.description}}</p>
+            <p class="card-text"><small class="text-muted">{{ $filters.date(item.create_at) }}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <!-- <div class="col-3 mt-4">
       <img src="https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704702228996.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=DqDO8GjdIXDFACQYa6H%2FOSPWSOlnqQeQ2fv%2FcEUffVlZGk8zms30MkCYg%2FBQhyGKXmW4MHCI3QGCfzc99M9SFy0rRzOntiVMOtDp63rP1utcGWXCXZbTftaLGa5Oj2rCEr9D529QfOfRVp7h5Nt%2F2YU1GxoCARDM8rMuZCmA8I2LAeQDwKWISLaj9EEiy3CNVQcbWPtNWO%2FQVKn8MfZZSm5AIHXn%2Fy3WcAjj6iutBIYKEedidOXhV3WIfk%2BilAZY4%2BiAp2pRdSB6Bc2ZuRGU0jxMQMmQ4noOkYd4qiS%2FXZi8E0gd5l4BBupVx%2F8BzALVKOKacX426au7djho3HF2pA%3D%3D" class="img-fluid img-thumbnail p-0 border-0 rounded-0" alt="">
@@ -46,12 +60,53 @@
 
 </div>
 </template>
-
+<style>
+.text-truncate-2{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card-shadow {
+  transition: box-shadow .5s;
+}
+.card-shadow:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.card-body{
+  background-color: #ffffff;
+}
+</style>
 <script>
-import LineChart from '../../components/Chart.vue';
 
 export default {
-
-  components: { LineChart },
+  data() {
+    return {
+      news: [],
+      pagination: {},
+    };
+  },
+  inject: ['emitter'],
+  methods: {
+    getNews() {
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/articles`;
+      this.$http.get(url).then((response) => {
+        this.news = response.data.articles;
+        console.log(response.data);
+        this.pagination = response.data.pagination;
+        console.log(this.pagination);
+      });
+    },
+    getNew(id) { // 取得產品id切換到該產品頁面
+      console.log(id);
+      this.$router.push(`/new/${id}`);
+    },
+  },
+  created() {
+    this.getNews();
+  },
 };
 </script>

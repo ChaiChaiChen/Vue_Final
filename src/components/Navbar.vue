@@ -31,6 +31,12 @@
              <h5><strong>優惠券</strong></h5>
             </router-link>
           </li>
+          <li class="nav-item ms-2 mt-2">
+            <router-link class="nav-link text-nav" @click="mobileBtn = false"
+             aria-current="page" to="articles">
+             <h5><strong>留言</strong></h5>
+            </router-link>
+          </li>
         </ul>
         <div class="nav navbar-nav ms-auto">
           <li class="nav-item ms-2 mt-2">

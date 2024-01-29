@@ -18,6 +18,10 @@ const routes = [
         component: () => import('../views/frontend/UserNews.vue'),
       },
       {
+        path: 'new/:newId',
+        component: () => import('../views/frontend/UserNew.vue'),
+      },
+      {
         path: 'product/:productId',
         component: () => import('../views/frontend/UserProduct.vue'),
       },
@@ -46,6 +50,10 @@ const routes = [
       {
         path: 'coupons',
         component: () => import('../views/backend/Coupons.vue'),
+      },
+      {
+        path: 'articles',
+        component: () => import('../views/backend/Articles.vue'),
       },
     ],
   },
