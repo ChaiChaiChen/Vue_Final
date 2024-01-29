@@ -8,27 +8,41 @@
 
   <div class="container-fluid">
 
-    <div class="row align-items-center bg-gray mt-5">
+    <div class="row justify-content-center align-items-center bg-gray mt-5">
       <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
-  <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
-</div>
-      <div class="col-md-6 gx-0 mt-5">
-        <div class="col d-flex justify-content-center">
+        <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-end mt-5">
+          <img :src="enterImage" alt="" class="img-fluid rounded" style="height: 480px;">
+      </div>
+      <div class="col-md-4 row justify-content-start">
+        <div class="col-6 secImg-box" v-for="secImage in imagesList" :key="secImage">
+            <a @mouseover="changeEnterImage(secImage)">
+              <img :src="secImage" style="width: 200px;" class="img-fluid mt-5 rounded" alt="">
+            </a>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-6 gx-0 mt-5">
+        <div class="d-flex justify-content-end">
           <img :src="enterImage" alt="" class="img-fluid" style="height: 480px;">
         </div>
-        <div class="col d-flex justify-content-center">
-          <div class="secImg-box m-3" v-for="secImage in imagesList" :key="secImage">
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-center">
+          <div class="col-6 secImg-box m-3" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
               <img :src="secImage" style="height: 140px;" alt="">
             </a>
         </div>
         </div>
-      </div>
-      <div class="col-md-6 d-flex justify-content-start gx-0 mt-md-3">
-        <div class="d-flex flex-column m-4">
-          <h4 class="font-md-l fw-bold mb-3 ">{{ tempProduct.title }}</h4>
+      </div> -->
+      <div class="col-md-12 d-flex justify-content-center gx-0 mt-md-3">
+        <div class="col-4 m-4">
+          <h4 class="font-md-l fw-bold mb-3 "><strong>{{ tempProduct.title }}</strong></h4>
           <p class="mb-5 fs-5 text-theme">售價：${{ tempProduct.price }}</p>
-          <p v-for="(content) in contentList" :key="content">{{ content }}</p>
+        </div>
+        <div class="col-4 m-4">
           <div class="btn-group" role="group" aria-label="Basic example">
             <button class="btn btn-btn-bg btn-xl btn-add-view m-1"
                 :disabled ="this.status.loadingItem === tempProduct.id"
@@ -44,6 +58,11 @@
                 >
                 分享 <i class="bi bi-share"></i></button>
           </div>
+        </div>
+      </div>
+      <div class="col-3 text-center mb-3 border bg-white" v-for="(content) in contentList" :key="content">
+        <div class="box row align-items-center" style="height: 100px;">
+          <p><strong>{{ content }}</strong></p>
         </div>
       </div>
     </div>
