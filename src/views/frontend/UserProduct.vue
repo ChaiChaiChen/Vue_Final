@@ -37,12 +37,12 @@
         </div>
         </div>
       </div> -->
-      <div class="col-md-12 d-flex justify-content-center gx-0 mt-md-3">
-        <div class="col-4 m-4">
+      <div class="row justify-content-center gx-0">
+        <div class="col-lg-4 col-12 mt-4">
           <h4 class="font-md-l fw-bold mb-3 "><strong>{{ tempProduct.title }}</strong></h4>
-          <p class="mb-5 fs-5 text-theme">售價：${{ tempProduct.price }}</p>
+          <p class="fs-5 text-theme">售價：${{ tempProduct.price }}</p>
         </div>
-        <div class="col-4 m-4">
+        <div class="col-lg-4 col-12 mt-4 row justify-content-center">
           <div class="btn-group" role="group" aria-label="Basic example">
             <button class="btn btn-btn-bg btn-xl btn-add-view m-1"
                 :disabled ="this.status.loadingItem === tempProduct.id"
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="col-3 text-center mb-3 border bg-white" v-for="(content) in contentList" :key="content">
+      <div class="col-3 text-center my-3 border bg-white" v-for="(content) in contentList" :key="content">
         <div class="box row align-items-center" style="height: 100px;">
           <p><strong>{{ content }}</strong></p>
         </div>
