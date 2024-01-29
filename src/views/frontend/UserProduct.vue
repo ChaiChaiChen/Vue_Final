@@ -12,7 +12,7 @@
       <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
         <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
       </div>
-      <div class="col-md-4 d-flex justify-content-start mt-5 ms-5">
+      <div class="col-md-4 d-flex justify-content-md-start mt-5">
           <img :src="enterImage" alt="" class="img-fluid rounded" style="height: 480px;">
       </div>
       <div class="col-md-3 row justify-content-start">
