@@ -2,7 +2,7 @@
 <template>
     <div class="modal fade" id="delModal" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modal">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content border-0">
           <div class="modal-header bg-dark text-white">
             <h5 class="modal-title">
@@ -12,7 +12,34 @@
                     data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="col-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="mb-3">
+                <label for="image" class="form-label">輸入圖片網址</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="image"
+                  v-model="tempArticle.imageUrl"
+                  placeholder="請輸入圖片連結"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="customFile" class="form-label"
+                  >或 上傳圖片
+                  <i class="fas fa-spinner fa-spin"></i>
+                </label>
+                <input
+                  type="file"
+                  id="customFile"
+                  class="form-control"
+                  ref="fileInput"
+                  @change="uploadFile"
+                />
+              </div>
+              <img class="img-fluid" :src="tempArticle.imageUrl" alt="" />
+              </div>
+              <div class="col-sm-8">
               <div class="mb-3">
                 <label for="title" class="form-label">標題</label>
                 <input
@@ -41,30 +68,8 @@
                   id="description"
                   v-model="tempArticle.description"
                   placeholder="請輸入描述"
+                  rows="4"
                   ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="image" class="form-label">輸入圖片網址</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="image"
-                  v-model="tempArticle.imageUrl"
-                  placeholder="請輸入圖片連結"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="customFile" class="form-label"
-                  >或 上傳圖片
-                  <i class="fas fa-spinner fa-spin"></i>
-                </label>
-                <input
-                  type="file"
-                  id="customFile"
-                  class="form-control"
-                  ref="fileInput"
-                  @change="uploadFile"
-                />
               </div>
               <div class="mb-3">
                 <label for="create_at">新增日期</label>
@@ -82,6 +87,7 @@
                     是否啟用
                   </label>
                 </div>
+              </div>
               </div>
               </div>
             </div>
