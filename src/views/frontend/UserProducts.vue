@@ -54,11 +54,8 @@
 </div>
 </div>
 </div>
-    <Pagination :pages="pagination"
-    @emit-pages="getProducts"></Pagination>
 </template>
 <script>
-import Pagination from '../../components/Pagination.vue';
 
 export default {
   data() {
@@ -72,22 +69,17 @@ export default {
       relatedProducts: [], // 存放類別產品
       filterType: '全部', // 切換產品類別
       n: 0,
-      pagination: {},
     };
   },
   inject: ['emitter'],
-  components: {
-    Pagination,
-  },
   methods: {
     getProducts() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`;
       this.isLoading = true;
       this.$http.get(url).then((response) => {
         this.productList = response.data.products;
-        this.pagination = response.data.pagination;
         this.relatedProducts = this.productList;
-        console.log(this.productList);
+        console.log(response);
         this.isLoading = false;
       });
     },

@@ -12,11 +12,11 @@
       <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
         <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
       </div>
-      <div class="col-md-12 col-lg-4 d-flex justify-content-xl-start justify-content-center mt-5">
+      <div class="col-md-12 col-lg-4 mt-5">
           <img :src="enterImage" alt="" class="img-fluid rounded" style="width: 480px;">
       </div>
-      <div class="col-md-12 col-lg-3 row">
-        <div class="col-lg-6 col-4 secImg-box mt-4 d-flex justify-content-xl-end justify-content-center" v-for="secImage in imagesList" :key="secImage">
+      <div class="col-md-12 col-lg-3 row mt-5">
+        <div class="col-lg-6 col-3 secImg-box mt-4" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
               <img :src="secImage" style="width: 200px;" class="img-fluid rounded" alt="">
             </a>
@@ -224,7 +224,7 @@ export default {
         this.productList = response.data.products;
         this.relatedProducts = this.productList.filter((item) => item.category === productCategory
         && item.id !== this.tempProduct.id);
-        console.log(this.relatedProducts);
+        this.relatedProducts = this.relatedProducts.slice(0, 4);
       });
     },
     relatedProduct(id) { // 取得產品id切換到該產品頁面
