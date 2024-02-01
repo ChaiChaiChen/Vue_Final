@@ -14,11 +14,11 @@
 <div class="container">
   <div class="row my-5">
     <div class="col-sm-6" v-for="(item, key) in news" :key="key">
-      <div class="card card-shadow mb-3 border border-gray"
-       style="max-height: 540px;" @click="getNew(item.id)">
+      <div class="card card-shadow mb-3 border border-gray newsCard"
+        @click="getNew(item.id)">
       <div class="row g-0">
         <div class="col-md-4 my-2 ps-2">
-          <img :src="item.imageUrl" class="rounded img-fluid" style="height: 120px; width: 200px;" alt="...">
+          <img :src="item.imageUrl" class="rounded img-fluid newsImg" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -34,27 +34,6 @@
 
 </div>
 </template>
-<style>
-.text-truncate-2{
-  text-overflow: -o-ellipsis-lastline;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.card-shadow {
-  cursor: pointer;
-  transition: box-shadow .5s;
-}
-.card-shadow:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-.card-body{
-  background-color: #ffffff;
-}
-</style>
 <script>
 export default {
   data() {

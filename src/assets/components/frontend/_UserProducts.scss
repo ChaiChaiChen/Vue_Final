@@ -1,0 +1,33 @@
+// 產品類別選擇list
+.list-group{
+    // 取消圓角
+    border-radius: 0;
+    // 調整滑鼠樣式
+    cursor: pointer;
+}
+.list-group-horizontal{
+    // 第一個list取消左下方圓角
+    .list-group-item:first-child:not(:last-child) {
+        border-bottom-left-radius: 0;
+    }
+    // 最後一個list取消右下方圓角
+    .list-group-item:last-child:not(:first-child) {
+        border-top-right-radius: 0;
+    }
+}
+.list-group-item{
+    // 取消外框
+    border: 0;
+    // active樣式
+    &.active{
+        background-color: #ffffff00;
+        border-bottom:3px solid rgb(235, 95, 35);
+        color: #ffb516;
+    }
+}
+@media (max-width: 1200px) {
+    // 調整產品頁面照片高度
+    .imgSize{
+        height: auto;
+    }
+}

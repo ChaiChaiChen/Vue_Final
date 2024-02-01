@@ -1,0 +1,47 @@
+.content{
+  // 產品內文保留連續空白、換行字元，且自動換行。
+  white-space: pre-wrap;
+}
+// 優惠券跑馬燈
+.coupon-container {
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+}
+// 優惠券內文
+.coupon-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: coupon 15s linear infinite;
+}
+// 主圖片
+.mainImg{
+  width: 480px;
+}
+// 小圖片
+.secImg-box{
+  transform:scale(1,1);
+  transition: all 0.3s ease-out;
+  &:hover{
+    transform:scale(1.1,1.1);
+  }
+  .secImg{
+    width: 200px;
+  }
+}
+// 產品介紹
+.product-content{
+  height: 100px;
+}
+// 加入購物車、分享按鈕
+.product-btn{
+  height: 50px;
+}
+@keyframes coupon {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

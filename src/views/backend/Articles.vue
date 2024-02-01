@@ -20,7 +20,7 @@
       <tbody>
         <tr v-for="(item, key) in articles" :key="key">
           <td>{{ item.title }}</td>
-          <td class="text-truncate" style="max-width: 200px;">{{ item.description }}</td>
+          <td class="text-truncate articles-description">{{ item.description }}</td>
           <td>{{ $filters.date(item.create_at) }}</td>
           <td>
             <span v-if="item.isPublic === true" class="text-success">啟用</span>

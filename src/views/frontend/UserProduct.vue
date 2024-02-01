@@ -9,16 +9,16 @@
   <div class="container-fluid">
 
     <div class="row justify-content-center align-items-center bg-gray mt-5">
-      <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2" style=" height: 50px;">
+      <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2">
         <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
       </div>
-      <div class="col-md-12 col-lg-4 mt-5">
-          <img :src="enterImage" alt="" class="img-fluid rounded" style="width: 480px;">
+      <div class="col-md-12 col-lg-4 mt-5 row justify-content-center">
+          <img :src="enterImage" alt="" class="img-fluid rounded mainImg">
       </div>
-      <div class="col-md-12 col-lg-3 row mt-5">
+      <div class="col-md-12 col-lg-3 row mt-lg-5">
         <div class="col-lg-6 col-3 secImg-box mt-4" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
-              <img :src="secImage" style="width: 200px;" class="img-fluid rounded" alt="">
+              <img :src="secImage" class="img-fluid rounded" alt="">
             </a>
         </div>
       </div>
@@ -43,7 +43,7 @@
           <p class="fs-5 text-theme">售價：${{ tempProduct.price }}</p>
         </div>
         <div class="col-lg-4 col-12 mt-4 row justify-content-center">
-          <div class="btn-group" role="group" aria-label="Basic example" style="height: 50px;">
+          <div class="btn-group product-btn" role="group" aria-label="Basic example">
             <button class="btn btn-btn-bg btn-xl btn-add-view m-1"
                 :disabled ="this.status.loadingItem === tempProduct.id"
                 @click="addCart(tempProduct.id)">
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="col-lg-3 text-center my-3 border bg-white" v-for="(content) in contentList" :key="content">
-        <div class="row justify-content-center align-items-center" style="height: 100px;">
+        <div class="row justify-content-center align-items-center product-content">
           <p class="mt-3">{{ content }}</p>
         </div>
       </div>
@@ -116,7 +116,7 @@
             <img v-if="showImage || n != index" :src="product.images[0]" alt="" class="img-cover imageSize" height="300">
             <img v-else :src="product.images[1]" alt="" class="img-cover imageSize" height="300">
           </div>
-          <div class="card-body text-center">
+          <div class="card-body text-center bg-card">
             <h5 class="card-img-title-lg">{{ product.title }}</h5>
               <p class="card-text">售價：{{ $filters.currency(product.price) }}</p>
             <button class="btn btn-btn-bg btn-add-view btn-xl"
@@ -133,36 +133,6 @@
     </div>
   </div>
 </template>
-<style>
-.content{
-  white-space: pre-wrap;
-}
-.coupon-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.coupon-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: coupon 15s linear infinite;
-}
-.secImg-box{
-  transform:scale(1,1);
-  transition: all 0.3s ease-out;
-}
-.secImg-box:hover{
-  transform:scale(1.1,1.1);
-}
-@keyframes coupon {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-</style>
 <script>
 export default {
   data() {

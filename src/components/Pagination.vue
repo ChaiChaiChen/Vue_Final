@@ -23,40 +23,6 @@
       </ul>
     </nav>
   </template>
-<style>
-.page-link{
-  border: none;
-  color: #555;
-  margin: 0 6px;
-}
-.page-item:first-child .page-link{
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.page-item:last-child .page-link{
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.page-link:hover{
-  border: none;
-  border-bottom: solid #a04a03;
-  color: #a04a03;
-  margin: 0 6px;
-}
-.pagination{
-  --bs-pagination-disabled-bg: #fff;
-  border: none;
-}
-.page-link:focus{
-  color: #a04a03;
-}
-.page-link.active, .active > .page-link {
-  background-color: #ffffff;
-  color: #ffab4b;
-  font-weight:bolder;
-  border-bottom: solid #ffab4b;
-}
-</style>
 <script>
 // :pages="{ 頁碼資訊 }"
 // @emitPages="更新頁面事件"

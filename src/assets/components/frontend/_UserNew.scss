@@ -1,0 +1,14 @@
+.newImg{
+    height: 500px;
+    width: 100%;
+}
+@media (max-width: 1200px) {
+    .newImg{
+        height: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .newImg{
+        height: 250px;
+    }
+}

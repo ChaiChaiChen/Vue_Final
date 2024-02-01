@@ -1,0 +1,17 @@
+.msg-title{
+    margin-top: 6rem;
+    width: 20%;
+}
+.toast-header{
+    background-color: #fff6e5;
+}
+@media (max-width: 1200px) {
+    .msg-title{
+        width: 40%;
+    }
+}
+@media (max-width: 768px){
+    .msg-title{
+        width: 60%;
+    }
+}

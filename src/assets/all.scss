@@ -6,7 +6,23 @@
 
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap');
+// frontend
+@import "./components/frontend/HomeView";
+@import "./components/frontend/UserProducts";
+@import "./components/frontend/UserProduct";
+@import "./components/frontend/UserNews";
+@import "./components/frontend/UserNew";
+@import "./components/frontend/UserCheckout";
 
+// backend
+@import "./components/backend/Articles";
+
+
+// support
+@import "./components/effect/Carousel";
+@import "./components/effect/Button";
+@import "./components/effect/Toast";
+@import "./components/effect/Table";
 html, body {
     font-family: 'Noto Serif TC', serif;
 }
@@ -14,194 +30,58 @@ html, body {
 #app {
     font-family: 'Noto Serif TC', serif;
 }
+.logo{
+  height:30px;
+}
+// 滑鼠特效
 .imgHover{
   cursor: pointer;
 }
+// 卡片外框
 .card{
   border-color: #ffffff00;
 }
-.card-body{
-  background-color: #fff6e5;
-}
-.list-group{
-  border-radius: 0;
-  cursor: pointer;
-}
-.list-group-horizontal{
-  .list-group-item:first-child:not(:last-child) {
-    border-bottom-left-radius: 0;
-  }
-  .list-group-item:last-child:not(:first-child) {
-    border-top-right-radius: 0;
-  }
-}
-.list-group-item{
-  border: 0;
-  
-  &.active{
-    background-color: #ffffff00;
-    border-bottom:3px solid rgb(235, 95, 35);
-    color: #ffb516;
-
-  }
-}
-.btn-add-view{
-    position: relative;
-    border: 0;
-    z-index:1;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #efb057;
-        z-index: -1;
-        transform-origin: left;
-        transition: transform 0.5s ease;
-        transform: scaleX(1);
-    }
-    &:hover::before{
-        transform-origin: right;
-        transition: transform 0.5s ease;
-        transform: scaleX(0);
-    }
-}
-.btn-share-view{
-  position: relative;
-    border: 0;
-    z-index:1;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #2ca8f0;
-        color: white;
-        z-index: -1;
-        transform-origin: left;
-        transition: transform 0.5s ease;
-        transform: scaleX(1);
-    }
-    &:hover::before{
-        transform-origin: right;
-        transition: transform 0.5s ease;
-        transform: scaleX(0);
-    }
-}
-.carousel-item{
-    width:100%;
-    height: 600px !important;
-  }
-.carousel-item img{
-  position: absolute;
-  top: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  right: -9999px;
-  margin: auto;
-}
-.imgIntroduce{
-  height: 400px;
-}
-.carousel-home-text{
-  padding-bottom: 15rem;
-  h1{
-      font-size: 4rem;
-  }
-}
-.carousel-text{
-    padding-left: 40rem;
-    padding-bottom: 15rem;
-    h1{
-        font-size: 4rem;
-    }
-}
-.bannerText{
-  letter-spacing: 15px;
-}
+// 優惠碼底圖
 .middleBg{
-    background-size: cover;
-    background-position: center;
-    background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url("https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704682267504.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=c4MWBs77ZM%2BOOl%2Ftm8wxNuw6Tk249vNTizbweLH4meFXjh8KyNl%2FsxlFGXaB%2Bv59FIo2PL8mzvo0XZ5b9mYropKqidJjKuQYPlpwrHy3hptZ%2BZxOi9HhltAeFNdIWVdityjeTZi%2F%2Be9EXb3v8la9j2VUKx8X6N1pITbPDCWJR7P%2FI3sy5LTTpQHkmuSpy71QcJ04frqTp33WtIm5Lfy6lsAERsXpMWmG8fG8DkvmJzjqGVNE5%2B4%2FLc8smGs%2F49g%2FPBr0b1dli4LjPDQtFlkazeyr2uSToIL5KWKymJilcfKzEHLhkzicaGSCzUfkdh0cIw03A56gFWkTCQwCitM6Ow%3D%3D");
-    background-attachment: fixed;
-    height: 400px;
-    position: relative;
-    display: block;
+  background-size: cover;
+  background-position: center;
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url("https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1704682267504.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=c4MWBs77ZM%2BOOl%2Ftm8wxNuw6Tk249vNTizbweLH4meFXjh8KyNl%2FsxlFGXaB%2Bv59FIo2PL8mzvo0XZ5b9mYropKqidJjKuQYPlpwrHy3hptZ%2BZxOi9HhltAeFNdIWVdityjeTZi%2F%2Be9EXb3v8la9j2VUKx8X6N1pITbPDCWJR7P%2FI3sy5LTTpQHkmuSpy71QcJ04frqTp33WtIm5Lfy6lsAERsXpMWmG8fG8DkvmJzjqGVNE5%2B4%2FLc8smGs%2F49g%2FPBr0b1dli4LjPDQtFlkazeyr2uSToIL5KWKymJilcfKzEHLhkzicaGSCzUfkdh0cIw03A56gFWkTCQwCitM6Ow%3D%3D");
+  background-attachment: fixed;
+  height: 400px;
+  position: relative;
+  display: block;
 }
-
-.link-bottom{
-  border-bottom: solid #888888 1px;
+// 頁面按鈕start
+.page-link{
+  border: none;
+  color: #555;
+  margin: 0 6px;
 }
-
-.imgText{
-  border-style:solid;
-  border-width:1px;
-  margin: 0 2rem;
-  padding: 4rem 0;
+.page-item:first-child .page-link{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
-.msg-title{
-  margin-top: 6rem;
-  width: 20%;
+.page-item:last-child .page-link{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
-@media (max-width: 1200px) {
-    .imgText{
-        margin: 0 1.5rem;
-        padding: 1rem;
-    }
-    .carousel-text{
-        padding-left: 0rem;
-        padding-bottom: 12rem;
-        h1{
-            font-size: 2rem;
-        }
-    }
-    .carousel-item{
-      width:100%;
-      height: 400px !important;
-    }
-    .carousel-home-text{
-      padding-bottom: 7rem;
-    }
-    .bannerText{
-      letter-spacing: 5px;
-    }
-    .imgIntroduce{
-      height: auto;
-    }
-    .imgSize{
-        height: 400px;
-    }
-    .msg-title{
-      width: 40%;
-    }
+.page-link:hover{
+  border: none;
+  border-bottom: solid #a04a03;
+  color: #a04a03;
+  margin: 0 6px;
 }
-@media (max-width: 768px){
-    .carousel-item{
-      width:100%;
-      height: 250px !important;
-    }
-    .carousel-home-text{
-      padding-bottom: 4rem;
-      h1{
-          font-size: 2rem;
-      }
-    }
-    .bannerText{
-      letter-spacing: 10px;
-    }
-    .carousel-item img{
-      position: absolute;
-      top: -9999px;
-      bottom: -9999px;
-      left: -9999px;
-      right: -9999px;
-      margin: auto;
-    }
-    .msg-title{
-      width: 60%;
-    }
-  }
+.pagination{
+  --bs-pagination-disabled-bg: #fff;
+  border: none;
+}
+.page-link:focus{
+  color: #a04a03;
+}
+.page-link.active, .active > .page-link {
+  background-color: #ffffff;
+  color: #ffab4b;
+  font-weight:bolder;
+  border-bottom: solid #ffab4b;
+}
+// 頁面按鈕end

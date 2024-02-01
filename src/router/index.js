@@ -7,6 +7,7 @@ const routes = [
     children: [
       {
         path: '',
+        name: 'Home',
         component: () => import('../views/frontend/HomeView.vue'),
       },
       {
@@ -64,7 +65,9 @@ const routes = [
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('../views/frontend/NotFound.vue'),
+    redirect: {
+      name: 'Home',
+    },
   },
 ];
 

@@ -14,18 +14,13 @@
   <div class="container">
   <Loading :active="isLoading"></Loading>
   <div class="my-5 row justify-content-center text-center">
-    <!-- <div class="col-12">
-      <div class="col-4 circle">1</div>
-      <div class="col-4 circle">2</div>
-      <div class="col-4 circle">3</div>
-      </div> -->
     <div class="col-md-8">
       <table class="table table-hover">
         <thead>
           <tr>
             <th></th>
             <th>品名</th>
-            <th style="width: 100px">數量</th>
+            <th class="unit">數量</th>
             <th>單價</th>
             <th>刪除</th>
           </tr>
@@ -33,7 +28,7 @@
         <tbody>
             <tr v-for="cart in cartsList.carts" :key="cart.Id">
               <td>
-                <img :src="cart.product.images[0]" style="height: 50px;" alt="">
+                <img :src="cart.product.images[0]" class="productImg" alt="">
               </td>
             <td class="bg-table-title">
               <router-link :to="`/product/${cart.product_id}`"
@@ -144,61 +139,7 @@
     </div>
   </div>
   </template>
-<style>
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #ffdf9ae5;
-}
-tr{
-  border-color: #be9a6b;
-}
-.input-group{
-  position: relative;
-  --primary: #19d093;
-}
-.input{
-  all: unset;
-  color: #9b5e35;
-  padding: 1rem;
-  border: 1px solid #d19222;
-  transition: 150ms cubic-bezier(0.4, 0,0.2,1);
-}
-.input:focus{
-  border: 1px solid var(--primary);
-}
-.input:is(:focus, :valid) ~ label{
-  transform: translateY(-120%) scale(0.7);
-  background-color: #1a1a1a;
-  padding-inline: 0.3rem;
-  color: var(--primary);
-}
-.label{
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  color: #9b5e35;
-  pointer-events: none;
-  transition: 150ms cubic-bezier(0.4, 0,0.2,1);
-}
-.form-style{
-  border: none;
-  border-bottom: 1px solid #9b5e35;
-}
-.circle{
-  display: inline-block;
-    text-align: center;
-    /* width: 10%; */
-    /* border: 1.2em solid #dddddd; */
-    background-color: #ddd;
-    width: 2.4em;
-    height: 2.4em;
-    line-height: 2.4em;
-    border-radius: 50%;
-    /* max-width: 1.2em; */
-    /* max-height: 1.2em; */
-    /* box-sizing: border-box; */
-    /* margin: 0 auto; */
-}
-</style>
+
 <script>
 
 export default {

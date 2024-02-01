@@ -154,11 +154,6 @@
 </div>
 
 </template>
-<style>
-.selection-process img{
-  width: 100px;
-}
-</style>
 <script>
 export default {
   data() {

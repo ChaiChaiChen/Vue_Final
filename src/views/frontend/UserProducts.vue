@@ -39,7 +39,7 @@
           <img v-if="showImage || n != index" :src="product.images[0]" class="img-cover imgSize" height="350">
           <img v-else :src="product.images[1]" class="img-cover imgSize" height="350">
         </div>
-        <div class="card-body text-center">
+        <div class="card-body text-center bg-card">
           <h5 class="card-img-title-lg">{{ product.title }}</h5>
             <p class="card-text">售價：{{ $filters.currency(product.price) }}</p>
           <button class="btn btn-btn-bg btn-add-view btn-xl"

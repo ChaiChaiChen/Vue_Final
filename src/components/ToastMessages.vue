@@ -3,9 +3,6 @@
     <Toast v-for="(msg, key) in messages" :key="key" :msg="msg"></Toast>
   </div>
 </template>
-<style>
-
-</style>
 <script>
 import Toast from '@/components/Toast.vue';
 
