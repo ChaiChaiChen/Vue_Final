@@ -16,6 +16,7 @@
 
 // backend
 @import "./components/backend/Articles";
+@import "./components/backend/Table";
 
 
 // support
@@ -23,6 +24,7 @@
 @import "./components/effect/Button";
 @import "./components/effect/Toast";
 @import "./components/effect/Table";
+@import "./components/effect/Enabled";
 html, body {
     font-family: 'Noto Serif TC', serif;
 }
@@ -53,35 +55,27 @@ html, body {
 }
 // 頁面按鈕start
 .page-link{
-  border: none;
+  border-radius: 50%;
   color: #555;
   margin: 0 6px;
 }
 .page-item:first-child .page-link{
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 50%;
 }
 .page-item:last-child .page-link{
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 50%;
 }
 .page-link:hover{
-  border: none;
-  border-bottom: solid #a04a03;
-  color: #a04a03;
-  margin: 0 6px;
-}
-.pagination{
-  --bs-pagination-disabled-bg: #fff;
-  border: none;
+  background-color: #a04a03;
+  color: white;
 }
 .page-link:focus{
   color: #a04a03;
 }
 .page-link.active, .active > .page-link {
-  background-color: #ffffff;
-  color: #ffab4b;
+  background-color: #ffab4b;
+  color: white;
   font-weight:bolder;
-  border-bottom: solid #ffab4b;
+  border: none;
 }
 // 頁面按鈕end

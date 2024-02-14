@@ -18,6 +18,11 @@
   max-height: 540px;
 }
 .newsImg{
-  height: 120px;
-  width: 200px;
+  height: 110px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .newsImg{
+    height: 200px;
+  }
 }

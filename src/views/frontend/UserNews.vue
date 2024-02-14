@@ -13,14 +13,14 @@
   </div>
 <div class="container">
   <div class="row my-5">
-    <div class="col-sm-6" v-for="(item, key) in news" :key="key">
+    <div class="col-lg-6" v-for="(item, key) in news" :key="key">
       <div class="card card-shadow mb-3 border border-gray newsCard"
         @click="getNew(item.id)">
       <div class="row g-0">
-        <div class="col-md-4 my-2 ps-2">
+        <div class="col-md-5 my-2 px-2 d-flex justify-content-center align-items-center">
           <img :src="item.imageUrl" class="rounded img-fluid newsImg" alt="...">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <div class="card-body">
             <h5 class="card-title">{{ item.title }}</h5>
             <p class="card-text text-truncate-2 text-dark-gray">{{item.description}}</p>

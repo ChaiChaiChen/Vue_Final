@@ -88,7 +88,7 @@ export default {
             // 將token和到期日儲存到cookie中
             document.cookie = `hexToken=${token}; expires=${new Date(expired)}`;
             // console.log(res);
-            this.$router.push('/dashboard/products');
+            this.$router.push('/dashboard/chart');
           }
         });
     },

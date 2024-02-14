@@ -15,6 +15,12 @@
         <ul class="nav navbar-nav me-auto">
           <li class="nav-item ms-2 mt-2">
             <router-link class="nav-link text-nav" @click="mobileBtn = false"
+             aria-current="page" to="chart">
+              <h5><strong>總覽</strong></h5>
+            </router-link>
+          </li>
+          <li class="nav-item ms-2 mt-2">
+            <router-link class="nav-link text-nav" @click="mobileBtn = false"
              aria-current="page" to="products">
               <h5><strong>產品</strong></h5>
             </router-link>

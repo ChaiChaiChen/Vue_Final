@@ -4,7 +4,7 @@
          aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modal">
       <div class="modal-dialog" role="document">
         <div class="modal-content border-0">
-          <div class="modal-header bg-dark text-white">
+          <div class="modal-header bg-modal-brown text-white">
             <h5 class="modal-title">
               <span>檢視訂單</span>
             </h5>

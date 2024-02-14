@@ -2,8 +2,8 @@
 <template>
   <div class="container">
     <div class="row mt-5">
-    <table class="table mt-4">
-        <thead>
+    <table class="table mt-5 text-center table-radius">
+        <thead class="table-theme">
             <tr>
                 <th width="120">購買時間</th>
                 <th width="120">Email</th>
@@ -26,19 +26,17 @@
                 </td>
                 <td class="text-right">{{ $filters.currency(order.total) }}</td>
                 <td>
-                    <span class="text-success" v-if="order.is_paid">已付款</span>
-                    <span class="text-muted" v-else>未付款</span>
+                    <span class="is-enabled-border is-enabled" v-if="order.is_paid">已付款</span>
+                    <span class="is-enabled-border not-enabled" v-else>未付款</span>
                 </td>
                 <td>
-                    <div class="btn-group">
-                        <button class="btn btn-outline-primary btn-sm"
-                        @click.prevent="openModal(order)"
-                        >檢視</button>
-                    <button class="btn btn-outline-danger btn-sm"
-                     @click.prevent="openDelOrderModal(order)">
-                      刪除
-                    </button>
-                    </div>
+                  <button class="btn btn-primary"
+                  @click.prevent="openModal(order)">
+                  <i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-danger"
+                    @click.prevent="openDelOrderModal(order)">
+                    <i class="bi bi-trash3"></i>
+                  </button>
                 </td>
             </tr>
         </tbody>

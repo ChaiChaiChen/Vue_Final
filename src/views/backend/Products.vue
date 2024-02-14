@@ -5,13 +5,13 @@
   <Loading :active="isLoading"></Loading>
     <div class="text-end mt-5">
     <!-- Button trigger modal -->
-        <button class="btn btn-primary" type="button"
+        <button class="new-product" type="button"
          @click.prevent="openModal(true)">
         新增產品
         </button>
     </div>
-    <table class="table mt-4">
-        <thead>
+    <table class="table mt-4 text-center table-radius">
+        <thead class="table-theme">
             <tr>
                 <th width="120">分類</th>
                 <th>產品名稱</th>
@@ -28,16 +28,18 @@
                 <td class="text-right">{{ $filters.currency(item.origin_price) }}</td>
                 <td class="text-right">{{ $filters.currency(item.price) }}</td>
                 <td>
-                    <span class="text-success" v-if="item.is_enabled">啟用</span>
-                    <span class="text-muted" v-else>未啟用</span>
+                    <span class="is-enabled-border is-enabled"
+                     v-if="item.is_enabled">啟用</span>
+                    <span class="is-enabled-border not-enabled" v-else>未啟用</span>
                 </td>
                 <td>
-                    <div class="btn-group">
-                        <button class="btn btn-outline-primary btn-sm"
-                         @click="openModal(false, item)">編輯</button>
-                        <button class="btn btn-outline-danger btn-sm"
-                        @click="openDelProductModal(item)">刪除</button>
-                    </div>
+                        <button class="btn btn-primary"
+                         @click="openModal(false, item)">
+                         <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button class="btn btn-danger"
+                        @click="openDelProductModal(item)">
+                        <i class="bi bi-trash3"></i></button>
                 </td>
             </tr>
         </tbody>
@@ -51,6 +53,9 @@
   </div>
   </div>
 </template>
+<style>
+
+</style>
 <script>
 import ProductModal from '../../components/ProductModal.vue';
 import DelModal from '../../components/DelModal.vue';

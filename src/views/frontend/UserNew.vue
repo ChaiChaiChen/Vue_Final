@@ -23,11 +23,9 @@ export default {
   methods: {
     getArticle() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/article/${this.id}`;
-      console.log(this.id);
       this.$http.get(api)
         .then((res) => {
           this.tempArticle = res.data.article;
-          console.log(this.tempArticle);
           const { description } = this.tempArticle;
           this.descriptionList = description.split('\n');
         });

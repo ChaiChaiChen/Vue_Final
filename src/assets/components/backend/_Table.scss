@@ -1,0 +1,15 @@
+.table-radius {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.new-product{
+    border: none;
+    background-color: #4070f4;
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.new-product:hover{
+    box-shadow: 0 0 0 4px var(--bs-light-yellow), 0 0 0 8px #4070f4;
+}

@@ -4,6 +4,11 @@
       <router-view/>
     <ToastMessages></ToastMessages>
 </template>
+<style>
+body{
+  background-color: var(--bs-light-yellow);
+}
+</style>
 <script>
 import emitter from '@/methods/emitter';
 import Navbar from '../../components/Navbar.vue';

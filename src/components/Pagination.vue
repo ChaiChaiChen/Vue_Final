@@ -2,7 +2,7 @@
 <template>
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-        <li class="page-item" :class="{ disabled: pages.current_page===1}">
+        <li class="page-item" v-if="pages.current_page !== 1">
           <a class="page-link" href="#"
            @click.prevent="updatePage(pages.current_page-1)" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
@@ -14,7 +14,7 @@
             {{ page }}
           </a>
         </li>
-        <li class="page-item " :class="{ disabled: pages.current_page===pages.total_pages}">
+        <li class="page-item " v-if="pages.current_page!==pages.total_pages">
           <a class="page-link" href="#"
           @click.prevent="updatePage(pages.current_page+1)" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>

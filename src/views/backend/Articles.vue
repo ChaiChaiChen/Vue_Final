@@ -3,17 +3,17 @@
 <div class="container">
   <div class="row mt-5">
     <div class="text-end mt-5">
-      <button class="btn btn-primary" @click="openArticleModal(true)">
+      <button class="new-product" @click="openArticleModal(true)">
       新增留言
       </button>
     </div>
-    <table class="table mt-4">
-      <thead>
+    <table class="table mt-4 text-center table-radius">
+        <thead class="table-theme">
         <tr>
           <th>標題</th>
           <th>文章內容</th>
           <th>日期</th>
-          <th>是否啟用</th>
+          <th width="120">是否啟用</th>
           <th>編輯</th>
         </tr>
       </thead>
@@ -23,18 +23,17 @@
           <td class="text-truncate articles-description">{{ item.description }}</td>
           <td>{{ $filters.date(item.create_at) }}</td>
           <td>
-            <span v-if="item.isPublic === true" class="text-success">啟用</span>
-            <span v-else class="text-muted">未起用</span>
+            <span v-if="item.isPublic === true" class="is-enabled-border is-enabled">啟用</span>
+            <span v-else class="is-enabled-border not-enabled">未啟用</span>
           </td>
           <td>
-            <div class="btn-group">
-              <button class="btn btn-outline-primary btn-sm"
+            <button class="btn btn-primary"
                       @click="openArticleModal(false, item)"
-              >編輯</button>
-              <button class="btn btn-outline-danger btn-sm"
+              ><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-danger"
                       @click="openDelArticleModal(item)"
-                >刪除</button>
-              </div>
+                ><i class="bi bi-trash3"></i>
+              </button>
             </td>
           </tr>
         </tbody>

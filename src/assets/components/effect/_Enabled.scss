@@ -1,0 +1,24 @@
+.is-enabled-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.is-enabled{
+    color: var(--bs-white);
+    background-color: var(--bs-success);
+}
+.not-enabled{
+    color: var(--bs-danger);
+    border: 3px solid var(--bs-danger);
+}
+@media (max-width: 768px) {
+  .is-enabled-border{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
