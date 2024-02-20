@@ -1,5 +1,5 @@
 <template>
-    <Bar id="bar-chart" :data="chartData" :options="options" />
+    <Bar id="bar-chart" :data="chartData" :options="chartOptions" />
   </template>
 
 <script>

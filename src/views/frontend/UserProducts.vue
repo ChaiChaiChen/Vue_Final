@@ -56,33 +56,40 @@
 </div>
 </template>
 <script>
+import { mapState, mapActions } from 'pinia';
+import productStore from '@/stores/frontend/productStore';
 
 export default {
   data() {
     return {
       isLoading: false,
-      productList: [], // 存放所有產品
       status: {
         loadingItem: '', // 對應品項id
       },
       showImage: true, // hover顯示產品第二張照片
-      relatedProducts: [], // 存放類別產品
       filterType: '全部', // 切換產品類別
+      relatedProducts: [],
       n: 0,
     };
   },
   inject: ['emitter'],
+  computed: {
+    ...mapState(productStore, ['productList']),
+  },
+  // watch: {
+  //   productList: {
+  //     deep: true,
+  //     immediate: true,
+  //     handler(value) {
+  //       console.log(value);
+  //       if (Object.keys(value).length > 0) {
+  //         this.relatedProducts = JSON.parse(JSON.stringify(value));
+  //       }
+  //     },
+  //   },
+  // },
   methods: {
-    getProducts() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`;
-      this.isLoading = true;
-      this.$http.get(url).then((response) => {
-        this.productList = response.data.products;
-        this.relatedProducts = this.productList;
-        console.log(response);
-        this.isLoading = false;
-      });
-    },
+    ...mapActions(productStore, ['getProducts']),
     getFilter() { // 切換產品
       switch (this.filterType) {
         case '全部':
@@ -127,8 +134,15 @@ export default {
     },
   },
 
-  created() {
-    this.getProducts();
+  async created() {
+    try {
+      await this.getProducts();
+      if (Object.keys(this.productList).length > 0) {
+        this.relatedProducts = JSON.parse(JSON.stringify(this.productList));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 </script>

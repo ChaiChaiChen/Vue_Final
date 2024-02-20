@@ -49,7 +49,6 @@
     <ProductModal ref="productModal" :product="tempProduct"
     @update-product="updateProduct"></ProductModal>
     <DelModal :item="tempProduct" ref="delModal" @del-item="delProduct"></DelModal>
-
   </div>
   </div>
 </template>
@@ -57,6 +56,8 @@
 
 </style>
 <script>
+import { mapState, mapActions } from 'pinia';
+import productStore from '@/stores/backend/productStore';
 import ProductModal from '../../components/ProductModal.vue';
 import DelModal from '../../components/DelModal.vue';
 import Pagination from '../../components/Pagination.vue';
@@ -64,8 +65,6 @@ import Pagination from '../../components/Pagination.vue';
 export default {
   data() {
     return {
-      products: [],
-      pagination: {},
       tempProduct: {},
       isNew: false,
       isLoading: false,
@@ -79,23 +78,11 @@ export default {
     Pagination,
   },
   inject: ['emitter'],
-
+  computed: {
+    ...mapState(productStore, ['products', 'pagination']),
+  },
   methods: {
-    getProducts(page = 1) {
-      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products/?page=${page}`;
-      this.isLoading = true;
-      // 透過axios中的this.$http取得方法，使用POST(包含API,夾帶的資料)
-      // promise使用.then方法進行串接
-      this.$http.get(api)
-        .then((res) => {
-          this.isLoading = false;
-          if (res.data.success) {
-            console.log(res.data);
-            this.products = res.data.products;
-            this.pagination = res.data.pagination;
-          }
-        });
-    },
+    ...mapActions(productStore, ['getProducts']),
     openModal(isNew, item) {
       if (isNew) {
         this.tempProduct = {};

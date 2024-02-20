@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable vue/multi-word-component-names */
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import VueClipboard from 'vue3-clipboard';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
@@ -36,6 +37,7 @@ app.config.globalProperties.$filters = {
   currency,
   date,
 };
+const pinia = createPinia();
 app.config.globalProperties.$scroll = {
   scrollTop,
   scrolling,
@@ -49,4 +51,5 @@ app.component('ErrorMessage', ErrorMessage);
 app.component('Loading', Loading);
 app.use(VueAxios, axios);
 app.use(VueClipboard);
+app.use(pinia);
 app.mount('#app');
