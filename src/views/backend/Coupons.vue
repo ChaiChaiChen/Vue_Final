@@ -43,22 +43,28 @@
       <couponModal :coupon="tempCoupon" ref="couponModal"
       @update-coupon="updateCoupon"/>
       <DelModal :item="tempCoupon" ref="delModal" @del-item="delCoupon"/>
+  <Pagination :pages="pagination" @emit-pages="getCoupons"></Pagination>
     </div>
   </div>
   </template>
-
 <script>
+import { mapState, mapActions } from 'pinia';
+import couponStore from '@/stores/backend/couponStore';
 import CouponModal from '@/components/CouponModal.vue';
 import DelModal from '@/components/DelModal.vue';
+import Pagination from '../../components/Pagination.vue';
 
 export default {
-  components: { CouponModal, DelModal },
+  components: {
+    CouponModal,
+    DelModal,
+    Pagination,
+  },
   props: {
     config: Object,
   },
   data() {
     return {
-      coupons: {},
       tempCoupon: {
         title: '',
         is_enabled: 0,
@@ -69,7 +75,11 @@ export default {
       isNew: false,
     };
   },
+  computed: {
+    ...mapState(couponStore, ['coupons', 'pagination']),
+  },
   methods: {
+    ...mapActions(couponStore, ['getCoupons']),
     openCouponModal(isNew, item) {
       this.isNew = isNew;
       if (this.isNew) {
@@ -85,15 +95,6 @@ export default {
       this.tempCoupon = { ...item };
       const delComponent = this.$refs.delModal;
       delComponent.showModal();
-    },
-    getCoupons() {
-      this.isLoading = true;
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/coupons`;
-      this.$http.get(url, this.tempProduct).then((response) => {
-        this.coupons = response.data.coupons;
-        this.isLoading = false;
-        console.log(response);
-      });
     },
     updateCoupon(tempCoupon) {
       if (this.isNew) {

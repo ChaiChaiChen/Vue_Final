@@ -48,6 +48,8 @@
   <Pagination :pages="pagination" @emit-pages="getOrders"></Pagination>
 </template>
 <script>
+import { mapState, mapActions } from 'pinia';
+import orderStore from '@/stores/backend/orderStore';
 import OrderModal from '../../components/OrderModal.vue';
 import DelModal from '../../components/DelModal.vue';
 import Pagination from '../../components/Pagination.vue';
@@ -55,8 +57,6 @@ import Pagination from '../../components/Pagination.vue';
 export default {
   data() {
     return {
-      orders: [],
-      pagination: {},
       tempOrder: {},
     };
   },
@@ -66,18 +66,11 @@ export default {
     Pagination,
   },
   inject: ['emitter'],
+  computed: {
+    ...mapState(orderStore, ['orders', 'pagination']),
+  },
   methods: {
-    getOrders(page = 1) {
-      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders/?page=${page}`;
-      this.$http.get(api)
-        .then((res) => {
-          if (res.data.success) {
-            this.orders = res.data.orders;
-            console.log('order', this.orders);
-            this.pagination = res.data.pagination;
-          }
-        });
-    },
+    ...mapActions(orderStore, ['getOrders']),
     openModal(order) {
       this.tempOrder = { ...order };
       const orderComponent = this.$refs.orderModal;
