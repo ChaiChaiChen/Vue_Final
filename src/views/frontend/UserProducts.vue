@@ -18,8 +18,8 @@
   </div>
   <div class="container">
   <Loading :active="isLoading"></Loading>
-    <div class="row">
-      <div class="col">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         <ul class="list-group list-group-horizontal justify-content-center mt-3">
           <li class="list-group-item" :class="{ active: filterType === '全部' }" @click="getFilter(filterType = '全部')">全部商品</li>
           <li class="list-group-item" :class="{ active: filterType === '布質' }" @click="getFilter(filterType = '布質')">布質沙發</li>
@@ -27,32 +27,36 @@
           <li class="list-group-item" :class="{ active: filterType === '全皮' }" @click="getFilter(filterType = '全皮')">全皮沙發</li>
         </ul>
       </div>
+      <div class="col-lg-2 col-8 mt-4">
+        <form class="form-inline">
+          <input type="search" class="form-control" placeholder="快速搜尋" aria-label="Search" v-model="search">
+        </form>
+      </div>
+    </div>
   </div>
-</div>
-
 <div class="container">
-  <div class="row mt-5 mb-5">
-    <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in relatedProducts" :key="product.Id" v-bind="product">
+  <div class="row mt-3 mb-5">
+    <div class="col-sm-12 col-md-6 col-xl-4 py-2" v-for="(product,index) in filterProducts" :key="product.Id" v-bind="product">
       <div class="card rounded-0">
         <!-- https://www.yisu.com/zixun/153224.html -->
-        <div class="card border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @mouseleave="leaveFun(index)" @click="getProduct(product.id)">
-          <img v-if="showImage || n != index" :src="product.images[0]" class="img-cover imgSize" height="350">
-          <img v-else :src="product.images[1]" class="img-cover imgSize" height="350">
+      <div class="card border-white text-white text-left imgHover" @mouseenter="enterFun(index)" @mouseleave="leaveFun(index)" @click="getProduct(product.id)">
+        <img v-if="showImage || n != index" :src="product.images[0]" class="img-cover imgSize" height="350">
+        <img v-else :src="product.images[1]" class="img-cover imgSize" height="350">
+      </div>
+      <div class="card-body text-center bg-card">
+        <h5 class="card-img-title-lg">{{ product.title }}</h5>
+          <p class="card-text">售價：{{ $filters.currency(product.price) }}</p>
+        <button class="btn btn-btn-bg btn-add-view btn-xl"
+        :disabled ="this.status.loadingItem === product.id"
+        @click="addCart(product.id)">
+        <div class="spinner-grow text-red spinner-grow-sm" v-if="this.status.loadingItem === product.id">
+          <span class="visually-hidden">Loading...</span>
         </div>
-        <div class="card-body text-center bg-card">
-          <h5 class="card-img-title-lg">{{ product.title }}</h5>
-            <p class="card-text">售價：{{ $filters.currency(product.price) }}</p>
-          <button class="btn btn-btn-bg btn-add-view btn-xl"
-          :disabled ="this.status.loadingItem === product.id"
-          @click="addCart(product.id)">
-          <div class="spinner-grow text-red spinner-grow-sm" v-if="this.status.loadingItem === product.id">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          加入購物車</button>
+            加入購物車</button>
+        </div>
       </div>
-      </div>
-</div>
-</div>
+    </div>
+  </div>
 </div>
 </template>
 <script>
@@ -63,6 +67,7 @@ export default {
   data() {
     return {
       isLoading: false,
+      search: '',
       status: {
         loadingItem: '', // 對應品項id
       },
@@ -75,10 +80,15 @@ export default {
   inject: ['emitter'],
   computed: {
     ...mapState(productStore, ['productList']),
+    filterProducts() {
+      // eslint-disable-next-line array-callback-return
+      return this.relatedProducts.filter((item) => item.title.match(this.search));
+    },
   },
   // watch: {
   //   productList: {
   //     deep: true,
+  // 當元件建立好，就立即執行一次此函式
   //     immediate: true,
   //     handler(value) {
   //       console.log(value);
