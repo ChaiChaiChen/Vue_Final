@@ -2,8 +2,7 @@
 <template>
     <div class="container">
         <div class="row mt-5">
-            <h2 class="mt-5">Welcome back, Admin</h2>
-            <div class="col-xl-3 col-6 mt-3">
+            <div class="col-xl-3 col-6 mt-5">
                 <div class="info p-4">
                     <h4 class="mt-2">
                       <i class="bi bi-bar-chart-fill fs-3 text-success"></i>
@@ -20,7 +19,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-xl-3 col-6 mt-3">
+            <div class="col-xl-3 col-6 mt-5">
                 <div class="info p-4">
                     <h4 class="mt-2">
                       <i class="bi bi-bag-check-fill fs-2 text-success"></i>
@@ -37,7 +36,7 @@
 
                 </div>
             </div>
-            <div class="col-xl-3 col-6 mt-3">
+            <div class="col-xl-3 col-6 mt-5">
                 <div class="info p-4">
                     <h4 class="mt-2">
                       <i class="bi bi-bookmark-check-fill fs-3 text-success"></i>
@@ -55,7 +54,7 @@
                   </p>
                 </div>
             </div>
-            <div class="col-xl-3 col-6 mt-3">
+            <div class="col-xl-3 col-6 mt-5">
                 <div class="info p-4">
                     <h4 class="mt-2">
                       <i class="bi bi-chat-dots-fill fs-3 text-success"></i>
@@ -71,13 +70,13 @@
                     </p>
                 </div>
             </div>
-            <div class="col-xl-8 col-12 mt-5">
+            <div class="col-xl-8 col-12 mt-3">
               <div class="info">
               <h3 class="text-center mt-3">歷年銷售量</h3>
                 <BarChart class="my-2"></BarChart>
               </div>
             </div>
-            <div class="col-xl-4 col-12 mt-5">
+            <div class="col-xl-4 col-12 mt-3">
               <div class="info">
                 <h3 class="text-center mt-3">類別銷量</h3>
                   <PieChart class="my-3"></PieChart>
@@ -104,7 +103,13 @@
                 </div>
               </div>
             </div> -->
-            <div class="col-xl-8 col-12 mt-5">
+            <div class="col-xl-4 col-12 mt-3 mb-5">
+              <div class="info">
+              <h3 class="text-center mt-3">顧客挑選意願</h3>
+                <Radar class="my-2"></Radar>
+              </div>
+            </div>
+            <div class="col-xl-8 col-12 mt-3 mb-5">
               <div class="info">
               <h3 class="text-center mt-3">歷年業績</h3>
                 <LineChart class="my-2"></LineChart>
@@ -114,36 +119,16 @@
     </div>
 </template>
 <style>
-.successtextclass{
-  color: #4bd614;
-}
-.info{
-    border:1px solid #cacaca;
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
-    border-radius: 5px;
-    background: white;
-    transition: box-shadow .3s;
-}
-.morebtn{
-  border: 1px solid #ffa742;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color .3s;
-}
-.morebtn:hover{
-  background-color: #ffd5ae;
-}
+
 </style>
 <script>
 import { mapState, mapActions } from 'pinia';
 import allStore from '@/stores/backend/allProductStore';
+import Radar from '@/components/RadarChart.vue';
 import LineChart from '../../components/LineChart.vue';
 import PieChart from '../../components/PieChart.vue';
 import BarChart from '../../components/BarChart.vue';
+
 // import ProgressBarChart from '../../components/ProgressBarChart.vue';
 
 export default {
@@ -166,6 +151,7 @@ export default {
     LineChart,
     PieChart,
     BarChart,
+    Radar,
     // ProgressBarChart,
   },
   inject: ['emitter'],
