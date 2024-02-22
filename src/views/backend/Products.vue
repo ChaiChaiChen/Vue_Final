@@ -44,8 +44,6 @@
             </tr>
         </tbody>
     </table>
-    <Pagination :pages="pagination"
-    @emit-pages="getProducts"></Pagination>
     <ProductModal ref="productModal" :product="tempProduct"
     @update-product="updateProduct"></ProductModal>
     <DelModal :item="tempProduct" ref="delModal" @del-item="delProduct"></DelModal>
@@ -57,10 +55,9 @@
 </style>
 <script>
 import { mapState, mapActions } from 'pinia';
-import productStore from '@/stores/backend/productStore';
+import allStore from '@/stores/backend/allProductStore';
 import ProductModal from '../../components/ProductModal.vue';
 import DelModal from '../../components/DelModal.vue';
-import Pagination from '../../components/Pagination.vue';
 
 export default {
   data() {
@@ -75,14 +72,13 @@ export default {
     ProductModal,
     // eslint-disable-next-line vue/no-unused-components
     DelModal,
-    Pagination,
   },
   inject: ['emitter'],
   computed: {
-    ...mapState(productStore, ['products', 'pagination']),
+    ...mapState(allStore, ['products']),
   },
   methods: {
-    ...mapActions(productStore, ['getProducts']),
+    ...mapActions(allStore, ['getProducts']),
     openModal(isNew, item) {
       if (isNew) {
         this.tempProduct = {};

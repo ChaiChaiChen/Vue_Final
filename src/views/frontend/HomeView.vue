@@ -164,19 +164,10 @@ export default {
           'https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705311990681.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eTGojm8G75jJYEjyGnerTWsSS%2B626TnSS4Yxl%2FiTX7GJA27x401h7kufycqaJLZGrXeG66UvKUdl5DzZg%2F2lnmd4zXXHU8q90oYZ5neM%2F6nPx1KDEgTfH9ixTbykmNIrVgHYyiN5gDWesFYmea5aKzDnw0AyZ3%2FakkJVAWeUJrRmxphicBSpB2A1tYXoKCVgHAdmDb5i%2FQ6WW55b6jKxM6uLv1K7yLVmFi7SUDEOjY43POtwU9EpGRUCIvxH4vvli13og1QkgEndPOPGxxZhcaHhl2jVzloZW4VMNGwckA4XkUEOk8tgKs3hl8%2BZipo1p8ObQJObuGBfq%2Fjv%2BJsgHQ%3D%3D',
           'https://storage.googleapis.com/vue-course-api.appspot.com/chaichai_api/1705312139600.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eZKkrOkD4NBLlJQDJ2NMbfXk0wiU7w7Xy32jCbWrwn2ceoqD%2FzXhgDF3exQ6omXa8gsS5bP3fVdO926IX3Chcn1tERCMDGB4XcCTAqWu9e2g2mzf7wNkK4eCW1RGlNaHhVBQj3u56FKV0LmRStG8IuRRbuBJdGiB0%2B1FTSU85RHnsLWxNKY3HmqI6Mzd9YOAtEhnqFYvv%2BAAkNis3aqap7wC7sRFbqI8Gz03oBmg%2BwDflnyqfYvJFcu25L2Mq7LFsseyLZ3xQrExnxK2rIMVUrNwCBiQeWPOUJQ%2BeMJI%2BV6RjAayZ8t4HDKBoh97c1KySiONcULh8baMqTI5godgWA%3D%3D'],
       },
-      productList: [],
     };
   },
   inject: ['emitter'],
   methods: {
-    getProducts() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
-      this.$http.get(url).then((response) => {
-        this.productList = response.data.products;
-        // 取得最新資料
-        console.log(this.productList.slice(0, 3));
-      });
-    },
     coupon() {
       navigator.clipboard.writeText('95%')
         .then(() => {
@@ -189,9 +180,6 @@ export default {
           this.$httpMessageState(response, '複製優惠碼');
         });
     },
-  },
-  created() {
-    this.getProducts();
   },
 };
 </script>

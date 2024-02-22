@@ -9,7 +9,7 @@
                       <i class="bi bi-bar-chart-fill fs-3 text-success"></i>
                       <strong class="ms-3 fs-3">產品清單</strong>
                     </h4>
-                    <p class="mt-3">共{{ productsList.length }}筆資料
+                    <p class="mt-3">共{{ products.length }}筆資料
                     </p>
                     <p class="mt-3">已啟用：{{ products_isenabled.length }}筆資料
                       <router-link to="/dashboard/products">
@@ -106,12 +106,11 @@
             </div> -->
             <div class="col-xl-8 col-12 mt-5">
               <div class="info">
-              <h3 class="text-center mt-3">歷年銷售量</h3>
+              <h3 class="text-center mt-3">歷年業績</h3>
                 <LineChart class="my-2"></LineChart>
               </div>
             </div>
         </div>
-
     </div>
 </template>
 <style>
@@ -140,6 +139,8 @@
 }
 </style>
 <script>
+import { mapState, mapActions } from 'pinia';
+import allStore from '@/stores/backend/allProductStore';
 import LineChart from '../../components/LineChart.vue';
 import PieChart from '../../components/PieChart.vue';
 import BarChart from '../../components/BarChart.vue';
@@ -148,7 +149,6 @@ import BarChart from '../../components/BarChart.vue';
 export default {
   data() {
     return {
-      productsList: {},
       products_isenabled: '',
       ordersList: 0,
       orders_is_paid: 0,
@@ -169,21 +169,11 @@ export default {
     // ProgressBarChart,
   },
   inject: ['emitter'],
+  computed: {
+    ...mapState(allStore, ['products']),
+  },
   methods: {
-    getProducts() {
-      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products/all`;
-      this.isLoading = true;
-      // 透過axios中的this.$http取得方法，使用POST(包含API,夾帶的資料)
-      // promise使用.then方法進行串接
-      this.$http.get(api)
-        .then((res) => {
-          if (res.data.success) {
-            this.productsList = Object.values(res.data.products);
-            this.products_isenabled = Object.values(res.data.products)
-              .filter((item) => item.is_enabled === 1);
-          }
-        });
-    },
+    ...mapActions(allStore, ['getProducts']),
     getOrders(page = 1) {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders/?page=${page}`;
       this.$http.get(api)
@@ -231,8 +221,16 @@ export default {
       console.log(this.currentProgress);
     },
   },
-  created() {
-    this.getProducts();
+  async created() {
+    try {
+      await this.getProducts();
+      if (Object.keys(this.products).length > 0) {
+        this.products_isenabled = Object.values(this.products)
+          .filter((item) => item.is_enabled === 1);
+      }
+    } catch (error) {
+      console.log(error);
+    }
     this.getOrders();
     this.getCoupons();
     this.getArticles();
