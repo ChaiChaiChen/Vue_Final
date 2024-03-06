@@ -1,20 +1,23 @@
 import axios from 'axios';
 import { defineStore } from 'pinia';
 
-export default defineStore('productStore', {
+export default defineStore('articleStore', {
   state: () => ({
-    products: [],
+    articles: [],
     pagination: {},
   }),
+  getters: {
+    articlesList: (state) => state.articles,
+  },
   actions: {
     // this
-    getProducts(page = 1) {
+    getArticles(page = 1) {
       // eslint-disable-next-line no-async-promise-executor
       return new Promise(async (resolve, reject) => {
-        const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/products/?page=${page}`;
+        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/articles?page=${page}`;
         try {
-          const res = await axios.get(api);
-          this.products = res.data.products;
+          const res = await axios.get(url);
+          this.articles = res.data.articles;
           this.pagination = res.data.pagination;
           resolve();
         } catch (error) {

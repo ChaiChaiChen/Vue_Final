@@ -9,7 +9,7 @@
                 <th width="120">Email</th>
                 <th width="300">購買項目</th>
                 <th width="120">應付金額</th>
-                <th width="120">是否已付款</th>
+                <th width="120">是否付款</th>
                 <th width="120">編輯</th>
             </tr>
         </thead>

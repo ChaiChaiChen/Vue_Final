@@ -149,6 +149,7 @@ export default {
       await this.getProducts();
       if (Object.keys(this.productList).length > 0) {
         this.relatedProducts = JSON.parse(JSON.stringify(this.productList));
+        this.$scroll.scrollTop();
       }
     } catch (error) {
       console.log(error);

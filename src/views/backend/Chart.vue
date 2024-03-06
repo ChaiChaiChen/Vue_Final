@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-xl-3 col-6 mt-5">
-                <div class="info p-4">
+                <div class="info p-4 details-box">
                     <h4 class="mt-2">
                       <i class="bi bi-bar-chart-fill fs-3 text-success"></i>
                       <strong class="ms-3 fs-3">產品清單</strong>
@@ -20,14 +20,14 @@
                 </div>
             </div>
             <div class="col-xl-3 col-6 mt-5">
-                <div class="info p-4">
+                <div class="info p-4 details-box">
                     <h4 class="mt-2">
                       <i class="bi bi-bag-check-fill fs-2 text-success"></i>
                       <strong class="ms-3 fs-2">訂單</strong>
                     </h4>
                     <p class="mt-3">共{{ ordersList }}筆資料</p>
                     <p class="mt-3">已付款：{{ orders_is_paid }}筆
-                      <router-link to="/dashboard/articles">
+                      <router-link to="/dashboard/orders">
                         <button class="morebtn float-end">
                           <i class="bi bi-arrow-right text-theme"></i>
                         </button>
@@ -36,16 +36,16 @@
 
                 </div>
             </div>
-            <div class="col-xl-3 col-6 mt-5">
-                <div class="info p-4">
+            <div class="col-xl-3 col-6 mt-lg-5 mt-4">
+                <div class="info p-4 details-box">
                     <h4 class="mt-2">
                       <i class="bi bi-bookmark-check-fill fs-3 text-success"></i>
                       <strong class="ms-3 fs-3">優惠券</strong>
                     </h4>
                     <p class="mt-3">
-                      目前：{{ couponsList.length }}組優惠碼
+                      共{{ coupons.length }}筆資料
                     </p>
-                  <p class="mt-3">已啟用：{{ coupons_isenabled.length }}組
+                  <p class="mt-3">已啟用：{{ coupons_isenabled.length }}筆
                     <router-link to="/dashboard/coupons">
                       <button class="morebtn float-end">
                         <i class="bi bi-arrow-right text-theme"></i>
@@ -54,13 +54,13 @@
                   </p>
                 </div>
             </div>
-            <div class="col-xl-3 col-6 mt-5">
-                <div class="info p-4">
+            <div class="col-xl-3 col-6 mt-lg-5 mt-4">
+                <div class="info p-4 details-box">
                     <h4 class="mt-2">
                       <i class="bi bi-chat-dots-fill fs-3 text-success"></i>
                       <strong class="ms-3 fs-3">留言</strong>
                     </h4>
-                    <p class="mt-3">共{{ articlesList.length }}筆資料</p>
+                    <p class="mt-3">共{{ articles.length }}則留言</p>
                     <p class="mt-3">已啟用：{{ articles_isenabled.length }}則
                       <router-link to="/dashboard/articles">
                         <button class="morebtn float-end">
@@ -103,16 +103,22 @@
                 </div>
               </div>
             </div> -->
-            <div class="col-xl-4 col-12 mt-3 mb-5">
+            <div class="col-xl-4 col-12 mt-3">
               <div class="info">
               <h3 class="text-center mt-3">顧客挑選意願</h3>
                 <Radar class="my-2"></Radar>
               </div>
             </div>
-            <div class="col-xl-8 col-12 mt-3 mb-5">
+            <div class="col-xl-8 col-12 mt-3">
               <div class="info">
               <h3 class="text-center mt-3">歷年業績</h3>
                 <LineChart class="my-2"></LineChart>
+              </div>
+            </div>
+            <div class="col-xl-6 col-12 mt-3 mb-5">
+              <div class="info">
+              <h3 class="text-center mt-3">客流量</h3>
+                <echartsLine class="my-2"></echartsLine>
               </div>
             </div>
         </div>
@@ -124,7 +130,10 @@
 <script>
 import { mapState, mapActions } from 'pinia';
 import allStore from '@/stores/backend/allProductStore';
+import couponStore from '@/stores/backend/couponStore';
+import articleStore from '@/stores/backend/articleStore';
 import Radar from '@/components/RadarChart.vue';
+import echartsLine from '@/components/echartLine.vue';
 import LineChart from '../../components/LineChart.vue';
 import PieChart from '../../components/PieChart.vue';
 import BarChart from '../../components/BarChart.vue';
@@ -134,14 +143,11 @@ import BarChart from '../../components/BarChart.vue';
 export default {
   data() {
     return {
-      products_isenabled: '',
+      products_isenabled: 0,
       ordersList: 0,
       orders_is_paid: 0,
-      couponsList: {},
-      coupons_isenabled: '',
-      articlesList: {},
-      articles_isenabled: '',
-      currentProgress: '',
+      coupons_isenabled: 0,
+      articles_isenabled: 0,
       start_page: 1,
       ordersLength: 0,
       orderspaidLength: 0,
@@ -152,14 +158,19 @@ export default {
     PieChart,
     BarChart,
     Radar,
+    echartsLine,
     // ProgressBarChart,
   },
   inject: ['emitter'],
   computed: {
+    ...mapState(couponStore, ['coupons']),
     ...mapState(allStore, ['products']),
+    ...mapState(articleStore, ['articles']),
   },
   methods: {
+    ...mapActions(couponStore, ['getCoupons']),
     ...mapActions(allStore, ['getProducts']),
+    ...mapActions(articleStore, ['getArticles']),
     getOrders(page = 1) {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/orders/?page=${page}`;
       this.$http.get(api)
@@ -186,26 +197,6 @@ export default {
           }
         });
     },
-    getCoupons() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/coupons`;
-      this.$http.get(url).then((res) => {
-        this.couponsList = Object.values(res.data.coupons);
-        this.coupons_isenabled = Object.values(res.data.coupons)
-          .filter((item) => item.is_enabled === 1);
-      });
-    },
-    getArticles() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/articles`;
-      this.$http.get(url).then((res) => {
-        this.articlesList = Object.values(res.data.articles);
-        this.articles_isenabled = Object.values(res.data.articles)
-          .filter((item) => item.isPublic === true);
-      });
-    },
-    progressdata() {
-      this.currentProgress = (Math.floor(Math.random() * 5) * 25);
-      console.log(this.currentProgress);
-    },
   },
   async created() {
     try {
@@ -214,13 +205,20 @@ export default {
         this.products_isenabled = Object.values(this.products)
           .filter((item) => item.is_enabled === 1);
       }
+      await this.getCoupons();
+      if (Object.keys(this.coupons).length > 0) {
+        this.coupons_isenabled = Object.values(this.coupons)
+          .filter((item) => item.is_enabled === 1);
+      }
+      await this.getArticles();
+      if (Object.keys(this.articles).length > 0) {
+        this.articles_isenabled = Object.values(this.articles)
+          .filter((item) => item.isPublic === true);
+      }
     } catch (error) {
       console.log(error);
     }
     this.getOrders();
-    this.getCoupons();
-    this.getArticles();
-    this.progressdata();
   },
 };
 </script>

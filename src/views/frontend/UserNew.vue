@@ -28,6 +28,7 @@ export default {
           this.tempArticle = res.data.article;
           const { description } = this.tempArticle;
           this.descriptionList = description.split('\n');
+          this.$scroll.scrollTop();
         });
     },
   },

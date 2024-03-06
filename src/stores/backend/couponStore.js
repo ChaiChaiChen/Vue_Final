@@ -7,7 +7,7 @@ export default defineStore('couponStore', {
     pagination: {},
   }),
   getters: {
-    productList: (state) => state.products,
+    couponsList: (state) => state.coupons,
   },
   actions: {
     // this

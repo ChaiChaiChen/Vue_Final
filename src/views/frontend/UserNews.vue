@@ -35,31 +35,27 @@
 </div>
 </template>
 <script>
+import { mapState, mapActions } from 'pinia';
+import newStore from '@/stores/frontend/newStore';
+
 export default {
   data() {
     return {
-      news: [],
-      pagination: {},
     };
   },
   inject: ['emitter'],
+  computed: {
+    ...mapState(newStore, ['news', 'pagination']),
+  },
   methods: {
-    getNews() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/articles`;
-      this.$http.get(url).then((response) => {
-        this.news = response.data.articles;
-        console.log(response.data);
-        this.pagination = response.data.pagination;
-        console.log(this.pagination);
-      });
-    },
+    ...mapActions(newStore, ['getNews']),
     getNew(id) { // 取得產品id切換到該產品頁面
       console.log(id);
       this.$router.push(`/new/${id}`);
     },
   },
-  created() {
-    this.getNews();
+  async created() {
+    await this.getNews();
   },
 };
 </script>

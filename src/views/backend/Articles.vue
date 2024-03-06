@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'pinia';
+import articleStore from '@/stores/backend/articleStore';
 import ArticleModal from '@/components/ArticleModal.vue';
 import DelModal from '@/components/DelModal.vue';
 import Pagination from '../../components/Pagination.vue';
@@ -55,10 +57,8 @@ import Pagination from '../../components/Pagination.vue';
 export default {
   data() {
     return {
-      articles: [],
       tempArticle: [],
       isNew: false,
-      pagination: {},
     };
   },
   components: {
@@ -66,15 +66,11 @@ export default {
     DelModal,
     Pagination,
   },
+  computed: {
+    ...mapState(articleStore, ['articles', 'pagination']),
+  },
   methods: {
-    getArticles(page = 1) {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/articles?page=${page}`;
-      this.$http.get(url).then((response) => {
-        this.articles = response.data.articles;
-        console.log(this.articles);
-        this.pagination = response.data.pagination;
-      });
-    },
+    ...mapActions(articleStore, ['getArticles']),
     openArticleModal(isNew, item) {
       this.isNew = isNew;
       if (this.isNew) {
@@ -121,8 +117,12 @@ export default {
       });
     },
   },
-  created() {
-    this.getArticles();
+  async created() {
+    try {
+      await this.getArticles();
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 </script>

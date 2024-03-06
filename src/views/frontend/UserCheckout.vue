@@ -141,13 +141,14 @@
   </template>
 
 <script>
+import { mapState, mapActions } from 'pinia';
+import getCartStore from '@/stores/frontend/getCartStore';
 
 export default {
   data() {
     return {
       isLoading: false,
       productList: [],
-      cartsList: [],
       status: {
         loadingItem: '', // 對應品項id
       },
@@ -164,19 +165,13 @@ export default {
       coupon_code: '',
     };
   },
+  computed: {
+    ...mapState(getCartStore, ['cartsList']),
+  },
   methods: {
+    ...mapActions(getCartStore, ['getCart']),
     getProduct(id) {
       this.$router.push(`/user/product/${id}`);
-    },
-    getCart() {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
-      this.isLoading = true;
-      this.$http.get(url).then((response) => {
-        console.log(response);
-        this.cartsList = response.data.data;
-        console.log('cartsList', this.cartsList);
-        this.isLoading = false;
-      });
     },
     addCouponCode() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/coupon`;
@@ -220,9 +215,12 @@ export default {
       });
     },
   },
-
-  created() {
-    this.getCart();
+  async created() {
+    try {
+      await this.getCart();
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 </script>

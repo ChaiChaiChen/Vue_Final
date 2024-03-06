@@ -9,19 +9,21 @@
   <div class="container-fluid">
 
     <div class="row justify-content-center align-items-center bg-gray mt-5">
-      <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-md-2">
+      <div class="coupon-container bg-nav text-theme text-center d-flex align-items-center justify-content-center mt-lg-4 mt-2">
         <div class="coupon-content">現在輸入優惠碼：95%&emsp;&emsp;享有95折優惠</div>
       </div>
-      <div class="col-md-12 col-lg-4 mt-5 row justify-content-center">
+      <div class="col-md-12 col-lg-1"></div>
+      <div class="col-md-12 col-lg-5 mt-5 row justify-content-center">
           <img :src="enterImage" alt="" class="img-fluid rounded mainImg">
       </div>
-      <div class="col-md-12 col-lg-3 row mt-lg-5">
+      <div class="col-md-12 col-lg-3 row mt-lg-5 ms-lg-3">
         <div class="col-lg-6 col-3 secImg-box mt-4" v-for="secImage in imagesList" :key="secImage">
             <a @mouseover="changeEnterImage(secImage)">
               <img :src="secImage" class="img-fluid rounded" alt="">
             </a>
         </div>
       </div>
+      <div class="col-md-12 col-lg-2"></div>
 
       <!-- <div class="col-md-6 gx-0 mt-5">
         <div class="d-flex justify-content-end">
@@ -134,6 +136,9 @@
   </div>
 </template>
 <script>
+import { mapState, mapActions } from 'pinia';
+import productStore from '@/stores/frontend/productStore';
+
 export default {
   data() {
     return {
@@ -151,12 +156,15 @@ export default {
       relatedProducts: [],
       showImage: true,
       n: 0,
-      elTop: 0, // 滾動前,捲軸距離視窗頂部的距離
       share: '',
     };
   },
   inject: ['emitter'],
+  computed: {
+    ...mapState(productStore, ['productList']),
+  },
   methods: {
+    ...mapActions(productStore, ['getProducts']),
     getProduct() {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/product/${this.id}`;
       this.isLoading = true;
@@ -189,13 +197,9 @@ export default {
       });
     },
     same(productCategory) {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
-      this.$http.get(url).then((response) => {
-        this.productList = response.data.products;
-        this.relatedProducts = this.productList.filter((item) => item.category === productCategory
+      this.relatedProducts = this.productList.filter((item) => item.category === productCategory
         && item.id !== this.tempProduct.id);
-        this.relatedProducts = this.relatedProducts.slice(0, 4);
-      });
+      this.relatedProducts = this.relatedProducts.slice(0, 4);
     },
     relatedProduct(id) { // 取得產品id切換到該產品頁面
       this.$router.push(`/product/${id}`);
@@ -227,6 +231,7 @@ export default {
     },
   },
   created() {
+    this.getProducts();
     // 透過$route.params接收UserCart所傳送的productId
     this.id = this.$route.params.productId;
     this.getProduct();

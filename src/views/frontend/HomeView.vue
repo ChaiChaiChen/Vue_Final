@@ -167,6 +167,10 @@ export default {
     };
   },
   inject: ['emitter'],
+  mounted() {
+    window.addEventListener('scroll', this.$scroll.scrollTop());
+    // 資料掛載完, window去監聽scroll事件
+  },
   methods: {
     coupon() {
       navigator.clipboard.writeText('95%')
